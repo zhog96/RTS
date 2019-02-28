@@ -1,0 +1,118 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{indentfirst}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{hhline}
+\lstset{basicstyle=\ttfamily,
+    escapeinside={||},
+    mathescape=true}
+%\usepackage{pdf}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\z}{\par\addvspace{\medskipamount}
+    \addtocounter{totaltasks}{1}%
+    \textbf{\arabic{totaltasks}.}
+}
+\newcommand{\zD}{\par\addvspace{\medskipamount}
+    \addtocounter{totaltasksD}{1}%
+    \textbf{Д-\arabic{totaltasksD}.}
+}
+\newcommand{\za}{
+    \textbf{a)}
+}
+\newcommand{\zb}{
+    \textbf{b)}
+}
+\newcommand{\zc}{
+    \textbf{c)}
+}
+\newcommand{\zd}{
+    \textbf{d)}
+}
+
+\newcommand{\ra}{\rightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\Lra}{\Leftrightarrow}
+\newcommand{\cd}{\cdot}
+\newcommand{\gs}{\geqslant}
+\newcommand{\ls}{\leqslant}
+\newcommand{\tx}{\text}
+\newcommand{\ti}{\times}
+\newcommand{\ov}{\overline}
+\newcommand{\df}{\ds\frac}
+\newcommand{\an}{\angle}
+\newcommand{\tr}{\triangle}
+\newcommand{\pa}{\parallel}
+\newcommand{\ig}{\includegraphics}
+\newcommand{\eq}{\equiv}
+\renewcommand{\mod}{\operatorname{mod}}
+\newcommand{\ba}{\begin{array}{c}}
+    \newcommand{\ea}{\end{array}}
+\renewcommand{\sb}{\left\{\ba}
+\newcommand{\se}{\ea\right.}
+\newcommand{\ovr}{\overrightarrow}
+\newcommand{\om}{\omega}
+\renewcommand{\tg}{\operatorname{tg}}
+\renewcommand{\ctg}{\operatorname{ctg}}
+\renewcommand{\phi}{\varphi}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\de}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\ub}{\underbrace}
+\newcommand{\arc}{\smile\!}
+
+\usepackage{wrapfig}
+\usepackage[paperheight=20.5cm,paperwidth=14cm, left=0.7cm,right=0.7cm,top=1cm,bottom=1.5cm]{geometry}
+
+\newcounter{totaltasks}
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{ТЗ семестрового проекта по информатике}
+\end{center}
+
+Состав команды : Жогов Александр, Панкратов Виктор, Сысак Михаил.
+
+Тема : игра жанра RTS (Real Time Strategy).
+
+Клиент состоит из $3$-x основных частей: интерфейс, ядро, ИИ.
+
+Интерфейс включает в себя работу с вводом-выводом и рисовку происходящего, используя библиотеку SFML и общается с ядром посредством специальных методов.
+
+Ядро можно тоже разделить на две части: внутренняя, которая занимается непосредственным изменением координат и состояний объектов, и внешняя (логическая), которая общается непосредственно с интерфейсом и служит для перевода абстрактных приказов для в более узкий класс и передает уже их внутреннему ядру.
+
+ИИ --- демон, управляющий компьютерными игроками посредством общения с внешним ядром теми же методами, что и интерфейс.
+
+Также прилагается сетевой итнерфейс для общения с ядром на удаленной машине.
+
+Игровой процесс будет состоять из элементов жанра RTS. В игре основной будет тематика продуктов. Например раса печенек, сэндвичей, сыра и другого. Причем помимо внешнего вида у каждой будет по-своему уникальные здания, юниты и взаимодействие с противником, например раса сэндвичей сможет собирать себя из останков различных противников, и т.~д.
+
+
+
+
+ 
+
+\end{document}
