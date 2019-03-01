@@ -35,3 +35,7 @@ GIT_IGNORE:
         git rm -r --cached .
     Теперь файлы не попадут в пуш
     
+SFML:
+    Сама библиотека: https://www.sfml-dev.org/tutorials/2.5/start-linux.php
+    Документация: https://www.sfml-dev.org/documentation/2.5.1/index.php
+    
