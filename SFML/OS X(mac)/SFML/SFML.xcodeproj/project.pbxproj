@@ -13,6 +13,7 @@
 		A8F201AF2229678100266855 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = A8F201AE2229678100266855 /* nice_music.ogg */; };
 		A8F201B12229678100266855 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F201B02229678100266855 /* sansation.ttf */; };
 		A8F201B32229678100266855 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A8F201B22229678100266855 /* icon.png */; };
+		A8F201BA222975EC00266855 /* image.axd.png in Resources */ = {isa = PBXBuildFile; fileRef = A8F201B9222975EC00266855 /* image.axd.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A8F201AE2229678100266855 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
 		A8F201B02229678100266855 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 		A8F201B22229678100266855 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		A8F201B9222975EC00266855 /* image.axd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.axd.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		A8F201AB2229678100266855 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A8F201B9222975EC00266855 /* image.axd.png */,
 				A8F201AC2229678100266855 /* cute_image.jpg */,
 				A8F201AE2229678100266855 /* nice_music.ogg */,
 				A8F201B02229678100266855 /* sansation.ttf */,
@@ -142,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F201BA222975EC00266855 /* image.axd.png in Resources */,
 				A8F201B32229678100266855 /* icon.png in Resources */,
 				A8F201B12229678100266855 /* sansation.ttf in Resources */,
 				A8F201AF2229678100266855 /* nice_music.ogg in Resources */,
