@@ -11,17 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d18014f3-f375-499e-bb7c-7d4431e55afb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Interface.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interface.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Interface.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interface.o" beforeDir="false" afterPath="$PROJECT_DIR$/Interface.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/main.o" afterDir="false" />
-    </list>
+    <list default="true" id="d18014f3-f375-499e-bb7c-7d4431e55afb" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/Interface.hpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#14#42#0" expanded="true" />
               </folding>
@@ -67,7 +57,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Interface.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
+            <state relative-caret-position="684">
               <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
@@ -211,12 +201,12 @@
       <workItem from="1554269551171" duration="22000" />
       <workItem from="1554269619279" duration="509000" />
       <workItem from="1554294641955" duration="2941000" />
-      <workItem from="1554325309661" duration="7476000" />
+      <workItem from="1554325309661" duration="7746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11332000" />
+    <option name="totallyTimeSpent" value="11602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -324,7 +314,7 @@
     <entry file="file://$PROJECT_DIR$/Interface.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#14#42#0" expanded="true" />
           </folding>
@@ -333,7 +323,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Interface.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
+        <state relative-caret-position="684">
           <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
