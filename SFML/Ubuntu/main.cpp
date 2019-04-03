@@ -34,6 +34,8 @@ int main() {
     thread2.launch();
     thread.wait();
     core.stop();
+    thread2.wait();
+    printf("core is done\n");
     return EXIT_SUCCESS;
 }
 
