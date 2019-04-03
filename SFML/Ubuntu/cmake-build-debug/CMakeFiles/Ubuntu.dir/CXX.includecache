@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/Core.cpp
+Core.hpp
+/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/Core.hpp
+
+/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/Core.hpp
+SFML/Graphics.hpp
+-
+Queue.hpp
+/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/Queue.hpp
+
+/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/Queue.hpp
+queue
+-
+SFML/System.hpp
+-
+

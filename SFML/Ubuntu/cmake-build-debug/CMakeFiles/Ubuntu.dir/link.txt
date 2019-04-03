@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Ubuntu.dir/Core.cpp.o CMakeFiles/Ubuntu.dir/Interface.cpp.o CMakeFiles/Ubuntu.dir/main.cpp.o CMakeFiles/Ubuntu.dir/Queue.cpp.o  -o Ubuntu 
