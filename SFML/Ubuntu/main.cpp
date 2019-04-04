@@ -35,7 +35,7 @@ int main() {
     thread.wait();
     core.stop();
     thread2.wait();
-    printf("core is done\n");
+    printf("main is done\n");
     return EXIT_SUCCESS;
 }
 
