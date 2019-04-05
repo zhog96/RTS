@@ -1,7 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include "Queue.hpp"
+#include "source/Tools/Queue.hpp"
 
 class Core {
 private:

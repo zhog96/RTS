@@ -6,9 +6,9 @@
 #include <unistd.h>
 #include <sys/types.h>
 
-#include "Interface.hpp"
-#include "Core.hpp"
-#include "Queue.hpp"
+#include "source/Main/Interface.hpp"
+#include "source/Main/Core.hpp"
+#include "source/Tools/Queue.hpp"
 
 Queue Core_Inter, Inter_Core;
 

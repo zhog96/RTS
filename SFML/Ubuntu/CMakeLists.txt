@@ -6,10 +6,32 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(Ubuntu
-        Core.cpp
-        Core.hpp
-        Interface.cpp
-        Interface.hpp
+        source/Main/Core.cpp
+        source/Main/Core.hpp
+        source/Main/Interface.cpp
+        source/Main/Interface.hpp
+        source/Scenes/MenuScene.hpp
+        source/Scenes/MenuScene.cpp
+        source/Scenes/Scene.hpp
+        source/Scenes/Scene.cpp
+        source/Scenes/SceneEvent.hpp
+        source/Scenes/SceneEvent.cpp
+        source/UIObjects/Button.hpp
+        source/UIObjects/Button.hpp
+        source/UIObjects/UIObject.hpp
+        source/UIObjects/UIObject.cpp
         main.cpp
-        Queue.cpp
-        Queue.hpp)
+        source/Tools/Queue.cpp
+        source/Tools/Queue.hpp)
+
+# Detect and add SFML
+set(SFML_DIR "/usr/share/SFML/cmake/Modules")
+set(CMAKE_MODULE_PATH "/usr/share/SFML/cmake/Modules" ${CMAKE_MODULE_PATH})
+find_package(SFML REQUIRED system window graphics network audio)
+if(SFML_FOUND)
+    include_directories(${SFML_INCLUDE_DIR})
+    target_link_libraries(Ubuntu ${EXECUTABLE_NAME} ${SFML_LIBRARIES})
+endif()
+
+
+
