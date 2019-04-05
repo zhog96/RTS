@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A801DB47224FBCBF004349C3 /* Interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A801DB45224FBCBF004349C3 /* Interface.cpp */; };
+		A801DB4D224FC1F4004349C3 /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A801DB4B224FC1F4004349C3 /* Core.cpp */; };
+		A8843DE52257827F00BCB603 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8843DE32257827F00BCB603 /* Queue.cpp */; };
+		A8843DEB225786F900BCB603 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8843DE9225786F900BCB603 /* Scene.cpp */; };
+		A8843DEE2257874700BCB603 /* UIObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8843DEC2257874700BCB603 /* UIObject.cpp */; };
+		A8843DF1225789C300BCB603 /* SceneEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8843DEF225789C300BCB603 /* SceneEvent.cpp */; };
+		A8843DF4225790B300BCB603 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8843DF2225790B300BCB603 /* Button.cpp */; };
+		A8843DF72257968100BCB603 /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8843DF52257968100BCB603 /* MenuScene.cpp */; };
 		A8F201A72229678100266855 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8F201A62229678100266855 /* ResourcePath.mm */; };
 		A8F201AA2229678100266855 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8F201A92229678100266855 /* main.cpp */; };
 		A8F201AD2229678100266855 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8F201AC2229678100266855 /* cute_image.jpg */; };
@@ -17,6 +25,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A801DB45224FBCBF004349C3 /* Interface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Interface.cpp; sourceTree = "<group>"; };
+		A801DB46224FBCBF004349C3 /* Interface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Interface.hpp; sourceTree = "<group>"; };
+		A801DB4B224FC1F4004349C3 /* Core.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Core.cpp; sourceTree = "<group>"; };
+		A801DB4C224FC1F4004349C3 /* Core.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Core.hpp; sourceTree = "<group>"; };
+		A8843DE32257827F00BCB603 /* Queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Queue.cpp; sourceTree = "<group>"; };
+		A8843DE42257827F00BCB603 /* Queue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
+		A8843DE9225786F900BCB603 /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		A8843DEA225786F900BCB603 /* Scene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
+		A8843DEC2257874700BCB603 /* UIObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UIObject.cpp; sourceTree = "<group>"; };
+		A8843DED2257874700BCB603 /* UIObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UIObject.hpp; sourceTree = "<group>"; };
+		A8843DEF225789C300BCB603 /* SceneEvent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneEvent.cpp; sourceTree = "<group>"; };
+		A8843DF0225789C300BCB603 /* SceneEvent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SceneEvent.hpp; sourceTree = "<group>"; };
+		A8843DF2225790B300BCB603 /* Button.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
+		A8843DF3225790B300BCB603 /* Button.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Button.hpp; sourceTree = "<group>"; };
+		A8843DF52257968100BCB603 /* MenuScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MenuScene.cpp; sourceTree = "<group>"; };
+		A8843DF62257968100BCB603 /* MenuScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MenuScene.hpp; sourceTree = "<group>"; };
 		A8F201A12229678100266855 /* SFML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F201A52229678100266855 /* SFML-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SFML-Info.plist"; sourceTree = "<group>"; };
 		A8F201A62229678100266855 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -59,11 +83,27 @@
 		A8F201A32229678100266855 /* SFML */ = {
 			isa = PBXGroup;
 			children = (
+				A8843DE32257827F00BCB603 /* Queue.cpp */,
+				A8843DE42257827F00BCB603 /* Queue.hpp */,
 				A8F201A62229678100266855 /* ResourcePath.mm */,
 				A8F201A82229678100266855 /* ResourcePath.hpp */,
 				A8F201A92229678100266855 /* main.cpp */,
 				A8F201AB2229678100266855 /* Resources */,
 				A8F201A42229678100266855 /* Supporting Files */,
+				A801DB45224FBCBF004349C3 /* Interface.cpp */,
+				A801DB46224FBCBF004349C3 /* Interface.hpp */,
+				A801DB4B224FC1F4004349C3 /* Core.cpp */,
+				A801DB4C224FC1F4004349C3 /* Core.hpp */,
+				A8843DE9225786F900BCB603 /* Scene.cpp */,
+				A8843DEA225786F900BCB603 /* Scene.hpp */,
+				A8843DEC2257874700BCB603 /* UIObject.cpp */,
+				A8843DED2257874700BCB603 /* UIObject.hpp */,
+				A8843DEF225789C300BCB603 /* SceneEvent.cpp */,
+				A8843DF0225789C300BCB603 /* SceneEvent.hpp */,
+				A8843DF2225790B300BCB603 /* Button.cpp */,
+				A8843DF3225790B300BCB603 /* Button.hpp */,
+				A8843DF52257968100BCB603 /* MenuScene.cpp */,
+				A8843DF62257968100BCB603 /* MenuScene.hpp */,
 			);
 			path = SFML;
 			sourceTree = "<group>";
@@ -180,8 +220,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8843DEB225786F900BCB603 /* Scene.cpp in Sources */,
+				A801DB47224FBCBF004349C3 /* Interface.cpp in Sources */,
+				A8843DEE2257874700BCB603 /* UIObject.cpp in Sources */,
 				A8F201AA2229678100266855 /* main.cpp in Sources */,
 				A8F201A72229678100266855 /* ResourcePath.mm in Sources */,
+				A8843DF4225790B300BCB603 /* Button.cpp in Sources */,
+				A8843DE52257827F00BCB603 /* Queue.cpp in Sources */,
+				A8843DF72257968100BCB603 /* MenuScene.cpp in Sources */,
+				A801DB4D224FC1F4004349C3 /* Core.cpp in Sources */,
+				A8843DF1225789C300BCB603 /* SceneEvent.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
