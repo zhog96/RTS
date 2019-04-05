@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Ubuntu.dir/Core.cpp.o"
-  "CMakeFiles/Ubuntu.dir/Interface.cpp.o"
+  "CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o"
+  "CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o"
+  "CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o"
+  "CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o"
+  "CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o"
+  "CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o"
   "CMakeFiles/Ubuntu.dir/main.cpp.o"
-  "CMakeFiles/Ubuntu.dir/Queue.cpp.o"
+  "CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.o"
   "Ubuntu.pdb"
   "Ubuntu"
 )

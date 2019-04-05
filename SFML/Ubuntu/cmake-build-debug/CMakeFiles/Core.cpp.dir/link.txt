@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/Core.cpp.dir/Interface.cpp.o CMakeFiles/Core.cpp.dir/main.cpp.o CMakeFiles/Core.cpp.dir/Queue.cpp.o  -o Core.cpp 

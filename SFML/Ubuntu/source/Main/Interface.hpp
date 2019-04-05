@@ -1,8 +1,8 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include "Queue.hpp"
-#include "MenuScene.hpp"
+#include "source/Tools/Queue.hpp"
+#include "source/Scenes/MenuScene.hpp"
 
 class Interface {
 private:

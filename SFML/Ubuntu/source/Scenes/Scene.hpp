@@ -5,8 +5,8 @@
 #include <queue>
 
 #include "SceneEvent.hpp"
-#include "UIObject.hpp"
-#include "Button.hpp"
+#include "source/UIObjects/UIObject.hpp"
+#include "source/UIObjects/Button.hpp"
 
 class Scene {
 protected:

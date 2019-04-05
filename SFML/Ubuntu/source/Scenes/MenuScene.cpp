@@ -1,5 +1,5 @@
 #include "MenuScene.hpp"
-#include "Button.hpp"
+#include "source/UIObjects/Button.hpp"
 #include "SceneEvent.hpp"
 
 int MenuScene::process() {
@@ -31,11 +31,11 @@ int MenuScene::draw() {
 
 MenuScene::MenuScene(sf::RenderWindow &window) : Scene(window) {
     textures.push_back(sf::Texture());
-    textures[0].loadFromFile("textures/MainMenu/MainMenuBG.jpg");
+    textures[0].loadFromFile("../textures/MainMenu/MainMenuBG.jpg");
     textures.push_back(sf::Texture());
-    textures[1].loadFromFile("textures/MainMenu/buttonPressed.png");
+    textures[1].loadFromFile("../textures/MainMenu/buttonPressed.png");
     textures.push_back(sf::Texture());
-    textures[2].loadFromFile("textures/MainMenu/buttonNotPressed.png");
+    textures[2].loadFromFile("../textures/MainMenu/buttonNotPressed.png");
     std::vector<sf::Texture *> vec({&textures[1], &textures[2]});
     sf::Transform tr;
     tr.translate(630, 400);
