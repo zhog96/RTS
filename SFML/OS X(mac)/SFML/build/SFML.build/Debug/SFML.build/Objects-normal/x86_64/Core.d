@@ -1,5 +1,7 @@
-dependencies: /Users/zogovaleksandr/RTS/SFML/OS\ X(mac)/SFML/SFML/main.cpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio.hpp \
+dependencies: /Users/zogovaleksandr/RTS/SFML/OS\ X(mac)/SFML/SFML/Core.cpp \
+  /Users/zogovaleksandr/RTS/SFML/OS\ X(mac)/SFML/SFML/Core.hpp \
+  /Library/Frameworks/SFML.framework/Headers/Graphics.hpp \
+  /Library/Frameworks/SFML.framework/Headers/Window.hpp \
   /Library/Frameworks/SFML.framework/Headers/System.hpp \
   /Library/Frameworks/SFML.framework/Headers/Config.hpp \
   /Library/Frameworks/SFML.framework/Headers/System/Clock.hpp \
@@ -26,24 +28,6 @@ dependencies: /Users/zogovaleksandr/RTS/SFML/OS\ X(mac)/SFML/SFML/main.cpp \
   /Library/Frameworks/SFML.framework/Headers/System/Vector2.inl \
   /Library/Frameworks/SFML.framework/Headers/System/Vector3.hpp \
   /Library/Frameworks/SFML.framework/Headers/System/Vector3.inl \
-  /Library/Frameworks/SFML.framework/Headers/Audio/InputSoundFile.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/Export.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/Listener.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/Music.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/SoundStream.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/SoundSource.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/AlResource.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/OutputSoundFile.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/Sound.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/SoundBuffer.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/SoundBufferRecorder.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/SoundRecorder.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/SoundFileFactory.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/SoundFileFactory.inl \
-  /Library/Frameworks/SFML.framework/Headers/Audio/SoundFileReader.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Audio/SoundFileWriter.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Graphics.hpp \
-  /Library/Frameworks/SFML.framework/Headers/Window.hpp \
   /Library/Frameworks/SFML.framework/Headers/Window/Clipboard.hpp \
   /Library/Frameworks/SFML.framework/Headers/Window/Export.hpp \
   /Library/Frameworks/SFML.framework/Headers/Window/Context.hpp \
@@ -90,6 +74,4 @@ dependencies: /Users/zogovaleksandr/RTS/SFML/OS\ X(mac)/SFML/SFML/main.cpp \
   /Library/Frameworks/SFML.framework/Headers/Graphics/Sprite.hpp \
   /Library/Frameworks/SFML.framework/Headers/Graphics/Text.hpp \
   /Library/Frameworks/SFML.framework/Headers/Graphics/VertexBuffer.hpp \
-  /Users/zogovaleksandr/RTS/SFML/OS\ X(mac)/SFML/SFML/Interface.hpp \
-  /Users/zogovaleksandr/RTS/SFML/OS\ X(mac)/SFML/SFML/Queue.hpp \
-  /Users/zogovaleksandr/RTS/SFML/OS\ X(mac)/SFML/SFML/Core.hpp
+  /Users/zogovaleksandr/RTS/SFML/OS\ X(mac)/SFML/SFML/Queue.hpp
