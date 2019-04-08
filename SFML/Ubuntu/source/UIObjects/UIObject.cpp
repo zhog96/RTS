@@ -1,8 +1,12 @@
 #include "UIObject.hpp"
 
-UIObject::UIObject(int id, std::vector<sf::Texture *> &textures, sf::Transform trans, sf::Vector2<double> size, std::queue<SceneEvent> &events, sf::RenderWindow & window) : events(events), window(window){
+UIObject::UIObject(int id, std::vector<sf::Texture *> &textures, sf::Transform trans, sf::Vector2<double> size,
+        std::string text, sf::Transform textTrans, sf::Font *font,
+        std::queue<SceneEvent> &events, sf::RenderWindow & window) : events(events), window(window){
     this->size = size;
     this->id = id;
+    this->text = sf::Text(text, *font, 60);
+    this->textTrans = textTrans;
     this->trans = trans;
     for(int i = 0; i < textures.size(); i++)
         sprites.push_back(sf::Sprite(*textures[i]));
@@ -10,7 +14,9 @@ UIObject::UIObject(int id, std::vector<sf::Texture *> &textures, sf::Transform t
 }
 
 int UIObject::draw() {
-    if(currSprite)
+    if(currSprite) {
         window.draw(*currSprite, sf::RenderStates(trans));
+        window.draw(text, sf::RenderStates(textTrans));
+    }
     return 0;
 }

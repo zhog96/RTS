@@ -15,9 +15,12 @@ protected:
     sf::Transform trans;
     std::vector<sf::Sprite> sprites;
     sf::Sprite *currSprite;
+    sf::Text text;
+    sf::Transform textTrans;
     sf::RenderWindow &window;
     int id;
 public:
-    UIObject(int id, std::vector<sf::Texture *> &textures, sf::Transform trans, sf::Vector2<double> size, std::queue<SceneEvent> &events, sf::RenderWindow &window);
+    UIObject(int id, std::vector<sf::Texture *> &textures, sf::Transform trans, sf::Vector2<double> size, std::string text, sf::Transform textTrans, sf::Font *font,
+            std::queue<SceneEvent> &events, sf::RenderWindow &window);
     int draw();
 };
