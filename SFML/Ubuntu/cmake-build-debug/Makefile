@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/sysak_ma/CLion/clion-2019.1/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /opt/clion-2019.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/sysak_ma/CLion/clion-2019.1/bin/cmake/linux/bin/cmake -E remove -f
+RM = /opt/clion-2019.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sysak_ma/Desktop/RTS/SFML/Ubuntu
+CMAKE_SOURCE_DIR = /home/alex/Game/SFML/Ubuntu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug
+CMAKE_BINARY_DIR = /home/alex/Game/SFML/Ubuntu/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/sysak_ma/CLion/clion-2019.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/clion-2019.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/sysak_ma/CLion/clion-2019.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/opt/clion-2019.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles /home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -204,6 +204,33 @@ source/Main/Interface.cpp.s:
 	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.s
 .PHONY : source/Main/Interface.cpp.s
 
+source/Main/Pipes.o: source/Main/Pipes.cpp.o
+
+.PHONY : source/Main/Pipes.o
+
+# target to build an object file
+source/Main/Pipes.cpp.o:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Main/Pipes.cpp.o
+.PHONY : source/Main/Pipes.cpp.o
+
+source/Main/Pipes.i: source/Main/Pipes.cpp.i
+
+.PHONY : source/Main/Pipes.i
+
+# target to preprocess a source file
+source/Main/Pipes.cpp.i:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Main/Pipes.cpp.i
+.PHONY : source/Main/Pipes.cpp.i
+
+source/Main/Pipes.s: source/Main/Pipes.cpp.s
+
+.PHONY : source/Main/Pipes.s
+
+# target to generate assembly for a file
+source/Main/Pipes.cpp.s:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Main/Pipes.cpp.s
+.PHONY : source/Main/Pipes.cpp.s
+
 source/Scenes/MenuScene.o: source/Scenes/MenuScene.cpp.o
 
 .PHONY : source/Scenes/MenuScene.o
@@ -312,6 +339,87 @@ source/Tools/Queue.cpp.s:
 	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.s
 .PHONY : source/Tools/Queue.cpp.s
 
+source/Tools/Time.o: source/Tools/Time.cpp.o
+
+.PHONY : source/Tools/Time.o
+
+# target to build an object file
+source/Tools/Time.cpp.o:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.o
+.PHONY : source/Tools/Time.cpp.o
+
+source/Tools/Time.i: source/Tools/Time.cpp.i
+
+.PHONY : source/Tools/Time.i
+
+# target to preprocess a source file
+source/Tools/Time.cpp.i:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.i
+.PHONY : source/Tools/Time.cpp.i
+
+source/Tools/Time.s: source/Tools/Time.cpp.s
+
+.PHONY : source/Tools/Time.s
+
+# target to generate assembly for a file
+source/Tools/Time.cpp.s:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.s
+.PHONY : source/Tools/Time.cpp.s
+
+source/UIObjects/Buttons/Button.o: source/UIObjects/Buttons/Button.cpp.o
+
+.PHONY : source/UIObjects/Buttons/Button.o
+
+# target to build an object file
+source/UIObjects/Buttons/Button.cpp.o:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.o
+.PHONY : source/UIObjects/Buttons/Button.cpp.o
+
+source/UIObjects/Buttons/Button.i: source/UIObjects/Buttons/Button.cpp.i
+
+.PHONY : source/UIObjects/Buttons/Button.i
+
+# target to preprocess a source file
+source/UIObjects/Buttons/Button.cpp.i:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.i
+.PHONY : source/UIObjects/Buttons/Button.cpp.i
+
+source/UIObjects/Buttons/Button.s: source/UIObjects/Buttons/Button.cpp.s
+
+.PHONY : source/UIObjects/Buttons/Button.s
+
+# target to generate assembly for a file
+source/UIObjects/Buttons/Button.cpp.s:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.s
+.PHONY : source/UIObjects/Buttons/Button.cpp.s
+
+source/UIObjects/Buttons/FunnyButton.o: source/UIObjects/Buttons/FunnyButton.cpp.o
+
+.PHONY : source/UIObjects/Buttons/FunnyButton.o
+
+# target to build an object file
+source/UIObjects/Buttons/FunnyButton.cpp.o:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o
+.PHONY : source/UIObjects/Buttons/FunnyButton.cpp.o
+
+source/UIObjects/Buttons/FunnyButton.i: source/UIObjects/Buttons/FunnyButton.cpp.i
+
+.PHONY : source/UIObjects/Buttons/FunnyButton.i
+
+# target to preprocess a source file
+source/UIObjects/Buttons/FunnyButton.cpp.i:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.i
+.PHONY : source/UIObjects/Buttons/FunnyButton.cpp.i
+
+source/UIObjects/Buttons/FunnyButton.s: source/UIObjects/Buttons/FunnyButton.cpp.s
+
+.PHONY : source/UIObjects/Buttons/FunnyButton.s
+
+# target to generate assembly for a file
+source/UIObjects/Buttons/FunnyButton.cpp.s:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.s
+.PHONY : source/UIObjects/Buttons/FunnyButton.cpp.s
+
 source/UIObjects/UIObject.o: source/UIObjects/UIObject.cpp.o
 
 .PHONY : source/UIObjects/UIObject.o
@@ -339,6 +447,33 @@ source/UIObjects/UIObject.cpp.s:
 	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.s
 .PHONY : source/UIObjects/UIObject.cpp.s
 
+source/UIObjects/UIinformation.o: source/UIObjects/UIinformation.cpp.o
+
+.PHONY : source/UIObjects/UIinformation.o
+
+# target to build an object file
+source/UIObjects/UIinformation.cpp.o:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.o
+.PHONY : source/UIObjects/UIinformation.cpp.o
+
+source/UIObjects/UIinformation.i: source/UIObjects/UIinformation.cpp.i
+
+.PHONY : source/UIObjects/UIinformation.i
+
+# target to preprocess a source file
+source/UIObjects/UIinformation.cpp.i:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.i
+.PHONY : source/UIObjects/UIinformation.cpp.i
+
+source/UIObjects/UIinformation.s: source/UIObjects/UIinformation.cpp.s
+
+.PHONY : source/UIObjects/UIinformation.s
+
+# target to generate assembly for a file
+source/UIObjects/UIinformation.cpp.s:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.s
+.PHONY : source/UIObjects/UIinformation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -357,6 +492,9 @@ help:
 	@echo "... source/Main/Interface.o"
 	@echo "... source/Main/Interface.i"
 	@echo "... source/Main/Interface.s"
+	@echo "... source/Main/Pipes.o"
+	@echo "... source/Main/Pipes.i"
+	@echo "... source/Main/Pipes.s"
 	@echo "... source/Scenes/MenuScene.o"
 	@echo "... source/Scenes/MenuScene.i"
 	@echo "... source/Scenes/MenuScene.s"
@@ -369,9 +507,21 @@ help:
 	@echo "... source/Tools/Queue.o"
 	@echo "... source/Tools/Queue.i"
 	@echo "... source/Tools/Queue.s"
+	@echo "... source/Tools/Time.o"
+	@echo "... source/Tools/Time.i"
+	@echo "... source/Tools/Time.s"
+	@echo "... source/UIObjects/Buttons/Button.o"
+	@echo "... source/UIObjects/Buttons/Button.i"
+	@echo "... source/UIObjects/Buttons/Button.s"
+	@echo "... source/UIObjects/Buttons/FunnyButton.o"
+	@echo "... source/UIObjects/Buttons/FunnyButton.i"
+	@echo "... source/UIObjects/Buttons/FunnyButton.s"
 	@echo "... source/UIObjects/UIObject.o"
 	@echo "... source/UIObjects/UIObject.i"
 	@echo "... source/UIObjects/UIObject.s"
+	@echo "... source/UIObjects/UIinformation.o"
+	@echo "... source/UIObjects/UIinformation.i"
+	@echo "... source/UIObjects/UIinformation.s"
 .PHONY : help
 
 

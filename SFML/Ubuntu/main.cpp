@@ -10,20 +10,19 @@
 #include "source/Main/Core.hpp"
 #include "source/Tools/Queue.hpp"
 
-Queue Core_Inter, Inter_Core;
-
-Core core(Core_Inter, Inter_Core);
-Interface interface(Inter_Core, Core_Inter);
+//Queue Core_Inter, Inter_Core;
 
 void interfaceDaemon() {
+    Interface::initInterface();
     printf("interfaceDaemon start\n");
-    interface.run();
+    Interface::run();
     printf("interfaceDaemon stop\n");
 }
 
 void coreDaemon() {
+    Core::initCore();
     printf("coreDaemon start\n");
-    core.run();
+    Core::run();
     printf("coreDaemon stop\n");
 }
 
@@ -33,7 +32,7 @@ int main() {
     sf::Thread thread2(&coreDaemon);
     thread2.launch();
     thread.wait();
-    core.stop();
+    Core::stop();
     thread2.wait();
     printf("main is done\n");
     return EXIT_SUCCESS;

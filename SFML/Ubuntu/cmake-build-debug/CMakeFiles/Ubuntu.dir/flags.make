@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/. 
+CXX_INCLUDES = -I/home/alex/Game/SFML/Ubuntu/. 
 

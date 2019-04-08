@@ -4,12 +4,10 @@
 #include "source/Tools/Queue.hpp"
 
 class Core {
-private:
-    bool stoped;
-    Queue &q_Inter_out;
-    Queue &q_Inter_in;
 public:
-    Core(Queue &q_Inter_out, Queue &q_Inter_in);
-    int run();
-    int stop();
+    static bool stoped;
+
+    static int initCore();
+    static int run();
+    static int stop();
 };

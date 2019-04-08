@@ -6,18 +6,21 @@
 
 #include "SceneEvent.hpp"
 #include "source/UIObjects/UIObject.hpp"
-#include "source/UIObjects/Button.hpp"
+#include "source/UIObjects/Buttons/Button.hpp"
 
 class Scene {
 protected:
     std::queue<SceneEvent> events;
-    sf::RenderWindow &window;
     std::vector<sf::Texture> textures;
+    std::vector<sf::Sprite> sprites;
     std::vector<sf::Font> fonts;
-    std::vector<Button> buttons;
+    std::vector<UIObject *> uiobjects;
     int changeTo;
 public:
-    Scene(sf::RenderWindow &window);
+    Scene();
     int getChange();
+    virtual int process() = 0;
+    virtual int draw() = 0;
+    ~Scene();
 };
 
