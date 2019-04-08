@@ -5,47 +5,82 @@ CMakeFiles/Ubuntu.dir/main.cpp.o
  .././source/Scenes/MenuScene.hpp
  .././source/Scenes/Scene.hpp
  .././source/Scenes/SceneEvent.hpp
- .././source/UIObjects/Button.hpp
+ .././source/Tools/Time.h
+ .././source/UIObjects/Buttons/Button.hpp
  .././source/UIObjects/UIObject.hpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/main.cpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.hpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Interface.hpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.hpp
+ .././source/UIObjects/UIinformation.h
+ /home/alex/Game/SFML/Ubuntu/main.cpp
+ /home/alex/Game/SFML/Ubuntu/source/Main/Core.hpp
+ /home/alex/Game/SFML/Ubuntu/source/Main/Interface.hpp
+ /home/alex/Game/SFML/Ubuntu/source/Tools/Queue.hpp
 CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o
  .././source/Tools/Queue.hpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.cpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.hpp
+ /home/alex/Game/SFML/Ubuntu/source/Main/Core.cpp
+ /home/alex/Game/SFML/Ubuntu/source/Main/Core.hpp
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o
  .././source/Scenes/MenuScene.hpp
  .././source/Scenes/Scene.hpp
  .././source/Scenes/SceneEvent.hpp
  .././source/Tools/Queue.hpp
- .././source/UIObjects/Button.hpp
+ .././source/Tools/Time.h
+ .././source/UIObjects/Buttons/Button.hpp
  .././source/UIObjects/UIObject.hpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Interface.cpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Interface.hpp
+ .././source/UIObjects/UIinformation.h
+ /home/alex/Game/SFML/Ubuntu/source/Main/Interface.cpp
+ /home/alex/Game/SFML/Ubuntu/source/Main/Interface.hpp
+CMakeFiles/Ubuntu.dir/source/Main/Pipes.cpp.o
+ /home/alex/Game/SFML/Ubuntu/source/Main/Pipes.cpp
+ /home/alex/Game/SFML/Ubuntu/source/Main/Pipes.h
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o
  .././source/Scenes/Scene.hpp
  .././source/Scenes/SceneEvent.hpp
- .././source/UIObjects/Button.hpp
+ .././source/Tools/Time.h
+ .././source/UIObjects/Buttons/Button.hpp
+ .././source/UIObjects/Buttons/FunnyButton.h
  .././source/UIObjects/UIObject.hpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/MenuScene.cpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/MenuScene.hpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
+ .././source/UIObjects/UIinformation.h
+ /home/alex/Game/SFML/Ubuntu/source/Scenes/MenuScene.cpp
+ /home/alex/Game/SFML/Ubuntu/source/Scenes/MenuScene.hpp
+ /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o
  .././source/Scenes/SceneEvent.hpp
- .././source/UIObjects/Button.hpp
+ .././source/Tools/Time.h
+ .././source/UIObjects/Buttons/Button.hpp
  .././source/UIObjects/UIObject.hpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/Scene.cpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/Scene.hpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
+ .././source/UIObjects/UIinformation.h
+ /home/alex/Game/SFML/Ubuntu/source/Scenes/Scene.cpp
+ /home/alex/Game/SFML/Ubuntu/source/Scenes/Scene.hpp
+ /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.cpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
+ /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.cpp
+ /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
 CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.o
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.cpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.hpp
+ /home/alex/Game/SFML/Ubuntu/source/Tools/Queue.cpp
+ /home/alex/Game/SFML/Ubuntu/source/Tools/Queue.hpp
+CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.o
+ /home/alex/Game/SFML/Ubuntu/source/Tools/Time.cpp
+ /home/alex/Game/SFML/Ubuntu/source/Tools/Time.h
+CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.o
+ .././source/Scenes/SceneEvent.hpp
+ .././source/Tools/Time.h
+ .././source/UIObjects/UIObject.hpp
+ .././source/UIObjects/UIinformation.h
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/Button.cpp
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/Button.hpp
+CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o
+ .././source/Scenes/SceneEvent.hpp
+ .././source/Tools/Time.h
+ .././source/UIObjects/UIObject.hpp
+ .././source/UIObjects/UIinformation.h
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/Button.hpp
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.cpp
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.h
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o
  .././source/Scenes/SceneEvent.hpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/UIObject.cpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/UIObject.hpp
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIObject.cpp
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIObject.hpp
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIinformation.h
+CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.o
+ .././source/Scenes/SceneEvent.hpp
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIinformation.cpp
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIinformation.h
