@@ -5,8 +5,10 @@
 
 class Button : public UIObject {
 protected:
+    sf::Vector2<double> pos;
+    sf::Vector2<double> textpos;
 public:
-    Button(int id, std::vector<sf::Vector2i> &drawIds, sf::IntRect size);
+    Button(int id, std::vector<sf::Vector2i> *drawIds, std::vector<sf::Vector2i> *textIds = NULL);
     int process() override;
     virtual int motion();
 };

@@ -8,11 +8,11 @@
 
 class UIObject {
 protected:
-    sf::IntRect size;
     std::vector<sf::Vector2i> drawIds;
+    std::vector<sf::Vector2i> textIds;
     int id;
     bool focused;
 public:
-    UIObject(int id, std::vector<sf::Vector2i> &drawIds, sf::IntRect size);
+    UIObject(int id, std::vector<sf::Vector2i> *drawIds, std::vector<sf::Vector2i> *textIds = NULL);
     virtual int process() = 0;
 };

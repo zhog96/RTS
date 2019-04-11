@@ -5,8 +5,7 @@
 class FunnyButton : public Button {
 private:
     double phi;
-    sf::Vector2<double> pos;
 public:
-    FunnyButton(int id, std::vector<sf::Vector2i> &drawIds, sf::IntRect size);;
+    FunnyButton(int id, std::vector<sf::Vector2i> *drawIds, std::vector<sf::Vector2i> *textIds);;
     int motion() override;
 };

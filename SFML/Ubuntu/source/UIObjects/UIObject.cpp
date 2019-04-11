@@ -1,8 +1,9 @@
 #include "UIObject.hpp"
 #include "UIinformation.h"
 
-UIObject::UIObject(int id, std::vector<sf::Vector2i> &drawIds, sf::IntRect size) {
-    this->size = size;
+UIObject::UIObject(int id, std::vector<sf::Vector2i> *drawIds, std::vector<sf::Vector2i> *textIds) {
     this->id = id;
-    this->drawIds = drawIds;
+    this->drawIds = *drawIds;
+    if(textIds == NULL) this->textIds = std::vector<sf::Vector2i>();
+    else this->textIds = *textIds;
 }

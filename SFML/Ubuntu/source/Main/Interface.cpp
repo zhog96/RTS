@@ -6,6 +6,7 @@
 
 #include "source/UIObjects/UIinformation.h"
 #include "source/Tools/Time.h"
+#include "source/UIObjects/DrawArray.h"
 
 sf::RenderWindow Interface::window;
 Scene * Interface::scene = NULL;
@@ -102,7 +103,8 @@ int Interface::run() {
         }*/
 
         window.clear();
-        scene->draw();
+        DrawArray::draw();
+        scene->draw();//???
         
         window.display();
 
