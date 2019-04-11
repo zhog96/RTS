@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+source/GameObjects/GameInformation.o: source/GameObjects/GameInformation.cpp.o
+
+.PHONY : source/GameObjects/GameInformation.o
+
+# target to build an object file
+source/GameObjects/GameInformation.cpp.o:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o
+.PHONY : source/GameObjects/GameInformation.cpp.o
+
+source/GameObjects/GameInformation.i: source/GameObjects/GameInformation.cpp.i
+
+.PHONY : source/GameObjects/GameInformation.i
+
+# target to preprocess a source file
+source/GameObjects/GameInformation.cpp.i:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.i
+.PHONY : source/GameObjects/GameInformation.cpp.i
+
+source/GameObjects/GameInformation.s: source/GameObjects/GameInformation.cpp.s
+
+.PHONY : source/GameObjects/GameInformation.s
+
+# target to generate assembly for a file
+source/GameObjects/GameInformation.cpp.s:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.s
+.PHONY : source/GameObjects/GameInformation.cpp.s
+
 source/Main/Core.o: source/Main/Core.cpp.o
 
 .PHONY : source/Main/Core.o
@@ -339,6 +366,33 @@ source/Tools/DrawArray.cpp.s:
 	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.s
 .PHONY : source/Tools/DrawArray.cpp.s
 
+source/Tools/ICMessage.o: source/Tools/ICMessage.cpp.o
+
+.PHONY : source/Tools/ICMessage.o
+
+# target to build an object file
+source/Tools/ICMessage.cpp.o:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o
+.PHONY : source/Tools/ICMessage.cpp.o
+
+source/Tools/ICMessage.i: source/Tools/ICMessage.cpp.i
+
+.PHONY : source/Tools/ICMessage.i
+
+# target to preprocess a source file
+source/Tools/ICMessage.cpp.i:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.i
+.PHONY : source/Tools/ICMessage.cpp.i
+
+source/Tools/ICMessage.s: source/Tools/ICMessage.cpp.s
+
+.PHONY : source/Tools/ICMessage.s
+
+# target to generate assembly for a file
+source/Tools/ICMessage.cpp.s:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.s
+.PHONY : source/Tools/ICMessage.cpp.s
+
 source/Tools/Queue.o: source/Tools/Queue.cpp.o
 
 .PHONY : source/Tools/Queue.o
@@ -513,6 +567,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... source/GameObjects/GameInformation.o"
+	@echo "... source/GameObjects/GameInformation.i"
+	@echo "... source/GameObjects/GameInformation.s"
 	@echo "... source/Main/Core.o"
 	@echo "... source/Main/Core.i"
 	@echo "... source/Main/Core.s"
@@ -534,6 +591,9 @@ help:
 	@echo "... source/Tools/DrawArray.o"
 	@echo "... source/Tools/DrawArray.i"
 	@echo "... source/Tools/DrawArray.s"
+	@echo "... source/Tools/ICMessage.o"
+	@echo "... source/Tools/ICMessage.i"
+	@echo "... source/Tools/ICMessage.s"
 	@echo "... source/Tools/Queue.o"
 	@echo "... source/Tools/Queue.i"
 	@echo "... source/Tools/Queue.s"

@@ -13,6 +13,12 @@ CMakeFiles/Ubuntu.dir/main.cpp.o: ../source/Main/Core.hpp
 CMakeFiles/Ubuntu.dir/main.cpp.o: ../source/Main/Interface.hpp
 CMakeFiles/Ubuntu.dir/main.cpp.o: ../source/Tools/Queue.hpp
 
+CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o: .././source/Tools/ICMessage.h
+CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o: ../source/GameObjects/GameInformation.cpp
+CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o: ../source/GameObjects/GameInformation.h
+
+CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o: .././source/GameObjects/GameInformation.h
+CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o: .././source/Tools/ICMessage.h
 CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o: .././source/Tools/Queue.hpp
 CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o: ../source/Main/Core.cpp
 CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o: ../source/Main/Core.hpp
@@ -52,13 +58,14 @@ CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o: ../source/Scenes/Scene.cpp
 CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o: ../source/Scenes/Scene.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o: ../source/Scenes/SceneEvent.hpp
 
-CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o: ../source/Scenes/SceneEvent.cpp
-CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o: ../source/Scenes/SceneEvent.hpp
 
 CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o: .././source/Scenes/SceneEvent.hpp
 CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o: .././source/UIObjects/UIinformation.h
 CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o: ../source/Tools/DrawArray.cpp
 CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o: ../source/Tools/DrawArray.h
+
+CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o: ../source/Tools/ICMessage.cpp
+CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o: ../source/Tools/ICMessage.h
 
 CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.o: ../source/Tools/Queue.cpp
 CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.o: ../source/Tools/Queue.hpp
@@ -77,11 +84,11 @@ CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.o: ../source/UIObjects
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o: .././source/Scenes/SceneEvent.hpp
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o: .././source/Tools/DrawArray.h
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o: .././source/Tools/Time.h
+CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o: .././source/UIObjects/Buttons/Button.hpp
+CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o: .././source/UIObjects/Buttons/FunnyButton.h
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o: .././source/UIObjects/UIObject.hpp
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o: .././source/UIObjects/UIinformation.h
-CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o: ../source/UIObjects/Buttons/Button.hpp
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o: ../source/UIObjects/Buttons/FunnyButton.cpp
-CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o: ../source/UIObjects/Buttons/FunnyButton.h
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o: .././source/Scenes/SceneEvent.hpp
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o: ../source/UIObjects/UIObject.cpp

@@ -10,3 +10,4 @@ public:
     FunnyButton(int id, std::vector<sf::Vector2i> &drawIds, sf::IntRect size);;
     int motion() override;
 };
+

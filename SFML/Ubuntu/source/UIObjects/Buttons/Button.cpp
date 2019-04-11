@@ -16,4 +16,5 @@ int Button::motion() {
     //printf("Button\n");
 }
 
+
 Button::Button(int id, std::vector<sf::Vector2i> &drawIds, sf::IntRect size) : UIObject(id, drawIds, size) {}

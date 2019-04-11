@@ -1,4 +1,4 @@
-#include "FunnyButton.h"
+#include "source/UIObjects/Buttons/FunnyButton.h"
 #include "source/Tools/DrawArray.h"
 #include <math.h>
 

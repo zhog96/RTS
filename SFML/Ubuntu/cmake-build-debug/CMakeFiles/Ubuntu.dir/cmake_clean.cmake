@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.o"
   "CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o"
   "CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o"
+  "CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o"
+  "CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o"
   "Ubuntu.pdb"
   "Ubuntu"
 )

@@ -12,6 +12,7 @@ int MenuScene::process() {
         uiobjects[i]->process();
     }
 
+
     std::queue<SceneEvent> *events = UIinformation::events;
 
     while(!events->empty()) {
@@ -50,9 +51,9 @@ MenuScene::MenuScene() : Scene() {
 
     DrawArray::setLayerTexture(1, &textures[Textures::ButtonsT]);
     std::vector<sf::Vector2i> vec = {DrawArray::addToLayer(sf::Vector2i(1, 0), sf::IntRect(22, 8, 16, 8), sf::IntRect(0, 0, 2, 1))};
-    uiobjects.push_back(new FunnyButton(Events::Play, vec, sf::IntRect(0, 0, 64 * 8, 32 * 8)));
+    uiobjects.push_back(new Button(Events::Play, vec, sf::IntRect(0, 0, 64 * 8, 32 * 8)));
 
     std::vector<sf::Vector2i> vec2 = {DrawArray::addToLayer(sf::Vector2i(1, 0), sf::IntRect(22, 20, 16, 8), sf::IntRect(0, 1, 2, 1))};
-    uiobjects.push_back(new FunnyButton(Events::Exit, vec2, sf::IntRect(0, 0, 64 * 8, 32 * 8)));
+    uiobjects.push_back(new Button(Events::Exit, vec2, sf::IntRect(0, 0, 64 * 8, 32 * 8)));
 }
 

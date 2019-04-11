@@ -1,8 +1,15 @@
-//
-// Created by sysak_ma on 11/04/19.
-//
+#pragma once
 
-#ifndef UBUNTU_ICMESSAGE_H
-#define UBUNTU_ICMESSAGE_H
 
-#endif //UBUNTU_ICMESSAGE_H
+
+class ICMessage {
+public:
+    typedef enum {changeUnit, changeBuilding, endStep, moveUnit, movedUnit, actionError} types;
+    int type;
+    int id;
+    int newState;
+    int destination1;
+    int destination2;
+    ICMessage(int type, int id, int newState, int destination1, int destination2);
+    ICMessage();
+};

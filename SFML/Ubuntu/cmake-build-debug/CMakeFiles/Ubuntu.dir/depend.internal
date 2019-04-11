@@ -13,7 +13,13 @@ CMakeFiles/Ubuntu.dir/main.cpp.o
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.hpp
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Interface.hpp
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.hpp
+CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o
+ .././source/Tools/ICMessage.h
+ /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/GameObjects/GameInformation.cpp
+ /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/GameObjects/GameInformation.h
 CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o
+ .././source/GameObjects/GameInformation.h
+ .././source/Tools/ICMessage.h
  .././source/Tools/Queue.hpp
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.cpp
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.hpp
@@ -53,18 +59,14 @@ CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/Scene.hpp
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o
-<<<<<<< HEAD
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.cpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
-=======
- /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.cpp
- /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
 CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o
  .././source/Scenes/SceneEvent.hpp
  .././source/UIObjects/UIinformation.h
- /home/alex/Game/SFML/Ubuntu/source/Tools/DrawArray.cpp
- /home/alex/Game/SFML/Ubuntu/source/Tools/DrawArray.h
->>>>>>> 3925bbe321b3082457d0a7ec9022d96491fae5fa
+ /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/DrawArray.cpp
+ /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/DrawArray.h
+CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o
+ /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/ICMessage.cpp
+ /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/ICMessage.h
 CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.o
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.cpp
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.hpp
@@ -83,11 +85,11 @@ CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o
  .././source/Scenes/SceneEvent.hpp
  .././source/Tools/DrawArray.h
  .././source/Tools/Time.h
+ .././source/UIObjects/Buttons/Button.hpp
+ .././source/UIObjects/Buttons/FunnyButton.h
  .././source/UIObjects/UIObject.hpp
  .././source/UIObjects/UIinformation.h
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/Button.hpp
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.cpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.h
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o
  .././source/Scenes/SceneEvent.hpp
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/UIObject.cpp
