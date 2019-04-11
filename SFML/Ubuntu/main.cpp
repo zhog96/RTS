@@ -35,6 +35,7 @@ int main() {
     Core::stop();
     thread2.wait();
     printf("main is done\n");
+    //interfaceDaemon();
     return EXIT_SUCCESS;
 }
 

@@ -8,14 +8,11 @@
 
 class UIObject {
 protected:
-    sf::Vector2<double> size;
-    sf::Transform trans;
-    std::vector<sf::Sprite> sprites;
-    sf::Sprite *currSprite;
+    sf::IntRect size;
+    std::vector<sf::Vector2i> drawIds;
     int id;
     bool focused;
 public:
-    UIObject(int id, std::vector<sf::Texture *> &textures, sf::Transform trans, sf::Vector2<double> size);
-    virtual int draw();
+    UIObject(int id, std::vector<sf::Vector2i> &drawIds, sf::IntRect size);
     virtual int process() = 0;
 };

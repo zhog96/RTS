@@ -3,6 +3,10 @@
 #include "source/UIObjects/Buttons/FunnyButton.h"
 #include "SceneEvent.hpp"
 
+#include "source/Tools/DrawArray.h"
+
+#include <vector>
+
 int MenuScene::process() {
     for(int i = 0; i < uiobjects.size(); i++) {
         uiobjects[i]->process();
@@ -25,45 +29,30 @@ int MenuScene::process() {
     return 0;
 }
 
-sf::VertexArray quad(sf::Quads, 400);
-
 int MenuScene::draw() {
-    sf::Transform tr;
-    tr.translate(450, 100);
-    sf::Text t("Strategy Game", fonts[Fonts::Arial], 150);
-    t.setFillColor(sf::Color::Red);
-    UIinformation::window->draw(sprites[Sprites::BackGroundS]);
-    UIinformation::window->draw(t, sf::RenderStates(tr));
-    for(int i = 0; i < uiobjects.size(); i++) {
-        uiobjects[i]->draw();
-    }
+
+    DrawArray::draw();
 }
 
-MenuScene::MenuScene() : Scene(){
-    for(int i = 0; i < 3; i++)
+MenuScene::MenuScene() : Scene() {
+    for(int i = 0; i < 2; i++)
         textures.emplace_back(sf::Texture());
     textures[Textures::BackGroundT].loadFromFile("../textures/MainMenu/MainMenuBG.jpg");
-    textures[Textures::ButtonFocusedT].loadFromFile("../textures/MainMenu/buttonPressed.png");
-    textures[Textures::ButtonReleasedT].loadFromFile("../textures/MainMenu/buttonNotPressed.png");
+    textures[Textures::ButtonsT].loadFromFile("../textures/MainMenu/buttons.png");
 
-    sprites.emplace_back(sf::Sprite());
-    sprites[Sprites::BackGroundS].setTexture(textures[Textures::BackGroundT]);
+    DrawArray::setLayerTexture(0, &textures[Textures::BackGroundT]);
+    std::vector<sf::Vertex> vertex;
+    vertex.emplace_back(sf::Vertex(sf::Vector2f(0.f, 0.f), sf::Vector2f(0.f, 0.f)));
+    vertex.emplace_back(sf::Vertex(sf::Vector2f(1920.f, 0.f), sf::Vector2f(1920.f, 0.f)));
+    vertex.emplace_back(sf::Vertex(sf::Vector2f(1920.f, 1080.f), sf::Vector2f(1920.f, 1080.f)));
+    vertex.emplace_back(sf::Vertex(sf::Vector2f(0.f, 1080.f), sf::Vector2f(0.f, 1080.f)));
+    BGid = DrawArray::addToLayer(sf::Vector2i(0, 0), vertex);
 
-    for(int i = 0; i < 3; i++)
-        fonts.emplace_back(sf::Font());
+    DrawArray::setLayerTexture(1, &textures[Textures::ButtonsT]);
+    std::vector<sf::Vector2i> vec = {DrawArray::addToLayer(sf::Vector2i(1, 0), sf::IntRect(22, 8, 16, 8), sf::IntRect(0, 0, 2, 1))};
+    uiobjects.push_back(new FunnyButton(Events::Play, vec, sf::IntRect(0, 0, 64 * 8, 32 * 8)));
 
-    fonts[Fonts::Font].loadFromFile("../fonts/font.ttf");
-    fonts[Fonts::Arial].loadFromFile("../fonts/arial.ttf");
-    std::vector<sf::Texture *> vec({&textures[Textures::ButtonReleasedT], &textures[Textures::ButtonFocusedT]});
-
-    sf::Transform tr, trT;
-    tr.translate(630, 400);
-    trT.translate(700, 450);
-    uiobjects.push_back(new FunnyButton(Events::Play, vec, tr, sf::Vector2<double>(600, 200), std::string("Play"), trT, &fonts[0]));
-    sf::Transform tr2, trT2;
-    tr2.translate(630, 700);
-    trT2.translate(700, 750);
-    uiobjects.push_back(new FunnyButton(Events::Exit, vec, tr2, sf::Vector2<double>(600, 200), std::string("Exit"), trT2, &fonts[0]));
-
+    std::vector<sf::Vector2i> vec2 = {DrawArray::addToLayer(sf::Vector2i(1, 0), sf::IntRect(22, 20, 16, 8), sf::IntRect(0, 1, 2, 1))};
+    uiobjects.push_back(new FunnyButton(Events::Exit, vec2, sf::IntRect(0, 0, 64 * 8, 32 * 8)));
 }
 

@@ -125,6 +125,12 @@
 		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.hpp">
 			<Option target="Ubuntu"/>
 		</Unit>
+		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/DrawArray.cpp">
+			<Option target="Ubuntu"/>
+		</Unit>
+		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/DrawArray.h">
+			<Option target="Ubuntu"/>
+		</Unit>
 		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/Queue.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
