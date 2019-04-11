@@ -25,7 +25,7 @@ sf::Vector2i DrawArray::getTextSize(sf::Vector2i id) {
 }
 
 sf::Vector2i DrawArray::addToLayer(int layer, sf::IntRect rectPos, sf::IntRect rectText) {
-    int a = 32;
+    int a = 1;
     layers[layer].append(sf::Vertex(sf::Vector2f(a * rectPos.left, a * rectPos.top), sf::Vector2f(a * rectText.left, a * rectText.top)));
     layers[layer].append(sf::Vertex(sf::Vector2f(a * (rectPos.left + rectPos.width), a * rectPos.top), sf::Vector2f(a * (rectText.left + rectText.width), a * rectText.top)));
     layers[layer].append(sf::Vertex(sf::Vector2f(a * (rectPos.left + rectPos.width), a * (rectPos.top + rectPos.height)), sf::Vector2f(a * (rectText.left + rectText.width), a * (rectText.top + rectText.height))));
@@ -33,12 +33,18 @@ sf::Vector2i DrawArray::addToLayer(int layer, sf::IntRect rectPos, sf::IntRect r
     return sf::Vector2i(layer, (layers[layer].getVertexCount() / 4) - 1);
 }
 
-sf::Vector2i DrawArray::getPos(sf::Vector2i id) {
-    return sf::Vector2i(layers[id.x][4 * id.y].position);
+sf::Vector2f DrawArray::getPos(sf::Vector2i id) {
+    return sf::Vector2f(layers[id.x][4 * id.y].position);
 }
 
 sf::Vector2i DrawArray::getSize(sf::Vector2i id) {
     return sf::Vector2i(layers[id.x][4 * id.y + 2].position) - sf::Vector2i(layers[id.x][4 * id.y].position);
+}
+
+sf::IntRect DrawArray::getSourceRect(sf::Vector2i id) {
+    sf::Vector2i pos = sf::Vector2i(layers[id.x][id.y].texCoords);
+    sf::Vector2i size = sf::Vector2i(layers[id.x][id.y + 2].texCoords) - pos;
+    sf::IntRect(pos.x, pos.y, size.x, size.y);
 }
 
 int DrawArray::update(sf::Vector2i id, sf::Vector2f pos) {

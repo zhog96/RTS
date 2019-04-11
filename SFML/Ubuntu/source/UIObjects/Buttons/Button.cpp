@@ -2,7 +2,7 @@
 #include "source/UIObjects/DrawArray.h"
 
 int Button::process() {
-    sf::Vector2<int> pos = DrawArray::getPos(drawIds[0]);
+    sf::Vector2<int> pos = sf::Vector2i(DrawArray::getPos(drawIds[0]));
     sf::Vector2<int> size = DrawArray::getSize(drawIds[0]);
     if(UIinformation::mPos.x <= pos.x + size.x && UIinformation::mPos.y <= pos.y + size.y && pos.x <= UIinformation::mPos.x && pos.y <= UIinformation::mPos.y) {
         if (UIinformation::clicked) UIinformation::events->push(SceneEvent(id, SceneEvent::Pressed));

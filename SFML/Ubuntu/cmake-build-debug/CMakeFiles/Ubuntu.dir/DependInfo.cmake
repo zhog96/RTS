@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/Button.cpp" "/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.o"
   "/home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.cpp" "/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o"
   "/home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.cpp" "/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o"
+  "/home/alex/Game/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.cpp" "/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o"
   "/home/alex/Game/SFML/Ubuntu/source/UIObjects/UIObject.cpp" "/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o"
   "/home/alex/Game/SFML/Ubuntu/source/UIObjects/UIinformation.cpp" "/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.o"
   )

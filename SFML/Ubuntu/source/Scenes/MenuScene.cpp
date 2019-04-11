@@ -4,6 +4,7 @@
 #include "SceneEvent.hpp"
 
 #include "source/UIObjects/DrawArray.h"
+#include "source/UIObjects/Effects/FancyCubes.h"
 
 #include <vector>
 
@@ -11,6 +12,18 @@ int MenuScene::process() {
     for(int i = 0; i < uiobjects.size(); i++) {
         uiobjects[i]->process();
     }
+
+
+    //TODO Move to Mouse class
+    bool click = UIinformation::clicked;
+    sf::Vector2i mouse = sf::Vector2i(UIinformation::mPos);
+    if(click) {
+        std::vector<sf::Vector2i> vec = {DrawArray::addToLayer(1, sf::IntRect(-100, -100, 16, 16),
+                                         sf::IntRect(0, 0, 4, 4))};
+        uiobjects.push_back(new FancyCubes(2, &vec, mouse, 1));
+    }
+
+
 
     std::queue<SceneEvent> *events = UIinformation::events;
 
@@ -61,13 +74,15 @@ MenuScene::MenuScene() : Scene() {
     text.setFillColor(sf::Color::White);
     std::vector<sf::Vector2i> vect = {DrawArray::addTextToLayer(1, text)};
     DrawArray::setLayerTexture(1, &textures[Textures::ButtonsT]);
-    std::vector<sf::Vector2i> vec = {DrawArray::addToLayer(1, sf::IntRect(22, 12, 16, 8), sf::IntRect(0, 0, 2, 1))};
+    std::vector<sf::Vector2i> vec = {DrawArray::addToLayer(1, sf::IntRect(22 * 32, 12 * 32, 16 * 32, 8 * 32), sf::IntRect(0 * 32, 0 * 32, 2 * 32, 1 * 32))};
     uiobjects.push_back(new FunnyButton(Events::Play, &vec, &vect));
 
     text = sf::Text("Exit", fonts[0], 120);
     text.setFillColor(sf::Color::White);
     std::vector<sf::Vector2i> vec2t = {DrawArray::addTextToLayer(1, text)};
-    std::vector<sf::Vector2i> vec2 = {DrawArray::addToLayer(1, sf::IntRect(22, 22, 16, 8), sf::IntRect(0, 1, 2, 1))};
+    std::vector<sf::Vector2i> vec2 = {DrawArray::addToLayer(1, sf::IntRect(22 * 32, 22 * 32, 16 * 32, 8 * 32), sf::IntRect(0 * 32, 1 * 32, 2 * 32, 1 * 32))};
     uiobjects.push_back(new FunnyButton(Events::Exit, &vec2, &vec2t));
+
+    DrawArray::setLayerTexture(2, &textures[Textures::ButtonsT]);
 }
 
