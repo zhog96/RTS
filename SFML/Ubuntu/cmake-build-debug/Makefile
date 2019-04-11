@@ -447,6 +447,33 @@ source/UIObjects/DrawArray.cpp.s:
 	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.s
 .PHONY : source/UIObjects/DrawArray.cpp.s
 
+source/UIObjects/Effects/FancyCubes.o: source/UIObjects/Effects/FancyCubes.cpp.o
+
+.PHONY : source/UIObjects/Effects/FancyCubes.o
+
+# target to build an object file
+source/UIObjects/Effects/FancyCubes.cpp.o:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o
+.PHONY : source/UIObjects/Effects/FancyCubes.cpp.o
+
+source/UIObjects/Effects/FancyCubes.i: source/UIObjects/Effects/FancyCubes.cpp.i
+
+.PHONY : source/UIObjects/Effects/FancyCubes.i
+
+# target to preprocess a source file
+source/UIObjects/Effects/FancyCubes.cpp.i:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.i
+.PHONY : source/UIObjects/Effects/FancyCubes.cpp.i
+
+source/UIObjects/Effects/FancyCubes.s: source/UIObjects/Effects/FancyCubes.cpp.s
+
+.PHONY : source/UIObjects/Effects/FancyCubes.s
+
+# target to generate assembly for a file
+source/UIObjects/Effects/FancyCubes.cpp.s:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.s
+.PHONY : source/UIObjects/Effects/FancyCubes.cpp.s
+
 source/UIObjects/UIObject.o: source/UIObjects/UIObject.cpp.o
 
 .PHONY : source/UIObjects/UIObject.o
@@ -546,6 +573,9 @@ help:
 	@echo "... source/UIObjects/DrawArray.o"
 	@echo "... source/UIObjects/DrawArray.i"
 	@echo "... source/UIObjects/DrawArray.s"
+	@echo "... source/UIObjects/Effects/FancyCubes.o"
+	@echo "... source/UIObjects/Effects/FancyCubes.i"
+	@echo "... source/UIObjects/Effects/FancyCubes.s"
 	@echo "... source/UIObjects/UIObject.o"
 	@echo "... source/UIObjects/UIObject.i"
 	@echo "... source/UIObjects/UIObject.s"

@@ -155,6 +155,12 @@
 		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.h">
 			<Option target="Ubuntu"/>
 		</Unit>
+		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.cpp">
+			<Option target="Ubuntu"/>
+		</Unit>
+		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.h">
+			<Option target="Ubuntu"/>
+		</Unit>
 		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/UIObject.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>

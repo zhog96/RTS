@@ -38,6 +38,7 @@ CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/Tools/Time.h
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/UIObjects/Buttons/Button.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/UIObjects/Buttons/FunnyButton.h
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/UIObjects/DrawArray.h
+CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/UIObjects/Effects/FancyCubes.h
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/UIObjects/UIObject.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/UIObjects/UIinformation.h
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: ../source/Scenes/MenuScene.cpp
@@ -83,6 +84,13 @@ CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o: .././source/Scenes/Scene
 CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o: .././source/UIObjects/UIinformation.h
 CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o: ../source/UIObjects/DrawArray.cpp
 CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o: ../source/UIObjects/DrawArray.h
+
+CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o: .././source/Scenes/SceneEvent.hpp
+CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o: ../source/UIObjects/DrawArray.h
+CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o: ../source/UIObjects/Effects/FancyCubes.cpp
+CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o: ../source/UIObjects/Effects/FancyCubes.h
+CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o: ../source/UIObjects/UIObject.hpp
+CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o: ../source/UIObjects/UIinformation.h
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o: .././source/Scenes/SceneEvent.hpp
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o: ../source/UIObjects/UIObject.cpp

@@ -39,6 +39,7 @@ CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o
  .././source/UIObjects/Buttons/Button.hpp
  .././source/UIObjects/Buttons/FunnyButton.h
  .././source/UIObjects/DrawArray.h
+ .././source/UIObjects/Effects/FancyCubes.h
  .././source/UIObjects/UIObject.hpp
  .././source/UIObjects/UIinformation.h
  /home/alex/Game/SFML/Ubuntu/source/Scenes/MenuScene.cpp
@@ -84,6 +85,13 @@ CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o
  .././source/UIObjects/UIinformation.h
  /home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.cpp
  /home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.h
+CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o
+ .././source/Scenes/SceneEvent.hpp
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.h
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.cpp
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.h
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIObject.hpp
+ /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIinformation.h
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o
  .././source/Scenes/SceneEvent.hpp
  /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIObject.cpp
