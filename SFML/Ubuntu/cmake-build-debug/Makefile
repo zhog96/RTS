@@ -312,6 +312,33 @@ source/Scenes/SceneEvent.cpp.s:
 	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.s
 .PHONY : source/Scenes/SceneEvent.cpp.s
 
+source/Tools/DrawArray.o: source/Tools/DrawArray.cpp.o
+
+.PHONY : source/Tools/DrawArray.o
+
+# target to build an object file
+source/Tools/DrawArray.cpp.o:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o
+.PHONY : source/Tools/DrawArray.cpp.o
+
+source/Tools/DrawArray.i: source/Tools/DrawArray.cpp.i
+
+.PHONY : source/Tools/DrawArray.i
+
+# target to preprocess a source file
+source/Tools/DrawArray.cpp.i:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.i
+.PHONY : source/Tools/DrawArray.cpp.i
+
+source/Tools/DrawArray.s: source/Tools/DrawArray.cpp.s
+
+.PHONY : source/Tools/DrawArray.s
+
+# target to generate assembly for a file
+source/Tools/DrawArray.cpp.s:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.s
+.PHONY : source/Tools/DrawArray.cpp.s
+
 source/Tools/Queue.o: source/Tools/Queue.cpp.o
 
 .PHONY : source/Tools/Queue.o
@@ -504,6 +531,9 @@ help:
 	@echo "... source/Scenes/SceneEvent.o"
 	@echo "... source/Scenes/SceneEvent.i"
 	@echo "... source/Scenes/SceneEvent.s"
+	@echo "... source/Tools/DrawArray.o"
+	@echo "... source/Tools/DrawArray.i"
+	@echo "... source/Tools/DrawArray.s"
 	@echo "... source/Tools/Queue.o"
 	@echo "... source/Tools/Queue.i"
 	@echo "... source/Tools/Queue.s"

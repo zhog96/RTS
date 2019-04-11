@@ -3,10 +3,10 @@
 
 class MenuScene : public Scene {
 private:
-    typedef enum {BackGroundT, ButtonReleasedT, ButtonFocusedT} Textures;
-    typedef enum {BackGroundS} Sprites;
+    typedef enum {BackGroundT, ButtonsT} Textures;
     typedef enum {Font, Arial} Fonts;
     typedef enum {Exit, Play} Events;
+    sf::Vector2i BGid;
 public:
     MenuScene();
     int process();
