@@ -34,6 +34,7 @@ CMakeFiles/Ubuntu.dir/source/Main/Pipes.cpp.o
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o
  .././source/Scenes/Scene.hpp
  .././source/Scenes/SceneEvent.hpp
+ .././source/Tools/DrawArray.h
  .././source/Tools/Time.h
  .././source/UIObjects/Buttons/Button.hpp
  .././source/UIObjects/Buttons/FunnyButton.h
@@ -52,8 +53,18 @@ CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/Scene.hpp
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o
+<<<<<<< HEAD
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.cpp
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
+=======
+ /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.cpp
+ /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
+CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o
+ .././source/Scenes/SceneEvent.hpp
+ .././source/UIObjects/UIinformation.h
+ /home/alex/Game/SFML/Ubuntu/source/Tools/DrawArray.cpp
+ /home/alex/Game/SFML/Ubuntu/source/Tools/DrawArray.h
+>>>>>>> 3925bbe321b3082457d0a7ec9022d96491fae5fa
 CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.o
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.cpp
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.hpp
@@ -62,6 +73,7 @@ CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.o
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Time.h
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.o
  .././source/Scenes/SceneEvent.hpp
+ .././source/Tools/DrawArray.h
  .././source/Tools/Time.h
  .././source/UIObjects/UIObject.hpp
  .././source/UIObjects/UIinformation.h
@@ -69,6 +81,7 @@ CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.o
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/Button.hpp
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o
  .././source/Scenes/SceneEvent.hpp
+ .././source/Tools/DrawArray.h
  .././source/Tools/Time.h
  .././source/UIObjects/UIObject.hpp
  .././source/UIObjects/UIinformation.h

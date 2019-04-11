@@ -12,10 +12,10 @@ class Scene {
 protected:
     std::queue<SceneEvent> events;
     std::vector<sf::Texture> textures;
-    std::vector<sf::Sprite> sprites;
     std::vector<sf::Font> fonts;
     std::vector<UIObject *> uiobjects;
     int changeTo;
+
 public:
     Scene();
     int getChange();

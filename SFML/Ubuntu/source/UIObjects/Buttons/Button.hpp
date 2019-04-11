@@ -5,11 +5,8 @@
 
 class Button : public UIObject {
 protected:
-    sf::Text text;
-    sf::Transform textTrans;
 public:
-    Button(int id, std::vector<sf::Texture *> &textures, sf::Transform trans, sf::Vector2<double> size, std::string text, sf::Transform textTrans, sf::Font *font);
+    Button(int id, std::vector<sf::Vector2i> &drawIds, sf::IntRect size);
     int process() override;
-    int draw() override;
     virtual int motion();
 };

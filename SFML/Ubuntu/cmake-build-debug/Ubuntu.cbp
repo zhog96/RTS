@@ -125,7 +125,17 @@
 		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.hpp">
 			<Option target="Ubuntu"/>
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.cpp">
+=======
+		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/DrawArray.cpp">
+			<Option target="Ubuntu"/>
+		</Unit>
+		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/DrawArray.h">
+			<Option target="Ubuntu"/>
+		</Unit>
+		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/Queue.cpp">
+>>>>>>> 3925bbe321b3082457d0a7ec9022d96491fae5fa
 			<Option target="Ubuntu"/>
 		</Unit>
 		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.hpp">

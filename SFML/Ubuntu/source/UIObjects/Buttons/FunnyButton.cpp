@@ -1,26 +1,21 @@
 #include "FunnyButton.h"
+#include "source/Tools/DrawArray.h"
 #include <math.h>
 
 int FunnyButton::motion() {
-    //printf("Time::delta : %d\n", Time::delta);
     if(focused) {
         double dt = Time::delta / 1000.0;
-        trans = startTr;
-        trans.translate(3 * sin(phi), 3 * sin(phi));
-        textTrans = startTextTr;
-        textTrans.translate(1.5 * sin(phi), 1.5 * sin(phi));
+        sf::Vector2<float> newPos = sf::Vector2f(pos) + sf::Vector2<float>(3 * sin(phi), 3 * sin(phi));
         phi += 0.01 * dt;
         if(phi > 1000.0 || phi < -1000.0) phi = asin(sin(phi));
+        DrawArray::update(drawIds[0], newPos);
     } else {
-        trans = startTr;
-        textTrans = startTextTr;
+        sf::Vector2<float> newPos = sf::Vector2f(pos);
+        DrawArray::update(drawIds[0], newPos);
     }
 }
 
-FunnyButton::FunnyButton(int id, std::vector<sf::Texture *> &textures, sf::Transform trans, sf::Vector2<double> size, std::string text, sf::Transform textTrans, sf::Font *font) : Button(id, textures, trans, size, text, textTrans, font) {
-    printf("Created funnybutton, id : %d\n", id);
-    currSprite = &sprites[0];
-    phi = 0.0;
-    startTr = trans;
-    startTextTr = textTrans;
+FunnyButton::FunnyButton(int id, std::vector<sf::Vector2i> &drawIds, sf::IntRect size) : Button(id, drawIds, size) {
+    pos = sf::Vector2<double>(DrawArray::getPos(drawIds[0]));
+    phi = 0;
 }
