@@ -22,7 +22,7 @@ add_executable(Ubuntu
         source/UIObjects/UIObject.cpp
         main.cpp
         source/Tools/Queue.cpp
-        source/Tools/Queue.hpp source/UIObjects/UIinformation.cpp source/UIObjects/UIinformation.h source/Main/Pipes.cpp source/Main/Pipes.h source/Tools/Time.cpp source/Tools/Time.h source/UIObjects/Buttons/FunnyButton.cpp source/UIObjects/Buttons/FunnyButton.h source/Tools/DrawArray.cpp source/Tools/DrawArray.h)
+        source/Tools/Queue.hpp source/UIObjects/UIinformation.cpp source/UIObjects/UIinformation.h source/Main/Pipes.cpp source/Main/Pipes.h source/Tools/Time.cpp source/Tools/Time.h source/UIObjects/Buttons/FunnyButton.cpp source/UIObjects/Buttons/FunnyButton.h source/UIObjects/DrawArray.cpp source/UIObjects/DrawArray.h)
 
 # Detect and add SFML
 set(SFML_DIR "/usr/share/SFML/cmake/Modules")

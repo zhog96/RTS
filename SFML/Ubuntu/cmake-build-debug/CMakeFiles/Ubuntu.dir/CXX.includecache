@@ -22,12 +22,6 @@ source/UIObjects/Buttons/Button.hpp
 
 .././source/Scenes/SceneEvent.hpp
 
-.././source/Tools/DrawArray.h
-SFML/Graphics.hpp
--
-vector
--
-
 .././source/Tools/Time.h
 SFML/System.hpp
 -
@@ -43,6 +37,12 @@ source/Tools/Time.h
 .././source/UIObjects/Buttons/FunnyButton.h
 Button.hpp
 .././source/UIObjects/Buttons/Button.hpp
+
+.././source/UIObjects/DrawArray.h
+SFML/Graphics.hpp
+-
+vector
+-
 
 .././source/UIObjects/UIObject.hpp
 SFML/Graphics.hpp
@@ -73,8 +73,8 @@ source/UIObjects/Buttons/FunnyButton.h
 /home/alex/Game/SFML/Ubuntu/source/Scenes/source/UIObjects/Buttons/FunnyButton.h
 SceneEvent.hpp
 /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
-source/Tools/DrawArray.h
-/home/alex/Game/SFML/Ubuntu/source/Scenes/source/Tools/DrawArray.h
+source/UIObjects/DrawArray.h
+/home/alex/Game/SFML/Ubuntu/source/Scenes/source/UIObjects/DrawArray.h
 vector
 -
 

@@ -226,18 +226,18 @@ CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.s
 
-CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
-CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o: ../source/Tools/DrawArray.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/Tools/DrawArray.cpp
+CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
+CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o: ../source/UIObjects/DrawArray.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.cpp
 
-CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/Tools/DrawArray.cpp > CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.i
+CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.cpp > CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.i
 
-CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/Tools/DrawArray.cpp -o CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.s
+CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.s
 
 # Object files for target Ubuntu
 Ubuntu_OBJECTS = \
@@ -254,7 +254,7 @@ Ubuntu_OBJECTS = \
 "CMakeFiles/Ubuntu.dir/source/Main/Pipes.cpp.o" \
 "CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.o" \
 "CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o" \
-"CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o"
+"CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o"
 
 # External object files for target Ubuntu
 Ubuntu_EXTERNAL_OBJECTS =
@@ -272,7 +272,7 @@ Ubuntu: CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.o
 Ubuntu: CMakeFiles/Ubuntu.dir/source/Main/Pipes.cpp.o
 Ubuntu: CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.o
 Ubuntu: CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o
-Ubuntu: CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o
+Ubuntu: CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o
 Ubuntu: CMakeFiles/Ubuntu.dir/build.make
 Ubuntu: /usr/lib/x86_64-linux-gnu/libsfml-system.so
 Ubuntu: /usr/lib/x86_64-linux-gnu/libsfml-window.so

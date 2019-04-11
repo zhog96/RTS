@@ -312,33 +312,6 @@ source/Scenes/SceneEvent.cpp.s:
 	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.s
 .PHONY : source/Scenes/SceneEvent.cpp.s
 
-source/Tools/DrawArray.o: source/Tools/DrawArray.cpp.o
-
-.PHONY : source/Tools/DrawArray.o
-
-# target to build an object file
-source/Tools/DrawArray.cpp.o:
-	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.o
-.PHONY : source/Tools/DrawArray.cpp.o
-
-source/Tools/DrawArray.i: source/Tools/DrawArray.cpp.i
-
-.PHONY : source/Tools/DrawArray.i
-
-# target to preprocess a source file
-source/Tools/DrawArray.cpp.i:
-	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.i
-.PHONY : source/Tools/DrawArray.cpp.i
-
-source/Tools/DrawArray.s: source/Tools/DrawArray.cpp.s
-
-.PHONY : source/Tools/DrawArray.s
-
-# target to generate assembly for a file
-source/Tools/DrawArray.cpp.s:
-	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/DrawArray.cpp.s
-.PHONY : source/Tools/DrawArray.cpp.s
-
 source/Tools/Queue.o: source/Tools/Queue.cpp.o
 
 .PHONY : source/Tools/Queue.o
@@ -447,6 +420,33 @@ source/UIObjects/Buttons/FunnyButton.cpp.s:
 	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.s
 .PHONY : source/UIObjects/Buttons/FunnyButton.cpp.s
 
+source/UIObjects/DrawArray.o: source/UIObjects/DrawArray.cpp.o
+
+.PHONY : source/UIObjects/DrawArray.o
+
+# target to build an object file
+source/UIObjects/DrawArray.cpp.o:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o
+.PHONY : source/UIObjects/DrawArray.cpp.o
+
+source/UIObjects/DrawArray.i: source/UIObjects/DrawArray.cpp.i
+
+.PHONY : source/UIObjects/DrawArray.i
+
+# target to preprocess a source file
+source/UIObjects/DrawArray.cpp.i:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.i
+.PHONY : source/UIObjects/DrawArray.cpp.i
+
+source/UIObjects/DrawArray.s: source/UIObjects/DrawArray.cpp.s
+
+.PHONY : source/UIObjects/DrawArray.s
+
+# target to generate assembly for a file
+source/UIObjects/DrawArray.cpp.s:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.s
+.PHONY : source/UIObjects/DrawArray.cpp.s
+
 source/UIObjects/UIObject.o: source/UIObjects/UIObject.cpp.o
 
 .PHONY : source/UIObjects/UIObject.o
@@ -531,9 +531,6 @@ help:
 	@echo "... source/Scenes/SceneEvent.o"
 	@echo "... source/Scenes/SceneEvent.i"
 	@echo "... source/Scenes/SceneEvent.s"
-	@echo "... source/Tools/DrawArray.o"
-	@echo "... source/Tools/DrawArray.i"
-	@echo "... source/Tools/DrawArray.s"
 	@echo "... source/Tools/Queue.o"
 	@echo "... source/Tools/Queue.i"
 	@echo "... source/Tools/Queue.s"
@@ -546,6 +543,9 @@ help:
 	@echo "... source/UIObjects/Buttons/FunnyButton.o"
 	@echo "... source/UIObjects/Buttons/FunnyButton.i"
 	@echo "... source/UIObjects/Buttons/FunnyButton.s"
+	@echo "... source/UIObjects/DrawArray.o"
+	@echo "... source/UIObjects/DrawArray.i"
+	@echo "... source/UIObjects/DrawArray.s"
 	@echo "... source/UIObjects/UIObject.o"
 	@echo "... source/UIObjects/UIObject.i"
 	@echo "... source/UIObjects/UIObject.s"
