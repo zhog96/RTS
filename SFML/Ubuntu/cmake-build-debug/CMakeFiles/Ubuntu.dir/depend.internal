@@ -5,6 +5,7 @@ CMakeFiles/Ubuntu.dir/main.cpp.o
  .././source/Scenes/MenuScene.hpp
  .././source/Scenes/Scene.hpp
  .././source/Scenes/SceneEvent.hpp
+ .././source/Tools/ICMessage.h
  .././source/Tools/Time.h
  .././source/UIObjects/Buttons/Button.hpp
  .././source/UIObjects/UIObject.hpp
@@ -24,9 +25,11 @@ CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.cpp
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.hpp
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o
+ .././source/GameObjects/GameInformation.h
  .././source/Scenes/MenuScene.hpp
  .././source/Scenes/Scene.hpp
  .././source/Scenes/SceneEvent.hpp
+ .././source/Tools/ICMessage.h
  .././source/Tools/Queue.hpp
  .././source/Tools/Time.h
  .././source/UIObjects/Buttons/Button.hpp

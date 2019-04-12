@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string>
 #include <SFML/System.hpp>
+#include <source/GameObjects/GameInformation.h>
 
 #include "source/UIObjects/UIinformation.h"
 #include "source/Tools/Time.h"
@@ -108,6 +109,7 @@ int Interface::run() {
 
         if(scene->getChange() == UIinformation::Scenes::Exit) {
             window.close();
+            GameInformation::IntCoreQ.push(ICMessage(ICMessage::types::endStep, -1, -1, -1, -1));
         }
     }
 }

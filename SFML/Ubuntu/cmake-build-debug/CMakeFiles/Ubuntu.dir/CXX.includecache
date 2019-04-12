@@ -37,4 +37,6 @@ SFML/Graphics.hpp
 -
 source/Tools/Queue.hpp
 /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/source/Tools/Queue.hpp
+source/Tools/ICMessage.h
+/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/source/Tools/ICMessage.h
 
