@@ -37,12 +37,6 @@ CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o
  .././source/UIObjects/DrawArray.h
  .././source/UIObjects/UIObject.hpp
  .././source/UIObjects/UIinformation.h
-<<<<<<< HEAD
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Interface.cpp
- /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Interface.hpp
-=======
- /home/alex/Game/SFML/Ubuntu/source/Main/Interface.cpp
- /home/alex/Game/SFML/Ubuntu/source/Main/Interface.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o
  .././source/Scenes/Scene.hpp
  .././source/Scenes/SceneEvent.hpp
@@ -53,10 +47,9 @@ CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o
  .././source/UIObjects/Effects/FancyCubes.h
  .././source/UIObjects/UIObject.hpp
  .././source/UIObjects/UIinformation.h
- /home/alex/Game/SFML/Ubuntu/source/Scenes/GameScene.cpp
- /home/alex/Game/SFML/Ubuntu/source/Scenes/GameScene.h
- /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
->>>>>>> 2e7c7ea856955ee78419cab85de97fa72a276ef1
+ /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/GameScene.cpp
+ /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/GameScene.h
+ /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o
  .././source/GameObjects/GameInformation.h
  .././source/Scenes/Scene.hpp
@@ -97,6 +90,7 @@ CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.o
  .././source/Scenes/SceneEvent.hpp
  .././source/Tools/Time.h
  .././source/UIObjects/DrawArray.h
+ .././source/UIObjects/Effects/FancyCubes.h
  .././source/UIObjects/UIObject.hpp
  .././source/UIObjects/UIinformation.h
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/Button.cpp
@@ -105,6 +99,7 @@ CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o
  .././source/Scenes/SceneEvent.hpp
  .././source/Tools/Time.h
  .././source/UIObjects/DrawArray.h
+ .././source/UIObjects/Effects/FancyCubes.h
  .././source/UIObjects/UIObject.hpp
  .././source/UIObjects/UIinformation.h
  /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/Button.hpp
