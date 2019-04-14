@@ -5,6 +5,7 @@ CMakeFiles/Ubuntu.dir/main.cpp.o
  .././source/Scenes/MenuScene.hpp
  .././source/Scenes/Scene.hpp
  .././source/Scenes/SceneEvent.hpp
+ .././source/Tools/ICMessage.h
  .././source/Tools/Time.h
  .././source/UIObjects/Buttons/Button.hpp
  .././source/UIObjects/UIObject.hpp
@@ -13,14 +14,22 @@ CMakeFiles/Ubuntu.dir/main.cpp.o
  /home/alex/Game/SFML/Ubuntu/source/Main/Core.hpp
  /home/alex/Game/SFML/Ubuntu/source/Main/Interface.hpp
  /home/alex/Game/SFML/Ubuntu/source/Tools/Queue.hpp
+CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o
+ .././source/Tools/ICMessage.h
+ /home/alex/Game/SFML/Ubuntu/source/GameObjects/GameInformation.cpp
+ /home/alex/Game/SFML/Ubuntu/source/GameObjects/GameInformation.h
 CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o
+ .././source/GameObjects/GameInformation.h
+ .././source/Tools/ICMessage.h
  .././source/Tools/Queue.hpp
  /home/alex/Game/SFML/Ubuntu/source/Main/Core.cpp
  /home/alex/Game/SFML/Ubuntu/source/Main/Core.hpp
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o
+ .././source/GameObjects/GameInformation.h
  .././source/Scenes/MenuScene.hpp
  .././source/Scenes/Scene.hpp
  .././source/Scenes/SceneEvent.hpp
+ .././source/Tools/ICMessage.h
  .././source/Tools/Queue.hpp
  .././source/Tools/Time.h
  .././source/UIObjects/Buttons/Button.hpp
@@ -29,9 +38,6 @@ CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o
  .././source/UIObjects/UIinformation.h
  /home/alex/Game/SFML/Ubuntu/source/Main/Interface.cpp
  /home/alex/Game/SFML/Ubuntu/source/Main/Interface.hpp
-CMakeFiles/Ubuntu.dir/source/Main/Pipes.cpp.o
- /home/alex/Game/SFML/Ubuntu/source/Main/Pipes.cpp
- /home/alex/Game/SFML/Ubuntu/source/Main/Pipes.h
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o
  .././source/Scenes/Scene.hpp
  .././source/Scenes/SceneEvent.hpp
@@ -57,6 +63,9 @@ CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o
 CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o
  /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.cpp
  /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
+CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o
+ /home/alex/Game/SFML/Ubuntu/source/Tools/ICMessage.cpp
+ /home/alex/Game/SFML/Ubuntu/source/Tools/ICMessage.h
 CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.o
  /home/alex/Game/SFML/Ubuntu/source/Tools/Queue.cpp
  /home/alex/Game/SFML/Ubuntu/source/Tools/Queue.hpp

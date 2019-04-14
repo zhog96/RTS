@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+source/GameObjects/GameInformation.o: source/GameObjects/GameInformation.cpp.o
+
+.PHONY : source/GameObjects/GameInformation.o
+
+# target to build an object file
+source/GameObjects/GameInformation.cpp.o:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o
+.PHONY : source/GameObjects/GameInformation.cpp.o
+
+source/GameObjects/GameInformation.i: source/GameObjects/GameInformation.cpp.i
+
+.PHONY : source/GameObjects/GameInformation.i
+
+# target to preprocess a source file
+source/GameObjects/GameInformation.cpp.i:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.i
+.PHONY : source/GameObjects/GameInformation.cpp.i
+
+source/GameObjects/GameInformation.s: source/GameObjects/GameInformation.cpp.s
+
+.PHONY : source/GameObjects/GameInformation.s
+
+# target to generate assembly for a file
+source/GameObjects/GameInformation.cpp.s:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.s
+.PHONY : source/GameObjects/GameInformation.cpp.s
+
 source/Main/Core.o: source/Main/Core.cpp.o
 
 .PHONY : source/Main/Core.o
@@ -203,33 +230,6 @@ source/Main/Interface.s: source/Main/Interface.cpp.s
 source/Main/Interface.cpp.s:
 	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.s
 .PHONY : source/Main/Interface.cpp.s
-
-source/Main/Pipes.o: source/Main/Pipes.cpp.o
-
-.PHONY : source/Main/Pipes.o
-
-# target to build an object file
-source/Main/Pipes.cpp.o:
-	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Main/Pipes.cpp.o
-.PHONY : source/Main/Pipes.cpp.o
-
-source/Main/Pipes.i: source/Main/Pipes.cpp.i
-
-.PHONY : source/Main/Pipes.i
-
-# target to preprocess a source file
-source/Main/Pipes.cpp.i:
-	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Main/Pipes.cpp.i
-.PHONY : source/Main/Pipes.cpp.i
-
-source/Main/Pipes.s: source/Main/Pipes.cpp.s
-
-.PHONY : source/Main/Pipes.s
-
-# target to generate assembly for a file
-source/Main/Pipes.cpp.s:
-	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Main/Pipes.cpp.s
-.PHONY : source/Main/Pipes.cpp.s
 
 source/Scenes/MenuScene.o: source/Scenes/MenuScene.cpp.o
 
@@ -311,6 +311,33 @@ source/Scenes/SceneEvent.s: source/Scenes/SceneEvent.cpp.s
 source/Scenes/SceneEvent.cpp.s:
 	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.s
 .PHONY : source/Scenes/SceneEvent.cpp.s
+
+source/Tools/ICMessage.o: source/Tools/ICMessage.cpp.o
+
+.PHONY : source/Tools/ICMessage.o
+
+# target to build an object file
+source/Tools/ICMessage.cpp.o:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o
+.PHONY : source/Tools/ICMessage.cpp.o
+
+source/Tools/ICMessage.i: source/Tools/ICMessage.cpp.i
+
+.PHONY : source/Tools/ICMessage.i
+
+# target to preprocess a source file
+source/Tools/ICMessage.cpp.i:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.i
+.PHONY : source/Tools/ICMessage.cpp.i
+
+source/Tools/ICMessage.s: source/Tools/ICMessage.cpp.s
+
+.PHONY : source/Tools/ICMessage.s
+
+# target to generate assembly for a file
+source/Tools/ICMessage.cpp.s:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.s
+.PHONY : source/Tools/ICMessage.cpp.s
 
 source/Tools/Queue.o: source/Tools/Queue.cpp.o
 
@@ -540,15 +567,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... source/GameObjects/GameInformation.o"
+	@echo "... source/GameObjects/GameInformation.i"
+	@echo "... source/GameObjects/GameInformation.s"
 	@echo "... source/Main/Core.o"
 	@echo "... source/Main/Core.i"
 	@echo "... source/Main/Core.s"
 	@echo "... source/Main/Interface.o"
 	@echo "... source/Main/Interface.i"
 	@echo "... source/Main/Interface.s"
-	@echo "... source/Main/Pipes.o"
-	@echo "... source/Main/Pipes.i"
-	@echo "... source/Main/Pipes.s"
 	@echo "... source/Scenes/MenuScene.o"
 	@echo "... source/Scenes/MenuScene.i"
 	@echo "... source/Scenes/MenuScene.s"
@@ -558,6 +585,9 @@ help:
 	@echo "... source/Scenes/SceneEvent.o"
 	@echo "... source/Scenes/SceneEvent.i"
 	@echo "... source/Scenes/SceneEvent.s"
+	@echo "... source/Tools/ICMessage.o"
+	@echo "... source/Tools/ICMessage.i"
+	@echo "... source/Tools/ICMessage.s"
 	@echo "... source/Tools/Queue.o"
 	@echo "... source/Tools/Queue.i"
 	@echo "... source/Tools/Queue.s"
