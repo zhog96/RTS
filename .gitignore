@@ -1,4 +1,8 @@
 .DS_Store
-*
-!SFML/Ubuntu/main.cpp
-!SFML/Ubuntu/source*
+/*
+!/SFML
+/SFML/*
+!/SFML/Ubuntu
+/SFML/Ubuntu/*
+!/SFML/Ubuntu/main.cpp
+!/SFML/Ubuntu/source
