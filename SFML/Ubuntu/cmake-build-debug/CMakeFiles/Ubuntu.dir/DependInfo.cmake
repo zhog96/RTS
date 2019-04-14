@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/alex/Game/SFML/Ubuntu/source/GameObjects/GameInformation.cpp" "/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o"
   "/home/alex/Game/SFML/Ubuntu/source/Main/Core.cpp" "/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o"
   "/home/alex/Game/SFML/Ubuntu/source/Main/Interface.cpp" "/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o"
+  "/home/alex/Game/SFML/Ubuntu/source/Scenes/GameScene.cpp" "/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o"
   "/home/alex/Game/SFML/Ubuntu/source/Scenes/MenuScene.cpp" "/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o"
   "/home/alex/Game/SFML/Ubuntu/source/Scenes/Scene.cpp" "/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o"
   "/home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.cpp" "/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o"

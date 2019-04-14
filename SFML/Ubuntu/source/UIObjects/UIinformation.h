@@ -6,7 +6,7 @@
 
 class UIinformation {
 public:
-    typedef enum {NoAction, Exit, MenuScene} Scenes;
+    typedef enum {NoAction, Exit, MenuScene, GameScene} Scenes;
     static bool bPressed[255];
     static sf::Vector2<double> mPos;
     static bool clicked;
