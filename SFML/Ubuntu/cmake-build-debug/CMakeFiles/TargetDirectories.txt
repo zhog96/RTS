@@ -1,3 +1,0 @@
-/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir
-/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/edit_cache.dir

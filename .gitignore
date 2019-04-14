@@ -1,2 +1,4 @@
 .DS_Store
-SFML/Ubuntu/.idea/workspace.xml
+*
+!SFML/Ubuntu/main.cpp
+!SFML/Ubuntu/source*
