@@ -7,6 +7,7 @@
 #include "source/UIObjects/UIinformation.h"
 #include "source/Tools/Time.h"
 #include "source/UIObjects/DrawArray.h"
+#include "source/GameObjects/GameInformation.h"
 
 sf::RenderWindow Interface::window;
 Scene * Interface::scene = NULL;
@@ -105,11 +106,12 @@ int Interface::run() {
         window.clear();
         DrawArray::draw();
         scene->draw();//???
-        
+
         window.display();
 
         if(scene->getChange() == UIinformation::Scenes::Exit) {
             window.close();
+            GameInformation::IntCoreQ.push(ICMessage(ICMessage::types::endStep, -1, -1, -1, -1));
         }
     }
 }

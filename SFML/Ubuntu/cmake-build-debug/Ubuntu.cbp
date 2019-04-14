@@ -89,6 +89,12 @@
 		<Unit filename="/home/alex/Game/SFML/Ubuntu/main.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
+		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/GameObjects/GameInformation.cpp">
+			<Option target="Ubuntu"/>
+		</Unit>
+		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/GameObjects/GameInformation.h">
+			<Option target="Ubuntu"/>
+		</Unit>
 		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Main/Core.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
@@ -99,12 +105,6 @@
 			<Option target="Ubuntu"/>
 		</Unit>
 		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Main/Interface.hpp">
-			<Option target="Ubuntu"/>
-		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Main/Pipes.cpp">
-			<Option target="Ubuntu"/>
-		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Main/Pipes.h">
 			<Option target="Ubuntu"/>
 		</Unit>
 		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Scenes/MenuScene.cpp">
@@ -123,6 +123,12 @@
 			<Option target="Ubuntu"/>
 		</Unit>
 		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.hpp">
+			<Option target="Ubuntu"/>
+		</Unit>
+		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/ICMessage.cpp">
+			<Option target="Ubuntu"/>
+		</Unit>
+		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/ICMessage.h">
 			<Option target="Ubuntu"/>
 		</Unit>
 		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/Queue.cpp">
