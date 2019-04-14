@@ -14,7 +14,7 @@
 
 void interfaceDaemon() {
     Interface::initInterface();
-    printf("interfaceDaemon start\n"); 
+    printf("interfaceDaemon start\n");
     Interface::run();
     printf("interfaceDaemon stop\n");
 }

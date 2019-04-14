@@ -64,6 +64,8 @@ void drawGL() {
 */
 
 
+//trololo
+
 int Interface::initInterface() {
     window.create(sf::VideoMode(1920, 1080), "SFML window");
     UIinformation::window = &window;
