@@ -123,7 +123,7 @@ int Interface::run() {
                 break;
             case UIinformation::Scenes::Exit:
                 DrawArray::clear();
-                GameInformation::IntCoreQ.push(ICMessage(ICMessage::types::endStep, -1, -1, -1, -1));
+                GameInformation::IntCoreQ.push(ICMessage(ICMessage::types::I, -1, -1, -1, -1));
                 window.close();
                 break;
         }
