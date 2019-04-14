@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+.././source/Scenes/SceneEvent.hpp
+
+.././source/UIObjects/UIinformation.h
+queue
+-
+SFML/Graphics.hpp
+-
+source/Scenes/SceneEvent.hpp
+.././source/UIObjects/source/Scenes/SceneEvent.hpp
+
+/home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.cpp
+source/UIObjects/UIinformation.h
+-
+DrawArray.h
+/home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.h
+
+/home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.h
+SFML/Graphics.hpp
+-
+vector
+-
+
