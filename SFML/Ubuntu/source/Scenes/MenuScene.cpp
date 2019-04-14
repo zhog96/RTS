@@ -9,6 +9,23 @@
 #include <vector>
 
 int MenuScene::process() {
+    int aliveCount = 0;
+    for(int i = 0; i < uiobjects.size(); i++) {
+        if (!uiobjects[i]->destructed()) {
+            aliveCount++;
+        } else {
+            delete uiobjects[i];
+        }
+    }
+    std::vector<UIObject *> vec(aliveCount, NULL);
+    for(int i = 0, j = 0; i < uiobjects.size(); i++) {
+        if (!uiobjects[i]->destructed()) {
+            vec[j] = uiobjects[i];
+            j++;
+        }
+    }
+    uiobjects = vec;
+
     for(int i = 0; i < uiobjects.size(); i++) {
         uiobjects[i]->process();
     }
@@ -18,9 +35,9 @@ int MenuScene::process() {
     bool click = UIinformation::clicked;
     sf::Vector2i mouse = sf::Vector2i(UIinformation::mPos);
     if(click) {
-        std::vector<sf::Vector2i> vec = {DrawArray::addToLayer(1, sf::IntRect(-100, -100, 16, 16),
+        std::vector<sf::Vector2i> vec = {DrawArray::addToLayer(1, sf::IntRect(-100, -100, 4, 4),
                                          sf::IntRect(0, 0, 4, 4))};
-        uiobjects.push_back(new FancyCubes(2, &vec, mouse, 1));
+        uiobjects.push_back(new FancyCubes(3, &vec, mouse, 10));
     }
 
 

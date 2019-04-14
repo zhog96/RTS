@@ -96,6 +96,7 @@ CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o
  /home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.h
 CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o
  .././source/Scenes/SceneEvent.hpp
+ .././source/Tools/Time.h
  /home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.h
  /home/alex/Game/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.cpp
  /home/alex/Game/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.h
