@@ -25,6 +25,7 @@ CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o: ../source/Main/Core.cpp
 CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o: ../source/Main/Core.hpp
 
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: .././source/GameObjects/GameInformation.h
+CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: .././source/Scenes/GameScene.h
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: .././source/Scenes/MenuScene.hpp
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: .././source/Scenes/Scene.hpp
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: .././source/Scenes/SceneEvent.hpp
@@ -37,6 +38,19 @@ CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: .././source/UIObjects/UIObjec
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: .././source/UIObjects/UIinformation.h
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: ../source/Main/Interface.cpp
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: ../source/Main/Interface.hpp
+
+CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: .././source/Scenes/Scene.hpp
+CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: .././source/Scenes/SceneEvent.hpp
+CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: .././source/Tools/Time.h
+CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: .././source/UIObjects/Buttons/Button.hpp
+CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: .././source/UIObjects/Buttons/FunnyButton.h
+CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: .././source/UIObjects/DrawArray.h
+CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: .././source/UIObjects/Effects/FancyCubes.h
+CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: .././source/UIObjects/UIObject.hpp
+CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: .././source/UIObjects/UIinformation.h
+CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: ../source/Scenes/GameScene.cpp
+CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: ../source/Scenes/GameScene.h
+CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: ../source/Scenes/SceneEvent.hpp
 
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/Scenes/Scene.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/Scenes/SceneEvent.hpp

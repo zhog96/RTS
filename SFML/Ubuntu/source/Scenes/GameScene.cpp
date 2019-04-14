@@ -1,4 +1,4 @@
-#include "MenuScene.hpp"
+#include "GameScene.h"
 #include "source/UIObjects/Buttons/Button.hpp"
 #include "source/UIObjects/Buttons/FunnyButton.h"
 #include "SceneEvent.hpp"
@@ -8,7 +8,7 @@
 
 #include <vector>
 
-int MenuScene::process() {
+int GameScene::process() {
     int aliveCount = 0;
     for(int i = 0; i < uiobjects.size(); i++) {
         if (!uiobjects[i]->destructed()) {
@@ -36,7 +36,7 @@ int MenuScene::process() {
     sf::Vector2i mouse = sf::Vector2i(UIinformation::mPos);
     if(click) {
         std::vector<sf::Vector2i> vec = {DrawArray::addToLayer(1, sf::IntRect(-100, -100, 2, 2),
-                                         sf::IntRect(0, 0, 4, 4))};
+                                                               sf::IntRect(0, 0, 4, 4))};
         uiobjects.push_back(new FancyCubes(2, &vec, mouse, 10));
     }
 
@@ -48,7 +48,7 @@ int MenuScene::process() {
         SceneEvent event = events->front();
         events->pop();
         if (event.eCode == SceneEvent::Pressed && event.id == Events::Exit) {
-            changeTo = UIinformation::Scenes::Exit;
+            changeTo = UIinformation::Scenes::MenuScene;
         } else if (event.eCode == SceneEvent::Pressed && event.id == Events::Play) {
             changeTo = UIinformation::Scenes::GameScene;
         }
@@ -59,11 +59,11 @@ int MenuScene::process() {
     return 0;
 }
 
-int MenuScene::draw() {
+int GameScene::draw() {
     //???
 }
 
-MenuScene::MenuScene() : Scene() {
+GameScene::GameScene() : Scene() {
     for(int i = 0; i < 2; i++)
         textures.emplace_back(sf::Texture());
     textures[Textures::BackGroundT].loadFromFile("../textures/MainMenu/MainMenuBG.jpg");
@@ -81,11 +81,11 @@ MenuScene::MenuScene() : Scene() {
     vertex.emplace_back(sf::Vertex(sf::Vector2f(0.f, 1080.f), sf::Vector2f(0.f, 1080.f)));
     BGid = DrawArray::addToLayer(0, vertex);
 
-    sf::Text textBG("Stratagy game", fonts[0], 180);
+    sf::Text textBG("GameScene", fonts[0], 180);
     textBG.setFillColor(sf::Color::Red);
     HeadTextid = DrawArray::addTextToLayer(0, textBG);
     DrawArray::updateText(HeadTextid, sf::Vector2f(sf::Vector2i(1920, 0) / 2
-    - sf::Vector2i(DrawArray::getTextSize(HeadTextid).x, -100) / 2));
+                                                   - sf::Vector2i(DrawArray::getTextSize(HeadTextid).x, -100) / 2));
 
     sf::Text text("Play", fonts[0], 120);
     text.setFillColor(sf::Color::White);

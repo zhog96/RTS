@@ -19,5 +19,6 @@ public:
     static sf::Vector2f getPos(sf::Vector2i id);
     static sf::Vector2i getSize(sf::Vector2i id);
     static sf::IntRect getSourceRect(sf::Vector2i id);
+    static int clear();
     static int draw();
 };

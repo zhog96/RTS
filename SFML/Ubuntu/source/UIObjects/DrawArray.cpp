@@ -1,16 +1,15 @@
 #include <source/UIObjects/UIinformation.h>
 #include "DrawArray.h"
 
-const int DrawArray::N = 3;
+const int DrawArray::N = 4;
 
 std::vector<sf::VertexArray> DrawArray::layers(N, sf::VertexArray(sf::Quads));
 std::vector<std::vector<sf::Text>> DrawArray::texts(N, std::vector<sf::Text>());
-std::vector<sf::Texture *> DrawArray::textures(N, NULL);
+std::vector<sf::Texture *> DrawArray::textures(N, nullptr);
 
 sf::Vector2i DrawArray::addTextToLayer(int layer, sf::Text& text) {
     texts[layer].emplace_back(text);
     return sf::Vector2i(layer, texts[layer].size() - 1);
-
 }
 
 int DrawArray::erase(sf::Vector2i id) {
@@ -28,6 +27,16 @@ int DrawArray::updateText(sf::Vector2i _id, sf::Vector2f pos) {
 sf::Vector2i DrawArray::getTextSize(sf::Vector2i id) {
     sf::FloatRect rect = texts[id.x][id.y].getLocalBounds();
     return sf::Vector2i(rect.width, 4.0 / 3.0 * texts[id.x][id.y].getCharacterSize());
+}
+
+int DrawArray::clear() {
+    for(int i = 0; i < N; i++) {
+        layers[i].clear();
+        texts[i].clear();
+        if(textures[i] != nullptr) {
+            textures[i] = nullptr;
+        }
+    }
 }
 
 sf::Vector2i DrawArray::addToLayer(int layer, sf::IntRect rectPos, sf::IntRect rectText) {
@@ -74,7 +83,7 @@ int DrawArray::setLayerTexture(int layer, sf::Texture *texture) {
 
 int DrawArray::draw() {
     for(int i = 0; i < N; i++) {
-        UIinformation::window->draw(layers[i], textures[i]);
+        if(textures[i] != NULL) UIinformation::window->draw(layers[i], textures[i]);
         for(int j = 0; j < texts[i].size(); j++) {
             UIinformation::window->draw(texts[i][j]);
         }
