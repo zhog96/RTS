@@ -5,36 +5,36 @@
 		<Option title="Ubuntu"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\share\;CMake Files\..\..\..\..\..\usr\share\SFML\;CMake Files\..\..\..\..\..\usr\share\SFML\cmake\;CMake Files\..\..\..\..\..\usr\share\SFML\cmake\Modules\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\share\;CMake Files\..\..\..\..\..\..\usr\share\SFML\;CMake Files\..\..\..\..\..\..\usr\share\SFML\cmake\;CMake Files\..\..\..\..\..\..\usr\share\SFML\cmake\Modules\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/alex/Game/SFML/Ubuntu/cmake-build-debug"/>
+				<Option working_dir="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/alex/Game/SFML/Ubuntu/cmake-build-debug"/>
+				<Option working_dir="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Ubuntu">
-				<Option output="/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Ubuntu" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alex/Game/SFML/Ubuntu/cmake-build-debug"/>
+				<Option output="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Ubuntu" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/alex/Game/SFML/Ubuntu/."/>
+					<Add directory="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/."/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -45,20 +45,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ubuntu"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ubuntu"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Ubuntu/fast">
-				<Option output="/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Ubuntu" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alex/Game/SFML/Ubuntu/cmake-build-debug"/>
+				<Option output="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Ubuntu" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/alex/Game/SFML/Ubuntu/."/>
+					<Add directory="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/."/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -69,121 +69,121 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ubuntu/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ubuntu/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/alex/Game/SFML/Ubuntu/cmake-build-debug"/>
+				<Option working_dir="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alex/Game/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/main.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/main.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/GameObjects/GameInformation.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/GameObjects/GameInformation.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/GameObjects/GameInformation.h">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/GameObjects/GameInformation.h">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Main/Core.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Main/Core.hpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.hpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Main/Interface.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Interface.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Main/Interface.hpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Interface.hpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Scenes/MenuScene.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/MenuScene.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Scenes/MenuScene.hpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/MenuScene.hpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Scenes/Scene.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/Scene.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Scenes/Scene.hpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/Scene.hpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.hpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.hpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/ICMessage.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/ICMessage.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/ICMessage.h">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/ICMessage.h">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/Queue.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/Queue.hpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.hpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/Time.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Time.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/Tools/Time.h">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Time.h">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/Button.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/Button.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/Button.hpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/Button.hpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.h">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.h">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/DrawArray.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.h">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/DrawArray.h">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.h">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.h">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/UIObject.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/UIObject.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/UIObject.hpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/UIObject.hpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/UIinformation.cpp">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/UIinformation.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/source/UIObjects/UIinformation.h">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/UIinformation.h">
 			<Option target="Ubuntu"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/CMakeLists.txt">
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/alex/Game/SFML/Ubuntu/../../../../../usr/share/SFML/cmake/Modules/FindSFML.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\SFML\cmake\Modules\"/>
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/../../../../../../usr/share/SFML/cmake/Modules/FindSFML.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\share\SFML\cmake\Modules\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

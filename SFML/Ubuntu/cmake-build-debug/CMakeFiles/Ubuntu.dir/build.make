@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/clion-2019.1/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/sysak_ma/CLion/clion-2019.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /opt/clion-2019.1/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/sysak_ma/CLion/clion-2019.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alex/Game/SFML/Ubuntu
+CMAKE_SOURCE_DIR = /home/sysak_ma/Desktop/RTS/SFML/Ubuntu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alex/Game/SFML/Ubuntu/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Ubuntu.dir/depend.make
@@ -59,211 +59,211 @@ include CMakeFiles/Ubuntu.dir/flags.make
 
 CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o: ../source/Main/Core.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/Main/Core.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.cpp
 
 CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/Main/Core.cpp > CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.cpp > CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/Main/Core.cpp -o CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.cpp -o CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: ../source/Main/Interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/Main/Interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Interface.cpp
 
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/Main/Interface.cpp > CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Interface.cpp > CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/Main/Interface.cpp -o CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Interface.cpp -o CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: ../source/Scenes/MenuScene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/Scenes/MenuScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/MenuScene.cpp
 
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/Scenes/MenuScene.cpp > CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/MenuScene.cpp > CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/Scenes/MenuScene.cpp -o CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/MenuScene.cpp -o CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o: ../source/Scenes/Scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/Scenes/Scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/Scene.cpp
 
 CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/Scenes/Scene.cpp > CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/Scene.cpp > CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/Scenes/Scene.cpp -o CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/Scene.cpp -o CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o: ../source/Scenes/SceneEvent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.cpp
 
 CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.cpp > CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.cpp > CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/Scenes/SceneEvent.cpp -o CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.cpp -o CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.o: ../source/UIObjects/Buttons/Button.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/Button.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/Button.cpp
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/Button.cpp > CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/Button.cpp > CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/Button.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/Button.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/Button.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o: ../source/UIObjects/UIObject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/UIObject.cpp
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIObject.cpp > CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/UIObject.cpp > CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIObject.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/UIObject.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/UIObject.cpp.s
 
 CMakeFiles/Ubuntu.dir/main.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Ubuntu.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/main.cpp.o -c /home/alex/Game/SFML/Ubuntu/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Ubuntu.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/main.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/main.cpp
 
 CMakeFiles/Ubuntu.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/main.cpp > CMakeFiles/Ubuntu.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/main.cpp > CMakeFiles/Ubuntu.dir/main.cpp.i
 
 CMakeFiles/Ubuntu.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/main.cpp -o CMakeFiles/Ubuntu.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/main.cpp -o CMakeFiles/Ubuntu.dir/main.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.o: ../source/Tools/Queue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/Tools/Queue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.cpp
 
 CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/Tools/Queue.cpp > CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.cpp > CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/Tools/Queue.cpp -o CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Queue.cpp -o CMakeFiles/Ubuntu.dir/source/Tools/Queue.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.o: ../source/UIObjects/UIinformation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIinformation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/UIinformation.cpp
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIinformation.cpp > CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/UIinformation.cpp > CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/UIObjects/UIinformation.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/UIinformation.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/UIinformation.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.o: ../source/Tools/Time.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/Tools/Time.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Time.cpp
 
 CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/Tools/Time.cpp > CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Time.cpp > CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/Tools/Time.cpp -o CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/Time.cpp -o CMakeFiles/Ubuntu.dir/source/Tools/Time.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o: ../source/UIObjects/Buttons/FunnyButton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.cpp
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.cpp > CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.cpp > CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Buttons/FunnyButton.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/Buttons/FunnyButton.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o: ../source/UIObjects/DrawArray.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/DrawArray.cpp
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.cpp > CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/DrawArray.cpp > CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/DrawArray.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o: ../source/UIObjects/Effects/FancyCubes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.cpp
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.cpp > CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.cpp > CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/UIObjects/Effects/FancyCubes.cpp -o CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o: ../source/GameObjects/GameInformation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/GameObjects/GameInformation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/GameObjects/GameInformation.cpp
 
 CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/GameObjects/GameInformation.cpp > CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/GameObjects/GameInformation.cpp > CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/GameObjects/GameInformation.cpp -o CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/GameObjects/GameInformation.cpp -o CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.s
 
 CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o: CMakeFiles/Ubuntu.dir/flags.make
 CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o: ../source/Tools/ICMessage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o -c /home/alex/Game/SFML/Ubuntu/source/Tools/ICMessage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o -c /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/ICMessage.cpp
 
 CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Game/SFML/Ubuntu/source/Tools/ICMessage.cpp > CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/ICMessage.cpp > CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.i
 
 CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Game/SFML/Ubuntu/source/Tools/ICMessage.cpp -o CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Tools/ICMessage.cpp -o CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.s
 
 # Object files for target Ubuntu
 Ubuntu_OBJECTS = \
@@ -310,7 +310,7 @@ Ubuntu: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so
 Ubuntu: /usr/lib/x86_64-linux-gnu/libsfml-network.so
 Ubuntu: /usr/lib/x86_64-linux-gnu/libsfml-audio.so
 Ubuntu: CMakeFiles/Ubuntu.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable Ubuntu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable Ubuntu"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Ubuntu.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -323,6 +323,6 @@ CMakeFiles/Ubuntu.dir/clean:
 .PHONY : CMakeFiles/Ubuntu.dir/clean
 
 CMakeFiles/Ubuntu.dir/depend:
-	cd /home/alex/Game/SFML/Ubuntu/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alex/Game/SFML/Ubuntu /home/alex/Game/SFML/Ubuntu /home/alex/Game/SFML/Ubuntu/cmake-build-debug /home/alex/Game/SFML/Ubuntu/cmake-build-debug /home/alex/Game/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sysak_ma/Desktop/RTS/SFML/Ubuntu /home/sysak_ma/Desktop/RTS/SFML/Ubuntu /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Ubuntu.dir/depend
 

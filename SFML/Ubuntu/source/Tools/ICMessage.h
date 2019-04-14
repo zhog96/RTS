@@ -4,7 +4,8 @@
 
 class ICMessage {
 public:
-    typedef enum {changeUnit, changeBuilding, endStep, moveUnit, movedUnit, actionError} types;
+    typedef enum {changeUnit, changeBuilding, endStep, movedUnit} typesI;
+    typedef enum {actionError, moveUnit} typesC;
     int type;
     int id;
     int newState;

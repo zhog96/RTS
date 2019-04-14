@@ -6,7 +6,7 @@
 bool Core::stoped = false;
 
 int Core::initCore() {}
-
+/*
 int Core::processMessage(ICMessage m) {
     if (m.type == ICMessage::types::endStep) {
         stop();
@@ -43,6 +43,18 @@ int Core::processMessage(ICMessage m) {
         GameInformation::playMap[m.destination1][m.destination2].occupied = true;
         GameInformation::playMap[m.destination1][m.destination2].occupierType = 0;
         GameInformation::playMap[m.destination1][m.destination2].occupierId = m.id;
+    }
+}
+*/
+
+int Core::processMessage(ICMessage m) {
+    if (m.type == ICMessage::typesI::endStep) {
+        stop();
+        printf(" \" Core \": Caught message from Interface\n");
+        return 1;
+        // break;
+    } else if (m.type == ICMessage::typesI::changeUnit) {
+        GameInformation::CoreIntQ.push(ICMessage(ICMessage::typesC::actionError, -1, -1, -1, -1));
     }
 }
 
