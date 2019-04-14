@@ -13,6 +13,12 @@ sf::Vector2i DrawArray::addTextToLayer(int layer, sf::Text& text) {
 
 }
 
+int DrawArray::erase(sf::Vector2i id) {
+    for(int i = 0; i < 4; i++) {
+        layers[id.x][(4 * id.y) + i] = sf::Vertex(sf::Vector2f(0.0f, 0.0f), sf::Vector2f(0.0f, 0.0f));
+    }
+}
+
 int DrawArray::updateText(sf::Vector2i _id, sf::Vector2f pos) {
     int layer = _id.x;
     int id = _id.y;

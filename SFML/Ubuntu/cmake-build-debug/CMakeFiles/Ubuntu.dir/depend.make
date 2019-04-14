@@ -95,6 +95,7 @@ CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o: ../source/UIObjects/Draw
 CMakeFiles/Ubuntu.dir/source/UIObjects/DrawArray.cpp.o: ../source/UIObjects/DrawArray.h
 
 CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o: .././source/Scenes/SceneEvent.hpp
+CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o: .././source/Tools/Time.h
 CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o: ../source/UIObjects/DrawArray.h
 CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o: ../source/UIObjects/Effects/FancyCubes.cpp
 CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o: ../source/UIObjects/Effects/FancyCubes.h
