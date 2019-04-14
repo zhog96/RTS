@@ -39,6 +39,9 @@ CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: .././source/UIObjects/UIinfor
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: ../source/Main/Interface.cpp
 CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o: ../source/Main/Interface.hpp
 
+<<<<<<< HEAD
+CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/GameObjects/GameInformation.h
+=======
 CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: .././source/Scenes/Scene.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: .././source/Scenes/SceneEvent.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: .././source/Tools/Time.h
@@ -52,8 +55,10 @@ CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: ../source/Scenes/GameScene.
 CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: ../source/Scenes/GameScene.h
 CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o: ../source/Scenes/SceneEvent.hpp
 
+>>>>>>> 2e7c7ea856955ee78419cab85de97fa72a276ef1
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/Scenes/Scene.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/Scenes/SceneEvent.hpp
+CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/Tools/ICMessage.h
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/Tools/Time.h
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/UIObjects/Buttons/Button.hpp
 CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o: .././source/UIObjects/Buttons/FunnyButton.h
