@@ -107,6 +107,12 @@
 		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Interface.hpp">
 			<Option target="Ubuntu"/>
 		</Unit>
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/GameScene.cpp">
+			<Option target="Ubuntu"/>
+		</Unit>
+		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/GameScene.h">
+			<Option target="Ubuntu"/>
+		</Unit>
 		<Unit filename="/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/MenuScene.cpp">
 			<Option target="Ubuntu"/>
 		</Unit>

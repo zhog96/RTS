@@ -231,6 +231,33 @@ source/Main/Interface.cpp.s:
 	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.s
 .PHONY : source/Main/Interface.cpp.s
 
+source/Scenes/GameScene.o: source/Scenes/GameScene.cpp.o
+
+.PHONY : source/Scenes/GameScene.o
+
+# target to build an object file
+source/Scenes/GameScene.cpp.o:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o
+.PHONY : source/Scenes/GameScene.cpp.o
+
+source/Scenes/GameScene.i: source/Scenes/GameScene.cpp.i
+
+.PHONY : source/Scenes/GameScene.i
+
+# target to preprocess a source file
+source/Scenes/GameScene.cpp.i:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.i
+.PHONY : source/Scenes/GameScene.cpp.i
+
+source/Scenes/GameScene.s: source/Scenes/GameScene.cpp.s
+
+.PHONY : source/Scenes/GameScene.s
+
+# target to generate assembly for a file
+source/Scenes/GameScene.cpp.s:
+	$(MAKE) -f CMakeFiles/Ubuntu.dir/build.make CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.s
+.PHONY : source/Scenes/GameScene.cpp.s
+
 source/Scenes/MenuScene.o: source/Scenes/MenuScene.cpp.o
 
 .PHONY : source/Scenes/MenuScene.o
@@ -576,6 +603,9 @@ help:
 	@echo "... source/Main/Interface.o"
 	@echo "... source/Main/Interface.i"
 	@echo "... source/Main/Interface.s"
+	@echo "... source/Scenes/GameScene.o"
+	@echo "... source/Scenes/GameScene.i"
+	@echo "... source/Scenes/GameScene.s"
 	@echo "... source/Scenes/MenuScene.o"
 	@echo "... source/Scenes/MenuScene.i"
 	@echo "... source/Scenes/MenuScene.s"

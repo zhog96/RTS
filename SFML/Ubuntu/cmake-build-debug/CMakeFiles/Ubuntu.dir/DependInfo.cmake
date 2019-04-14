@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/GameObjects/GameInformation.cpp" "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o"
   "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Core.cpp" "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/Main/Core.cpp.o"
   "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Main/Interface.cpp" "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/Main/Interface.cpp.o"
+  "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/GameScene.cpp" "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o"
   "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/MenuScene.cpp" "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/Scenes/MenuScene.cpp.o"
   "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/Scene.cpp" "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/Scenes/Scene.cpp.o"
   "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.cpp" "/home/sysak_ma/Desktop/RTS/SFML/Ubuntu/cmake-build-debug/CMakeFiles/Ubuntu.dir/source/Scenes/SceneEvent.cpp.o"

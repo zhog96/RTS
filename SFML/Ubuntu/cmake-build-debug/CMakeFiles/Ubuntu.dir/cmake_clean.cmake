@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ubuntu.dir/source/UIObjects/Effects/FancyCubes.cpp.o"
   "CMakeFiles/Ubuntu.dir/source/GameObjects/GameInformation.cpp.o"
   "CMakeFiles/Ubuntu.dir/source/Tools/ICMessage.cpp.o"
+  "CMakeFiles/Ubuntu.dir/source/Scenes/GameScene.cpp.o"
   "Ubuntu.pdb"
   "Ubuntu"
 )

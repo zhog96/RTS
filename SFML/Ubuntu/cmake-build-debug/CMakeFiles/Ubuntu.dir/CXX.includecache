@@ -30,6 +30,7 @@ source/UIObjects/Buttons/Button.hpp
 
 .././source/Scenes/SceneEvent.hpp
 
+<<<<<<< HEAD
 .././source/Tools/ICMessage.h
 
 .././source/Tools/Queue.hpp
@@ -55,20 +56,36 @@ Button.hpp
 .././source/UIObjects/Buttons/Button.hpp
 
 .././source/UIObjects/DrawArray.h
+=======
+.././source/UIObjects/UIinformation.h
+queue
+-
+>>>>>>> 2e7c7ea856955ee78419cab85de97fa72a276ef1
 SFML/Graphics.hpp
 -
-vector
--
+source/Scenes/SceneEvent.hpp
+.././source/UIObjects/source/Scenes/SceneEvent.hpp
 
+<<<<<<< HEAD
 .././source/UIObjects/Effects/FancyCubes.h
 ../UIObject.hpp
 .././source/UIObjects/UIObject.hpp
 
 .././source/UIObjects/UIObject.hpp
+=======
+/home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.cpp
+source/UIObjects/UIinformation.h
+-
+DrawArray.h
+/home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.h
+
+/home/alex/Game/SFML/Ubuntu/source/UIObjects/DrawArray.h
+>>>>>>> 2e7c7ea856955ee78419cab85de97fa72a276ef1
 SFML/Graphics.hpp
 -
 vector
 -
+<<<<<<< HEAD
 queue
 -
 UIObject.hpp
@@ -125,4 +142,6 @@ source/Scenes/Scene.hpp
 /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/source/Scenes/Scene.hpp
 
 /home/sysak_ma/Desktop/RTS/SFML/Ubuntu/source/Scenes/SceneEvent.hpp
+=======
+>>>>>>> 2e7c7ea856955ee78419cab85de97fa72a276ef1
 
