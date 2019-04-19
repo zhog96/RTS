@@ -2,6 +2,7 @@
 #include "source/UIObjects/Buttons/Button.hpp"
 #include "source/UIObjects/Buttons/FunnyButton.h"
 #include "SceneEvent.hpp"
+#include "source/UIObjects/Buttons/Tile.h"
 
 #include "source/UIObjects/DrawArray.h"
 #include "source/UIObjects/Effects/FancyCubes.h"
@@ -49,8 +50,6 @@ int GameScene::process() {
         events->pop();
         if (event.eCode == SceneEvent::Pressed && event.id == Events::Exit) {
             changeTo = UIinformation::Scenes::MenuScene;
-        } else if (event.eCode == SceneEvent::Pressed && event.id == Events::Play) {
-            changeTo = UIinformation::Scenes::GameScene;
         }
     }
 
@@ -67,7 +66,7 @@ GameScene::GameScene() : Scene() {
     for(int i = 0; i < 2; i++)
         textures.emplace_back(sf::Texture());
     textures[Textures::BackGroundT].loadFromFile("../textures/MainMenu/MainMenuBG.jpg");
-    textures[Textures::ButtonsT].loadFromFile("../textures/MainMenu/buttons.png");
+    textures[Textures::textureSheet].loadFromFile("../textures/GameScene/textureSheet.png");
 
     sf::Font font;
     font.loadFromFile("../fonts/arial.ttf");
@@ -81,27 +80,30 @@ GameScene::GameScene() : Scene() {
     vertex.emplace_back(sf::Vertex(sf::Vector2f(0.f, 1080.f), sf::Vector2f(0.f, 1080.f)));
     BGid = DrawArray::addToLayer(0, vertex);
 
-    sf::Text textBG("GameScene", fonts[0], 180);
-    textBG.setFillColor(sf::Color::Red);
-    HeadTextid = DrawArray::addTextToLayer(0, textBG);
-    DrawArray::updateText(HeadTextid, sf::Vector2f(sf::Vector2i(1920, 0) / 2
-                                                   - sf::Vector2i(DrawArray::getTextSize(HeadTextid).x, -100) / 2));
+    DrawArray::setLayerTexture(1, &textures[Textures::textureSheet]);
+    for (int i = 0; i < 60; i++) {
+        for (int j = 0; j < 25; j++) {
+            std::vector<sf::Vector2i> placeholder;
+            std::vector<sf::Vector2i> vec2 = {DrawArray::addToLayer(1, sf::IntRect(i * 32, j * 32, 1 * 32, 1 * 32), sf::IntRect(2 * 32, 0 * 32, 1 * 32, 1 * 32))};
+            uiobjects.push_back(new Tile(Events::Exit, &vec2, &placeholder));
+        }
+    }
 
-    sf::Text text("Play", fonts[0], 120);
+    DrawArray::setLayerTexture(2, &textures[Textures::textureSheet]);
+    std::vector<sf::Vertex> vertex2;
+    vertex2.emplace_back(sf::Vertex(sf::Vector2f(0.f, 720.f), sf::Vector2f(0.f, 0.f)));
+    vertex2.emplace_back(sf::Vertex(sf::Vector2f(1920.f, 720.f), sf::Vector2f(64.f, 0.f)));
+    vertex2.emplace_back(sf::Vertex(sf::Vector2f(1920.f, 1080.f), sf::Vector2f(64.f, 32.f)));
+    vertex2.emplace_back(sf::Vertex(sf::Vector2f(0.f, 1080.f), sf::Vector2f(0.f, 32.f)));
+    Panelid = DrawArray::addToLayer(2, vertex2);
+
+    DrawArray::setLayerTexture(3, &textures[Textures::textureSheet]);
+    sf::Text text = sf::Text("Exit", fonts[0], 120);
     text.setFillColor(sf::Color::White);
-    std::vector<sf::Vector2i> vect = {DrawArray::addTextToLayer(1, text)};
-    DrawArray::setLayerTexture(1, &textures[Textures::ButtonsT]);
-    std::vector<sf::Vector2i> vec = {DrawArray::addToLayer(1, sf::IntRect(22 * 32, 12 * 32, 16 * 32, 8 * 32), sf::IntRect(0 * 32, 0 * 32, 2 * 32, 1 * 32))};
-    uiobjects.push_back(new FunnyButton(Events::Play, &vec, &vect));
-
-    DrawArray::setLayerTexture(2, &textures[Textures::ButtonsT]);
-
-    text = sf::Text("Exit", fonts[0], 120);
-    text.setFillColor(sf::Color::White);
-    std::vector<sf::Vector2i> vec2t = {DrawArray::addTextToLayer(1, text)};
-    std::vector<sf::Vector2i> vec2 = {DrawArray::addToLayer(1, sf::IntRect(22 * 32, 22 * 32, 16 * 32, 8 * 32), sf::IntRect(0 * 32, 1 * 32, 2 * 32, 1 * 32))};
+    std::vector<sf::Vector2i> vec2t = {DrawArray::addTextToLayer(3, text)};
+    std::vector<sf::Vector2i> vec2 = {DrawArray::addToLayer(3, sf::IntRect(1850 - 16 * 32, 1030 - 8 * 32, 16 * 32, 8 * 32), sf::IntRect(0 * 32, 2 * 32, 2 * 32, 1 * 32))};
     uiobjects.push_back(new FunnyButton(Events::Exit, &vec2, &vec2t));
 
-    DrawArray::setLayerTexture(2, &textures[Textures::ButtonsT]);
+
 }
 

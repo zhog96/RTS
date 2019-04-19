@@ -20,8 +20,10 @@ int Button::motion() {
 Button::Button(int id, std::vector<sf::Vector2i> *drawIds, std::vector<sf::Vector2i> *textIds) : UIObject(id, drawIds, textIds) {
     sf::Vector2i size = DrawArray::getSize(this->drawIds[0]);
     pos = sf::Vector2<double>(DrawArray::getPos((*drawIds)[0]));
-    sf::Vector2i textSize = DrawArray::getTextSize(this->textIds[0]);
-    textpos = sf::Vector2<double>(sf::Vector2i(pos) + (size / 2 - textSize / 2));
-    printf("%d %d\n", DrawArray::getTextSize(this->textIds[0]).x, textSize.y);
-    DrawArray::updateText(this->textIds[0], sf::Vector2f(textpos));
+    if (textIds->size() > 0) {
+        sf::Vector2i textSize = DrawArray::getTextSize(this->textIds[0]);
+        textpos = sf::Vector2<double>(sf::Vector2i(pos) + (size / 2 - textSize / 2));
+        printf("%d %d\n", DrawArray::getTextSize(this->textIds[0]).x, textSize.y);
+        DrawArray::updateText(this->textIds[0], sf::Vector2f(textpos));
+    }
 }

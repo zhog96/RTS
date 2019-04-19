@@ -14,7 +14,7 @@ protected:
     bool focused;
     bool forDelete;
 public:
-    UIObject(int id, std::vector<sf::Vector2i> *drawIds, std::vector<sf::Vector2i> *textIds = NULL);
+    UIObject(int id, std::vector<sf::Vector2i> *drawIds = NULL, std::vector<sf::Vector2i> *textIds = NULL);
     virtual int process() = 0;
     int destructed();
 };
