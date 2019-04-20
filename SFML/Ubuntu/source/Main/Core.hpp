@@ -7,7 +7,7 @@
 
 class Core {
 public:
-    static bool stoped;
+    static bool stopped;
 
     static int initCore();
     static int run();

@@ -65,7 +65,7 @@ int GameScene::draw() {
 GameScene::GameScene() : Scene() {
     for(int i = 0; i < 2; i++)
         textures.emplace_back(sf::Texture());
-    textures[Textures::BackGroundT].loadFromFile("../textures/MainMenu/MainMenuBG.jpg");
+    textures[Textures::BackGroundT].loadFromFile("../textures/GameScene/GameSceneBG.png");
     textures[Textures::textureSheet].loadFromFile("../textures/GameScene/textureSheet.png");
 
     sf::Font font;
