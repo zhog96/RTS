@@ -47,28 +47,24 @@ int Core::processMessage(ICMessage m) {
 }
 */
 
-int Core::processMessage(ICMessage m) {
-    if (m.type == ICMessage::typesI::endStep) {
-        stop();
-        printf(" \" Core \": Caught message from Interface\n");
-        return 1;
-        // break;
-    } else if (m.type == ICMessage::typesI::changeUnit) {
-        GameInformation::CoreIntQ.push(ICMessage(ICMessage::typesC::actionError, NULL));
+int Core::processMessage(ICMessage * m) {
+    switch (m->type) {
+        case ICMessage::typesI::STOP:
+            stop();
+            printf("\" Core \": Caught message from Interface\n");
+        case ICMessage::typesI::changeUnit:
+            break;
+            //GameInformation::CoreIntQ.push(ICMessage(ICMessage::typesC::actionError, NULL));
     }
+    delete m;
 }
 
 int Core::run() {
     while(!stopped) {
-        //printf("Hey from Core\n");
-        sf::sleep(sf::milliseconds(30));
-        while (true) {
-            if (!GameInformation::IntCoreQ.empty()) {
-                ICMessage m = GameInformation::IntCoreQ.front();
-                GameInformation::IntCoreQ.pop();
-                if (processMessage(m)) break;
-            }
-            sf::sleep(sf::milliseconds(30));
+        if (!GameInformation::IntCoreQ.empty()) {
+            ICMessage * m = GameInformation::IntCoreQ.front();
+            GameInformation::IntCoreQ.pop();
+            processMessage(m);
         }
     }
 }

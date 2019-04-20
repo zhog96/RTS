@@ -35,6 +35,6 @@ public:
     static std::vector< std::vector< Tile > > playMap;
     static std::vector< Unit > units;
     static std::vector< Building > buildings;
-    static std::queue< ICMessage > IntCoreQ;
-    static std::queue< ICMessage > CoreIntQ;
+    static std::queue< ICMessage * > IntCoreQ;
+    static std::queue< ICMessage * > CoreIntQ;
 };
