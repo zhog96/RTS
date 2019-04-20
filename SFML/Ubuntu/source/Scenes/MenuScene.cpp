@@ -5,6 +5,7 @@
 
 #include "source/UIObjects/DrawArray.h"
 #include "source/UIObjects/Effects/FancyCubes.h"
+#include <TGUI/TGUI.hpp>
 
 #include <vector>
 
@@ -60,7 +61,7 @@ int MenuScene::process() {
 }
 
 int MenuScene::draw() {
-    //???
+    //!!!
 }
 
 MenuScene::MenuScene() : Scene() {
@@ -81,7 +82,7 @@ MenuScene::MenuScene() : Scene() {
     vertex.emplace_back(sf::Vertex(sf::Vector2f(0.f, 1080.f), sf::Vector2f(0.f, 1080.f)));
     BGid = DrawArray::addToLayer(0, vertex);
 
-    sf::Text textBG("Stratagy game", fonts[0], 180);
+    sf::Text textBG("Strategy game", fonts[0], 180);
     textBG.setFillColor(sf::Color::Red);
     HeadTextid = DrawArray::addTextToLayer(0, textBG);
     DrawArray::updateText(HeadTextid, sf::Vector2f(sf::Vector2i(1920, 0) / 2

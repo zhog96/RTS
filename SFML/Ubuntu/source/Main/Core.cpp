@@ -3,7 +3,7 @@
 #include <source/Tools/ICMessage.h>
 #include "source/GameObjects/GameInformation.h"
 
-bool Core::stoped = false;
+bool Core::stopped = false;
 
 int Core::initCore() {}
 /*
@@ -54,12 +54,12 @@ int Core::processMessage(ICMessage m) {
         return 1;
         // break;
     } else if (m.type == ICMessage::typesI::changeUnit) {
-        GameInformation::CoreIntQ.push(ICMessage(ICMessage::typesC::actionError, -1, -1, -1, -1));
+        GameInformation::CoreIntQ.push(ICMessage(ICMessage::typesC::actionError, NULL));
     }
 }
 
 int Core::run() {
-    while(!stoped) {
+    while(!stopped) {
         //printf("Hey from Core\n");
         sf::sleep(sf::milliseconds(30));
         while (true) {
@@ -74,5 +74,5 @@ int Core::run() {
 }
 
 int Core::stop() {
-    stoped = true;
+    stopped = true;
 }

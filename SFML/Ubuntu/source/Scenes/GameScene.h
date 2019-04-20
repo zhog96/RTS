@@ -3,11 +3,12 @@
 
 class GameScene : public Scene {
 private:
-    typedef enum {BackGroundT, ButtonsT} Textures;
+    typedef enum {BackGroundT, textureSheet} Textures;
     typedef enum {Font, Arial} Fonts;
-    typedef enum {Exit, Play} Events;
+    typedef enum {Exit, TilePressed} Events;
     sf::Vector2i BGid;
     sf::Vector2i HeadTextid;
+    sf::Vector2i Panelid;
 public:
     GameScene();
     int process();
