@@ -68,7 +68,8 @@ int Core::processMessage(ICMessage * m) {
     switch (m->type) {
         case ICMessage::typesI::STOP: {
             stop();
-            break;
+            delete m;
+            return 1;
         }
         case ICMessage::typesI::tryChangeUnit: { //Попытка что-то сделать с юнитом
             int xFrom = (*m->args)[0], yFrom = (*m->args)[1], xTo = (*m->args)[2], yTo = (*m->args)[3];
