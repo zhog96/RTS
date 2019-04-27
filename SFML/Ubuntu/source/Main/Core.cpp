@@ -6,66 +6,129 @@
 bool Core::stopped = false;
 
 int Core::initCore() {}
-/*
-int Core::processMessage(ICMessage m) {
-    if (m.type == ICMessage::types::endStep) {
-        stop();
-        printf(" \" Core \": Caught message from Interface\n");
-        return 1;
-        // break;
-    } else if (m.type == ICMessage::types::changeUnit) {
-        if (m.newState == Unit::states::Moving) {
-            if (GameInformation::playMap[m.destination1][m.destination2].occupied) {
-                GameInformation::CoreIntQ.push(ICMessage(ICMessage::types::actionError, -1, -1, -1, -1));
-                //    continue;
-            } else {
-                GameInformation::CoreIntQ.push(ICMessage(ICMessage::types::moveUnit, m.id, -1, m.destination1, m.destination2));
-            }
-        } else if (m.newState == Unit::states::Attacking) {
-            if (!GameInformation::playMap[m.destination1][m.destination2].occupied) {
-                GameInformation::CoreIntQ.push(ICMessage(ICMessage::types::actionError, -1, -1, -1, -1));
-                //    continue;
-            } else {
-                if (GameInformation::playMap[m.destination1][m.destination2].occupierType) {
-                    GameInformation::buildings[GameInformation::playMap[m.destination1][m.destination2].occupierId].HP--;
-                } else {
-                    GameInformation::units[GameInformation::playMap[m.destination1][m.destination2].occupierId].HP--;
-                }
-            }
+
+void processNextStep() {}
+
+std::pair<int, int> processMovement(std::pair<int, int> from, std::pair<int, int> to) {
+    std::queue<std::pair<int, int>> queue;
+    std::vector<std::vector<bool>> visited(GameInformation::mapSize, std::vector<bool>(GameInformation::mapSize, false));
+    std::vector<std::vector<std::pair<int, int>>> previousStep(GameInformation::mapSize, std::vector<std::pair<int, int>>(GameInformation::mapSize, {-1, -1}));
+    queue.push(from);
+    visited[from.first][from.second] = true;
+    while (!queue.empty()) {
+        std::pair<int, int> tile = queue.front();
+        queue.pop();
+        std::pair<int, int> nextTile = {tile.first + 1, tile.second};
+        if (nextTile.first < GameInformation::mapSize && !visited[nextTile.first][nextTile.second] && !GameInformation::playMap[nextTile.first][nextTile.second].occupied) {
+            queue.push(nextTile);
+            visited[nextTile.first][nextTile.second] = true;
+            previousStep[nextTile.first][nextTile.second] = tile;
         }
-    } else if (m.type == ICMessage::types::changeBuilding) {
-        //GameInformation::buildings[m.id].state = m.newState;
-    } else if (m.type == ICMessage::types::movedUnit) {
-        GameInformation::units[m.id].state = Unit::states::Idle;
-        GameInformation::playMap[GameInformation::units[m.id].x][GameInformation::units[m.id].y].occupied = false;
-        GameInformation::units[m.id].y = m.destination2;
-        GameInformation::units[m.id].x = m.destination1;
-        GameInformation::playMap[m.destination1][m.destination2].occupied = true;
-        GameInformation::playMap[m.destination1][m.destination2].occupierType = 0;
-        GameInformation::playMap[m.destination1][m.destination2].occupierId = m.id;
+        nextTile = {tile.first - 1, tile.second};
+        if (nextTile.first >= 0 && !visited[nextTile.first][nextTile.second] && !GameInformation::playMap[nextTile.first][nextTile.second].occupied) {
+            queue.push(nextTile);
+            visited[nextTile.first][nextTile.second] = true;
+            previousStep[nextTile.first][nextTile.second] = tile;
+        }
+
+        nextTile = {tile.first, tile.second + 1};
+        if (nextTile.second < GameInformation::mapSize && !visited[nextTile.first][nextTile.second] && !GameInformation::playMap[nextTile.first][nextTile.second].occupied) {
+            queue.push(nextTile);
+            visited[nextTile.first][nextTile.second] = true;
+            previousStep[nextTile.first][nextTile.second] = tile;
+        }
+
+        nextTile = {tile.first, tile.second - 1};
+        if (nextTile.second >= 0 && !visited[nextTile.first][nextTile.second] && !GameInformation::playMap[nextTile.first][nextTile.second].occupied) {
+            queue.push(nextTile);
+            visited[nextTile.first][nextTile.second] = true;
+            previousStep[nextTile.first][nextTile.second] = tile;
+        }
+    }
+
+    /*for (int i = 0; i < GameInformation::mapSize; i++) {
+        for (int j = 0; j < GameInformation::mapSize; j++) {
+            printf("{%d %d} ", previousStep[i][j].first, previousStep[i][j].second);
+        }
+        printf("\n");
+    }*/
+    //TODO print the entire map for debug, looks like it works, still cant be sure though
+
+    if (previousStep[to.first][to.second].first == -1) {
+        return {-1, -1};
+    } else {
+        std::pair<int, int> ret = to;
+        while (previousStep[ret.first][ret.second] != from) ret = previousStep[ret.first][ret.second];
+        return ret;
     }
 }
-*/
+
 
 int Core::processMessage(ICMessage * m) {
     switch (m->type) {
-        case ICMessage::typesI::STOP:
+        case ICMessage::typesI::STOP: {
             stop();
-            printf("\" Core \": Caught message from Interface\n");
-        case ICMessage::typesI::changeUnit:
             break;
-            //GameInformation::CoreIntQ.push(ICMessage(ICMessage::typesC::actionError, NULL));
+        }
+        case ICMessage::typesI::tryChangeUnit: { //Попытка что-то сделать с юнитом
+            int xFrom = (*m->args)[0], yFrom = (*m->args)[1], xTo = (*m->args)[2], yTo = (*m->args)[3];
+            int id;
+            if (GameInformation::playMap[xFrom][yFrom].occupied) { //Проверяем, есть ли вообще юнит
+                id = GameInformation::playMap[xFrom][yFrom].occupierId;
+            } else {
+                GameInformation::CoreIntQ.push(new ICMessage(ICMessage::typesC::actionError, NULL));
+                break;
+            }
+            if (GameInformation::playMap[xTo][yTo].occupied) { //Проверяем, что хотят сделать -- если атака, то
+                //либо это сразу атака, когда враг близко
+                if ((xTo == xFrom + 1 && yTo == yFrom) || (xTo == xFrom - 1 && yTo == yFrom) || (xTo == xFrom && yTo == yFrom + 1) || (xTo == xFrom && yTo == yFrom - 1)) {
+                    GameInformation::units[id].state = Unit::Attacking;
+                    GameInformation::units[id].destination = {xTo, yTo};
+                    //TODO
+                } else {
+                    //либо требуется немного пройти
+                    GameInformation::units[id].state = Unit::Moving;
+                    GameInformation::units[id].destination = {xTo, yTo};
+                    std::pair<int, int> newXY = processMovement({xFrom, yFrom}, {xTo, yTo});
+                    std::vector<int> *args = new std::vector<int>({xFrom, yFrom, newXY.first, newXY.second});
+                    GameInformation::CoreIntQ.push(new ICMessage(ICMessage::typesC::moveUnit, args));
+                    GameInformation::units[id].xy = newXY;
+                    GameInformation::units[id].used = true;
+                }
+            } else {
+                //если не атака, то просто идем
+                GameInformation::units[id].state = Unit::Moving;
+                GameInformation::units[id].destination = {xTo, yTo};
+                std::pair<int, int> newXY = processMovement({xFrom, yFrom}, {xTo, yTo});
+                std::vector<int> *args = new std::vector<int>({xFrom, yFrom, newXY.first, newXY.second});
+                GameInformation::CoreIntQ.push(new ICMessage(ICMessage::typesC::moveUnit, args));
+                GameInformation::units[id].xy = newXY;
+                GameInformation::units[id].used = true;
+            }
+            break;
+        }
+        case ICMessage::typesI::endStep: {
+            for (int i = 0; i < GameInformation::units.size(); i++) {
+                GameInformation::units[i].used = false;
+            }
+            delete m;
+            return 1;
+        }
     }
     delete m;
+    return 0;
 }
 
 int Core::run() {
     while(!stopped) {
-        if (!GameInformation::IntCoreQ.empty()) {
-            ICMessage * m = GameInformation::IntCoreQ.front();
-            GameInformation::IntCoreQ.pop();
-            processMessage(m);
+        while (true) {
+            if (!GameInformation::IntCoreQ.empty()) {
+                ICMessage *m = GameInformation::IntCoreQ.front();
+                GameInformation::IntCoreQ.pop();
+                if (processMessage(m)) break;
+            }
         }
+        processNextStep();
     }
 }
 
