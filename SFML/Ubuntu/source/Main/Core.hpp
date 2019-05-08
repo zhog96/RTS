@@ -12,5 +12,5 @@ public:
     static int initCore();
     static int run();
     static int stop();
-    static int processMessage(ICMessage m);
+    static int processMessage(ICMessage * m);
 };
