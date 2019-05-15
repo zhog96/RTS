@@ -6,6 +6,7 @@
 /SFML/Ubuntu/*
 !/SFML/Ubuntu/main.cpp
 !/SFML/Ubuntu/source
+!/TGUI
 /TGUI/*
 !/TGUI/main.cpp
 !/TGUI/src
