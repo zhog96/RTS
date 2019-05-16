@@ -26,7 +26,7 @@ bool MapObject::mouseOn() {
 }
 
 bool MapObject::mouseClickedOn() {
-    return mouseOn() && UIinformation::mClicked[sf::Mouse::Left];
+    return mouseOn() && UIinformation::mClicked[sf::Mouse::Left] && UIinformation::mDeltaClick[0].x == 0 && UIinformation::mDeltaClick[0].y == 0;
 }
 
 void MapObject::update() {
