@@ -38,7 +38,10 @@ int Interface::run() {
             if(!UIinformation::mPressed[i]) UIinformation::mClicked[i] = false;
         }
         for(int i = 0; i < 2; i++) {
-            if(!UIinformation::mPressed[i]) UIinformation::mLastPressed[i] = UIinformation::mPos;
+            if(!UIinformation::mPressed[i]) {
+                UIinformation::mLastPressed[i] = UIinformation::mPos;
+                UIinformation::mLastClick[i] = UIinformation::mPos;
+            }
         }
 
         sf::Event event;
@@ -142,6 +145,9 @@ int Interface::run() {
 
         // Draw all created widgets
         gui.draw();
+
+        //if(UIinformation::mPressed[0]) printf("YES\n");
+        //printf("%f %f\n", UIinformation::mDeltaClick[0].x, UIinformation::mDeltaClick[0].y);
 
         window.display();
     }
