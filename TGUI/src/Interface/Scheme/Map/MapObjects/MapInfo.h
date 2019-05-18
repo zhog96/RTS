@@ -17,6 +17,7 @@ public:
     static std::vector<std::vector<tileInfo>> tiles;
     static int flagsCnt;
     static int GenerateMap();
+    static int OpenZeros(sf::Vector2i start);
 };
 
 

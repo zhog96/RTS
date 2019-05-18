@@ -11,7 +11,7 @@
 sf::Texture Map::tiles;
 tgui::Canvas * Map::canvas = nullptr;
 sf::Vector2f Map::camera(0.0f, 0.0f);
-std::vector<MapObject *> Map::objects;
+std::vector<Tile *> Map::objects;
 
 void Map::loadMap(tgui::Canvas * canvas) {
 
@@ -72,4 +72,11 @@ void Map::clean() {
         MapInfo::tiles[i].clear();
     }
     MapInfo::tiles.clear();
+}
+
+void Map::checkTileStates() {
+    for (int i = 0; i < objects.size(); i++) {
+        if (objects[i]->info->content == 9) continue;
+        if (objects[i]->info->state == MapInfo::states::pressed && objects[i]->state != (Tile::ZERO + objects[i]->info->content)) objects[i]->changeState(Tile::ZERO + objects[i]->info->content);
+    }
 }
