@@ -8,6 +8,7 @@
 #include "../Time.h"
 #include "../Element/Button.h"
 #include "Map/Map.h"
+#include "Map/MapObjects/MapInfo.h"
 
 bool PlaySheme::paused = false;
 
@@ -22,6 +23,9 @@ void PlaySheme::unpause() {
     UIinformation::gui->get("Continue")->setVisible(paused);
     UIinformation::gui->get("Exit")->setVisible(paused);
     UIinformation::gui->get("Pause")->setVisible(paused);
+    if(!paused) {
+        for(int i = 0; i < 2; i++) MapInfo::pressedAfterPause[i] = 0;
+    }
 }
 
 void PlaySheme::update() {
@@ -30,11 +34,11 @@ void PlaySheme::update() {
         for (int i = 0; i < Shemes::elements.size(); i++) {
             Shemes::elements[i].update();
         }
-    } else {
+    } //else {
         for (int i = 0; i < Shemes::elementsPause.size(); i++) {
             Shemes::elementsPause[i].update();
         }
-    }
+    //}
     if(UIinformation::bClicked[sf::Keyboard::Space]) {
         unpause();
     }

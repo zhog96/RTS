@@ -17,7 +17,8 @@ void MapObject::solidMove(sf::Vector2f toPos) {
 
 bool MapObject::mouseOn() {
     sf::Vector2f mPos = UIinformation::mPos - MapInfo::mapPos;
-    if(MapInfo::mouseOnMap && pos.x <= mPos.x && pos.y <= mPos.y
+    if(MapInfo::mouseOnMap
+    && pos.x <= mPos.x && pos.y <= mPos.y
     && mPos.x <= pos.x + size.x - 1 && mPos.y <= pos.y + size.y - 1) {
         return true;
     }
@@ -25,11 +26,11 @@ bool MapObject::mouseOn() {
 }
 
 bool MapObject::mouseLeftClickedOn() {
-    return mouseOn() && UIinformation::mClicked[sf::Mouse::Left] && UIinformation::mDeltaClick[sf::Mouse::Left].x == 0 && UIinformation::mDeltaClick[sf::Mouse::Left].y == 0;
+    return mouseOn() && MapInfo::pressedAfterPause[sf::Mouse::Left] == 2 && UIinformation::mClicked[sf::Mouse::Left] && UIinformation::mDeltaClick[sf::Mouse::Left].x == 0 && UIinformation::mDeltaClick[sf::Mouse::Left].y == 0;
 }
 
 bool MapObject::mouseRightClickedOn() {
-    return mouseOn() && UIinformation::mClicked[sf::Mouse::Right] && UIinformation::mDeltaClick[sf::Mouse::Right].x == 0 && UIinformation::mDeltaClick[sf::Mouse::Right].y == 0;
+    return mouseOn() && MapInfo::pressedAfterPause[sf::Mouse::Right] == 2 && UIinformation::mClicked[sf::Mouse::Right] && UIinformation::mDeltaClick[sf::Mouse::Right].x == 0 && UIinformation::mDeltaClick[sf::Mouse::Right].y == 0;
 }
 
 void MapObject::update() {

@@ -26,11 +26,18 @@ void Map::loadMap(tgui::Canvas * canvas) {
         }
     }
     MapInfo::mapPos = canvas->getPosition();
-
-
+    MapInfo::mouseOnMap = false;
+    for(int i = 0; i < 2; i++) {
+        MapInfo::pressedAfterPause[i] = 0;
+    }
 }
 
 void Map::update() {
+    for(int i = 0; i < 2; i++) {
+        if (MapInfo::pressedAfterPause[i] == 0 && !UIinformation::mPressed[i]) MapInfo::pressedAfterPause[i] = 1;
+        if (MapInfo::pressedAfterPause[i] == 1 && UIinformation::mPressed[i]) MapInfo::pressedAfterPause[i] = 2;
+    }
+
     if(canvas->getPosition().x <= UIinformation::mPos.x && canvas->getPosition().y <= UIinformation::mPos.y &&
             UIinformation::mPos.x <= canvas->getPosition().x + canvas->getSize().x &&
             UIinformation::mPos.y <= canvas->getPosition().y + canvas->getSize().y) {
