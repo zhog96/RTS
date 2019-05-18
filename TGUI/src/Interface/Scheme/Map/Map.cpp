@@ -12,6 +12,7 @@ sf::Texture Map::tiles;
 tgui::Canvas * Map::canvas = nullptr;
 sf::Vector2f Map::camera(0.0f, 0.0f);
 std::vector<MapObject *> Map::objects;
+float Map::height = 0.0f;
 
 void Map::loadMap(tgui::Canvas * canvas) {
 
@@ -33,11 +34,36 @@ void Map::loadMap(tgui::Canvas * canvas) {
 }
 
 void Map::update() {
-    if(UIinformation::wheel != 0) printf("%f\n", UIinformation::wheel);
     for(int i = 0; i < 2; i++) {
         if (MapInfo::pressedAfterPause[i] == 0 && !UIinformation::mPressed[i]) MapInfo::pressedAfterPause[i] = 1;
         if (MapInfo::pressedAfterPause[i] == 1 && UIinformation::mPressed[i]) MapInfo::pressedAfterPause[i] = 2;
     }
+
+    if(UIinformation::wheel != 0 && MapInfo::mouseOnMap) {
+        //printf("%f\n", UIinformation::wheel);
+        height += -UIinformation::wheel * 0.01;
+    }
+
+    /*if(UIinformation::wheel != 0 && MapInfo::mouseOnMap) {
+        //printf("%f\n", UIinformation::wheel);
+        float dh = -UIinformation::wheel * 0.01;
+        if(height + dh != 0) {
+            height += dh;
+            sf::Vector2f center = UIinformation::mPos - MapInfo::mapPos;
+            //DrawArray::scroll(center, height, dh, H0)
+
+            int DrawArray::scroll(sf::Vector2f center, float h, float dh, float H0) {
+                for (int i = 0; i < N; i++) {
+                    for (int j = 0; j < layers[i].getVertexCount(); j++) {
+                        sf::Vertex &v = layers[i][j];
+                        v.position = (v.position - center) * (H0 - h) / (H0 - h + dh) + center;
+                    }
+                }
+                return 0;
+            }
+
+        }
+    }*/
 
     if(canvas->getPosition().x <= UIinformation::mPos.x && canvas->getPosition().y <= UIinformation::mPos.y &&
             UIinformation::mPos.x <= canvas->getPosition().x + canvas->getSize().x &&
@@ -57,22 +83,25 @@ void Map::update() {
     if(cameraMove.x * cameraMove.x + cameraMove.y * cameraMove.y != 0)
         cameraMove = cameraMove / sqrt(cameraMove.x * cameraMove.x + cameraMove.y * cameraMove.y);
     cameraMove *= cameraMoveSpeed * Time::delta;
+    float H0 = 1.0f;
     cameraMove -= UIinformation::mDeltaPressed[sf::Mouse::Left];
-    camera -= cameraMove;
-
-    MapInfo::mapPos = canvas->getPosition() + camera;
+    camera += cameraMove * (height + H0) / H0;
 
     canvas->clear(sf::Color::Black);
 
-    sf::View view;
-    view.setSize(sf::Vector2f(1000.f, 1000.f));
+    sf::Vector2f size = canvas->getSize();
+    sf::Vector2f center = camera - size / 2.0f * height / H0;
     for(int i = 0; i < DrawArray::N; i++) {
-        for(int j = 0; j < DrawArray::layers[i].getVertexCount(); j++)
-            DrawArray::layers[i][j].position += camera;
+        for(int j = 0; j < DrawArray::layers[i].getVertexCount(); j++) {
+            DrawArray::layers[i][j].position = (DrawArray::layers[i][j].position - center) * H0 / (height + H0);
+        }
         canvas->draw(DrawArray::layers[i], DrawArray::textures[i]);
-        for(int j = 0; j < DrawArray::layers[i].getVertexCount(); j++)
-            DrawArray::layers[i][j].position -= camera;
+        for(int j = 0; j < DrawArray::layers[i].getVertexCount(); j++) {
+            DrawArray::layers[i][j].position = (DrawArray::layers[i][j].position * (height + H0) / H0) + center;
+        }
     }
+
+    MapInfo::mapPos = ((UIinformation::mPos - canvas->getPosition()) * (height + H0) / H0) + center;
 
     for(int i = 0; i < objects.size(); i++) objects[i]->update();
 }

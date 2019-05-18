@@ -15,7 +15,7 @@ void MapObject::solidMove(sf::Vector2f toPos) {
 }
 
 bool MapObject::mouseOn() {
-    sf::Vector2f mPos = UIinformation::mPos - MapInfo::mapPos;
+    sf::Vector2f mPos = MapInfo::mapPos;
     sf::Vector2i size = DrawArray::getSize(drawId);
     if(MapInfo::mouseOnMap
     && pos.x <= mPos.x && pos.y <= mPos.y
