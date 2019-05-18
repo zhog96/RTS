@@ -18,5 +18,6 @@ public:
     static void clean();
 
     static void checkTileStates();
+    static void openAllTiles();
 };
 

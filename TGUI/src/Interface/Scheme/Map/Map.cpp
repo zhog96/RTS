@@ -79,3 +79,15 @@ void Map::checkTileStates() {
         if (((Tile *) objects[i])->info->state == MapInfo::states::pressed && ((Tile *) objects[i])->state != (Tile::ZERO + ((Tile *) objects[i])->info->content)) ((Tile *) objects[i])->changeState(Tile::ZERO + ((Tile *) objects[i])->info->content);
     }
 }
+
+void Map::openAllTiles() {
+    for (int i = 0; i < objects.size(); i++) {
+        if (((Tile *) objects[i])->info->content == 9) ((Tile *) objects[i])->changeState(Tile::BOMB);
+        else ((Tile *) objects[i])->changeState(Tile::ZERO + ((Tile *) objects[i])->info->content);
+    }
+    for (int i = 0; i < MapInfo::mapSize.x; i++) {
+        for (int j = 0; j < MapInfo::mapSize.y; j++) {
+            MapInfo::tiles[i][j].state = MapInfo::states::pressed;
+        }
+    }
+}
