@@ -56,6 +56,13 @@ int Tile::changeState(int newState) {
             break;
         case HIGHLIGHTED:
             DrawArray::updateTexture(drawId, sf::Vector2i(4 * 32, 2 * 32));
+            break;
+        case BOMB_CROSSED:
+            DrawArray::updateTexture(drawId, sf::Vector2i(1 * 32, 3 * 32));
+            break;
+        case EXPLOSION:
+            DrawArray::updateTexture(drawId, sf::Vector2i(0 * 32, 3 * 32));
+            break;
     }
     return 0;
 }
@@ -65,7 +72,7 @@ void Tile::update() {
         if (info->state == MapInfo::states::highlighted || info->state == MapInfo::states::def || info->state == MapInfo::states::qmark) {
             info->state = MapInfo::states::pressed;
             if (info->content == 9) {
-                changeState(BOMB);
+                changeState(EXPLOSION);
                 Map::openAllTiles();
                 printf("%f %f\n", pos.x / 32, pos.y / 32);
             } else if (info->content == 0) {
