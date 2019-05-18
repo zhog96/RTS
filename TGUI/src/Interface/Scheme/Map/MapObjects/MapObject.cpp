@@ -26,11 +26,11 @@ bool MapObject::mouseOn() {
 }
 
 bool MapObject::mouseLeftClickedOn() {
-    return mouseOn() && UIinformation::mClicked[sf::Mouse::Left] && UIinformation::mDeltaClick[0].x == 0 && UIinformation::mDeltaClick[0].y == 0;
+    return mouseOn() && UIinformation::mClicked[sf::Mouse::Left] && UIinformation::mDeltaClick[sf::Mouse::Left].x == 0 && UIinformation::mDeltaClick[sf::Mouse::Left].y == 0;
 }
 
 bool MapObject::mouseRightClickedOn() {
-    return mouseOn() && UIinformation::mClicked[sf::Mouse::Right] && UIinformation::mDeltaClick[0].x == 0 && UIinformation::mDeltaClick[0].y == 0;
+    return mouseOn() && UIinformation::mClicked[sf::Mouse::Right] && UIinformation::mDeltaClick[sf::Mouse::Right].x == 0 && UIinformation::mDeltaClick[sf::Mouse::Right].y == 0;
 }
 
 void MapObject::update() {
