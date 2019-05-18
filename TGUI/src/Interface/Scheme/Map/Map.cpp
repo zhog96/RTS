@@ -11,7 +11,7 @@
 sf::Texture Map::tiles;
 tgui::Canvas * Map::canvas = nullptr;
 sf::Vector2f Map::camera(0.0f, 0.0f);
-std::vector<Tile *> Map::objects;
+std::vector<MapObject *> Map::objects;
 
 void Map::loadMap(tgui::Canvas * canvas) {
 
@@ -25,7 +25,6 @@ void Map::loadMap(tgui::Canvas * canvas) {
             objects.emplace_back(new Tile(sf::Vector2f(32 * i, 32 * j), &MapInfo::tiles[j][i]));
         }
     }
-
     MapObject::mapPos = canvas->getPosition();
 
 
@@ -76,7 +75,7 @@ void Map::clean() {
 
 void Map::checkTileStates() {
     for (int i = 0; i < objects.size(); i++) {
-        if (objects[i]->info->content == 9) continue;
-        if (objects[i]->info->state == MapInfo::states::pressed && objects[i]->state != (Tile::ZERO + objects[i]->info->content)) objects[i]->changeState(Tile::ZERO + objects[i]->info->content);
+        if (((Tile *) objects[i])->info->content == 9) continue;
+        if (((Tile *) objects[i])->info->state == MapInfo::states::pressed && ((Tile *) objects[i])->state != (Tile::ZERO + ((Tile *) objects[i])->info->content)) ((Tile *) objects[i])->changeState(Tile::ZERO + ((Tile *) objects[i])->info->content);
     }
 }
