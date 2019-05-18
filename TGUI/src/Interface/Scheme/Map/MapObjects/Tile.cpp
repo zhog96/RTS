@@ -3,6 +3,7 @@
 #include "../../../UIinformation.h"
 #include "../Map.h"
 #include <queue>
+#include <iostream>
 
 Tile::Tile(sf::Vector2f pos, tileInfo * info) : MapObject(pos) , info(info), state(DEFAULT) {
     if (info->state == MapInfo::states::highlighted) changeState(HIGHLIGHTED);
@@ -76,12 +77,14 @@ void Tile::update() {
                 Map::openAllTiles();
                 printf("%f %f\n", pos.x / 32, pos.y / 32);
             } else if (info->content == 0) {
-                //changeState(ZERO);
+                MapInfo::nClosedTiles--;
+                std::cout << "TILES LEFT : " << MapInfo::nClosedTiles << std::endl;
                 MapInfo::OpenZeros({(int) (pos.y / 32), (int) (pos.x / 32)});
                 Map::checkTileStates();
                 printf("%f %f\n", pos.x / 32, pos.y / 32);
-                //openZeros(pos.x / 32, pos.y / 32);
             } else {
+                MapInfo::nClosedTiles--;
+                std::cout << "TILES LEFT : " << MapInfo::nClosedTiles << std::endl;
                 changeState(ZERO + info->content);
                 printf("%f %f\n", pos.x / 32, pos.y / 32);
             }
@@ -89,12 +92,21 @@ void Tile::update() {
     }
     if (mouseRightClickedOn()) {
         if (info->state == MapInfo::states::highlighted || info->state == MapInfo::states::def) {
-            info->state = MapInfo::states::flag;
-            changeState(FLAGGED);
+            if (MapInfo::flagsCnt > 0) {
+                info->state = MapInfo::states::flag;
+                changeState(FLAGGED);
+                MapInfo::flagsCnt--;
+                std::cout << "FLAGS LEFT : " << MapInfo::flagsCnt << std::endl;
+            } else {
+                info->state = MapInfo::states::qmark;
+                changeState(QMARK);
+            }
             printf("%f %f\n", pos.x / 32, pos.y / 32);
         } else if (info->state == MapInfo::states::flag) {
             info->state = MapInfo::states::qmark;
             changeState(QMARK);
+            MapInfo::flagsCnt++;
+            std::cout << "FLAGS LEFT : " << MapInfo::flagsCnt << std::endl;
             printf("%f %f\n", pos.x / 32, pos.y / 32);
         } else if (info->state == MapInfo::states::qmark) {
             info->state = MapInfo::states::def;
