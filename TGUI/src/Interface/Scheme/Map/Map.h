@@ -7,7 +7,7 @@
 
 class Map {
 private:
-    static std::vector<Tile *> objects;
+    static std::vector<MapObject *> objects;
 public:
     static sf::Texture tiles;
     static tgui::Canvas * canvas;
