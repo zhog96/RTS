@@ -11,6 +11,7 @@ public:
     static std::vector<sf::VertexArray> layers;
     static std::vector<sf::Texture *> textures;
 
+    static int scroll(sf::Vector2f center, float h);
     static sf::Vector2i addToLayer(int layer, sf::IntRect rectPos, sf::IntRect rectText);
     static sf::Vector2i addToLayer(int layer, std::vector<sf::Vertex> &pos);
     static int erase(sf::Vector2i id);

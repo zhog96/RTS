@@ -10,6 +10,7 @@ public:
     static bool bClicked[256];
     static bool mPressed[2];
     static bool mClicked[2];
+    static float wheel;
     static sf::Vector2f mDeltaClick[2];
     static sf::Vector2f mLastClick[2];
     static sf::Vector2f mDeltaPressed[2];
