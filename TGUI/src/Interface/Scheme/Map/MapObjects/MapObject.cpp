@@ -2,8 +2,7 @@
 #include "../DrawArray.h"
 #include "../../../Time.h"
 #include "../../../UIinformation.h"
-
-sf::Vector2f MapObject::mapPos = sf::Vector2f(0.0f, 0.0f);
+#include "MapInfo.h"
 
 MapObject::MapObject(sf::Vector2f pos) {
     this->pos = pos;
@@ -17,8 +16,8 @@ void MapObject::solidMove(sf::Vector2f toPos) {
 }
 
 bool MapObject::mouseOn() {
-    sf::Vector2f mPos = UIinformation::mPos - mapPos;
-    if(pos.x + 1 <= mPos.x && pos.y + 1 <= mPos.y
+    sf::Vector2f mPos = UIinformation::mPos - MapInfo::mapPos;
+    if(MapInfo::mouseOnMap && pos.x <= mPos.x && pos.y <= mPos.y
     && mPos.x <= pos.x + size.x - 1 && mPos.y <= pos.y + size.y - 1) {
         return true;
     }

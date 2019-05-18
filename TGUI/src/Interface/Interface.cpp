@@ -102,6 +102,13 @@ int Interface::run() {
             }
         }
 
+        for(int i = 0; i < 2; i++) {
+            int delta = 4;
+            sf::Vector2f vec = UIinformation::mDeltaClick[i];
+            float len = vec.x * vec.x + vec.y * vec.y;
+            if(len <= delta && delta <= len) UIinformation::mDeltaClick[i] = sf::Vector2f(0.0f, 0.0f);
+        }
+
         Time::update();
         if(update != nullptr) update();
 
