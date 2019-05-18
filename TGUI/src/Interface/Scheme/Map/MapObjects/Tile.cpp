@@ -66,6 +66,7 @@ void Tile::update() {
             info->state = MapInfo::states::pressed;
             if (info->content == 9) {
                 changeState(BOMB);
+                Map::openAllTiles();
                 printf("%f %f\n", pos.x / 32, pos.y / 32);
             } else if (info->content == 0) {
                 //changeState(ZERO);

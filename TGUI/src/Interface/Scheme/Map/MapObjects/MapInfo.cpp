@@ -6,8 +6,8 @@
 #include <chrono>
 #include <queue>
 
-sf::Vector2i MapInfo::mapSize = {20, 20};
-int MapInfo::nBombs = 50;
+sf::Vector2i MapInfo::mapSize = {30, 30};
+int MapInfo::nBombs = 150;
 std::vector<std::vector<tileInfo>> MapInfo::tiles;
 
 int MapInfo::GenerateMap() {
