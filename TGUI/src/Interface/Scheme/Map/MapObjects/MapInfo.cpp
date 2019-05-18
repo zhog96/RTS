@@ -11,6 +11,7 @@ int MapInfo::nBombs = 150;
 std::vector<std::vector<tileInfo>> MapInfo::tiles;
 sf::Vector2f MapInfo::mapPos = sf::Vector2f(0.0f, 0.0f);
 bool MapInfo::mouseOnMap = false;
+int MapInfo::pressedAfterPause[2];
 
 int MapInfo::GenerateMap() {
     MapInfo::tiles = std::vector<std::vector<tileInfo>>(MapInfo::mapSize.x, std::vector<tileInfo>(MapInfo::mapSize.y, {-1, MapInfo::states::def}));
