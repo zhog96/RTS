@@ -1,9 +1,15 @@
 #pragma once
 
 #include "MapObject.h"
+#include "MapInfo.h"
 
 class Tile : public MapObject {
 public:
-    Tile(sf::Vector2f pos);
+    typedef enum {DEFAULT, FLAGGED, QMARK, ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, BOMB, EMPTY, HIGHLIGHTED} tileStates;
+    Tile(sf::Vector2f pos, tileInfo * info);
+    tileInfo * info;
     void update() override;
+    int state;
+    int changeState(int newState);
+   // void openZeros(int x, int y);
 };

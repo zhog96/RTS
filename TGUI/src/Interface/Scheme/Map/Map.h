@@ -7,7 +7,7 @@
 
 class Map {
 private:
-    static std::vector<MapObject *> objects;
+    static std::vector<Tile *> objects;
 public:
     static sf::Texture tiles;
     static tgui::Canvas * canvas;
@@ -16,5 +16,7 @@ public:
     static void loadMap(tgui::Canvas * canvas);
     static void update();
     static void clean();
+
+    static void checkTileStates();
 };
 

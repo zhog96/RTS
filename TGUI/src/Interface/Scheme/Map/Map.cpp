@@ -1,7 +1,9 @@
 #include "Map.h"
 
 #include <math.h>
+#include <iostream>
 
+#include "MapObjects/MapInfo.h"
 #include "../../UIinformation.h"
 #include "../../Time.h"
 #include "DrawArray.h"
@@ -9,20 +11,24 @@
 sf::Texture Map::tiles;
 tgui::Canvas * Map::canvas = nullptr;
 sf::Vector2f Map::camera(0.0f, 0.0f);
-std::vector<MapObject *> Map::objects;
+std::vector<Tile *> Map::objects;
 
 void Map::loadMap(tgui::Canvas * canvas) {
+
+    MapInfo::GenerateMap();
 
     Map::canvas = canvas;
     tiles.loadFromFile("../themes/images/button.png");
     DrawArray::setLayerTexture(0, &tiles);
-    for (int i = 0; i < 10; i++) {
-        for(int j = 0; j < 10; j++) {
-            objects.emplace_back(new Tile(sf::Vector2f(32 * i, 32 * j)));
+    for (int i = 0; i < MapInfo::mapSize.x; i++) {
+        for(int j = 0; j < MapInfo::mapSize.y; j++) {
+            objects.emplace_back(new Tile(sf::Vector2f(32 * i, 32 * j), &MapInfo::tiles[j][i]));
         }
     }
 
     MapObject::mapPos = canvas->getPosition();
+
+
 }
 
 void Map::update() {
@@ -62,4 +68,15 @@ void Map::clean() {
     camera = sf::Vector2f(0.0f, 0.0f);
     canvas = nullptr;
     DrawArray::clear();
+    for (int i = 0; i < MapInfo::mapSize.x; i++) {
+        MapInfo::tiles[i].clear();
+    }
+    MapInfo::tiles.clear();
+}
+
+void Map::checkTileStates() {
+    for (int i = 0; i < objects.size(); i++) {
+        if (objects[i]->info->content == 9) continue;
+        if (objects[i]->info->state == MapInfo::states::pressed && objects[i]->state != (Tile::ZERO + objects[i]->info->content)) objects[i]->changeState(Tile::ZERO + objects[i]->info->content);
+    }
 }

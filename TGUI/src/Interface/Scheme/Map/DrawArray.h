@@ -15,6 +15,7 @@ public:
     static sf::Vector2i addToLayer(int layer, std::vector<sf::Vertex> &pos);
     static int erase(sf::Vector2i id);
     static int update(sf::Vector2i id, sf::Vector2f pos);
+    static int updateTexture(sf::Vector2i id, sf::Vector2i pos);
     static int setLayerTexture(int layer, sf::Texture *texture);
     static sf::Vector2f getPos(sf::Vector2i id);
     static sf::Vector2i getSize(sf::Vector2i id);

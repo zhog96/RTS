@@ -54,6 +54,14 @@ int DrawArray::update(sf::Vector2i id, sf::Vector2f pos) {
     layers[id.x][4 * id.y + 3].position = sf::Vector2f(pos) + sf::Vector2f(0.f, size.y);
 }
 
+int DrawArray::updateTexture(sf::Vector2i id, sf::Vector2i pos) {
+    sf::Vector2f size = layers[id.x][4 * id.y + 2].texCoords - layers[id.x][4 * id.y].texCoords;
+    layers[id.x][4 * id.y].texCoords = sf::Vector2f(pos);
+    layers[id.x][4 * id.y + 1].texCoords = sf::Vector2f(pos) + sf::Vector2f(size.x, 0.f);
+    layers[id.x][4 * id.y + 2].texCoords = sf::Vector2f(pos) + size;
+    layers[id.x][4 * id.y + 3].texCoords = sf::Vector2f(pos) + sf::Vector2f(0.f, size.y);
+}
+
 sf::Vector2i DrawArray::addToLayer(int layer, std::vector<sf::Vertex> &pos) {
     for (int i = 0; i < 4; i++) {
         layers[layer].append(pos[i]);
