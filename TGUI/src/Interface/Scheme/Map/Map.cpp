@@ -90,8 +90,12 @@ void Map::checkTileStates() {
 
 void Map::openAllTiles() {
     for (int i = 0; i < objects.size(); i++) {
-        if (((Tile *) objects[i])->info->content == 9) ((Tile *) objects[i])->changeState(Tile::BOMB);
-        else ((Tile *) objects[i])->changeState(Tile::ZERO + ((Tile *) objects[i])->info->content);
+        if (((Tile *) objects[i])->info->content == 9) {
+            if (((Tile *) objects[i])->state == Tile::EXPLOSION || ((Tile *) objects[i])->info->state == MapInfo::states::flag) continue;
+            ((Tile *) objects[i])->changeState(Tile::BOMB);
+        } else {
+            ((Tile *) objects[i])->changeState(((Tile *)objects[i])->info->state == MapInfo::states::flag ? Tile::BOMB_CROSSED  : Tile::ZERO + ((Tile *) objects[i])->info->content);
+        }
     }
     for (int i = 0; i < MapInfo::mapSize.x; i++) {
         for (int j = 0; j < MapInfo::mapSize.y; j++) {

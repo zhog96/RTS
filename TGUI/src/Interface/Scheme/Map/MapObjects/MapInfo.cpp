@@ -6,8 +6,8 @@
 #include <chrono>
 #include <queue>
 
-sf::Vector2i MapInfo::mapSize = {30, 30};
-int MapInfo::nBombs = 150;
+sf::Vector2i MapInfo::mapSize = {10, 10};
+int MapInfo::nBombs = 10;
 std::vector<std::vector<tileInfo>> MapInfo::tiles;
 sf::Vector2f MapInfo::mapPos = sf::Vector2f(0.0f, 0.0f);
 bool MapInfo::mouseOnMap = false;
