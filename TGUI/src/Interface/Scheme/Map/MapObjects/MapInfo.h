@@ -10,6 +10,8 @@ struct tileInfo {
 
 class MapInfo {
 public:
+    static sf::Vector2f mapPos;
+    static bool mouseOnMap;
     static sf::Vector2i mapSize;
     static int nBombs;
     typedef enum {bmb = 9} contents;
