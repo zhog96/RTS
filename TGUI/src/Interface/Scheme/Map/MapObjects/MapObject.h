@@ -12,6 +12,7 @@ public:
     MapObject(sf::Vector2f pos);
     void solidMove(sf::Vector2f toPos);
     bool mouseOn();
-    bool mouseClickedOn();
+    bool mouseLeftClickedOn();
+    bool mouseRightClickedOn();
     virtual void update();
 };
