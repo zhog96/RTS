@@ -12,6 +12,7 @@ public:
     static sf::Texture tiles;
     static tgui::Canvas * canvas;
     static sf::Vector2f camera;
+    static float height;
 
     static void loadMap(tgui::Canvas * canvas);
     static void update();
