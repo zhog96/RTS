@@ -81,6 +81,8 @@ int Interface::run() {
                     }
                     UIinformation::mPressed[event.key.code] = false;
                 }
+            } else if (event.type == sf::Event::MouseWheelScrolled) {
+                UIinformation::wheel = event.mouseWheelScroll.delta * Time::delta / 1000;
             }
 
             // Pass the event to all the widgets
@@ -157,5 +159,7 @@ int Interface::run() {
         //printf("%f %f\n", UIinformation::mDeltaClick[0].x, UIinformation::mDeltaClick[0].y);
 
         window.display();
+
+        UIinformation::wheel = 0.0f;
     }
 }

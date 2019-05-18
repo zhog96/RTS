@@ -23,6 +23,15 @@ int DrawArray::clear() {
     }
 }
 
+int DrawArray::scroll(sf::Vector2f center, float h) {
+    for(int i = 0; i < N; i++) {
+        for(int j = 0; j < layers[i].getVertexCount(); j++) {
+            sf::Vertex &v = layers[i][j];
+            //v.position = (v.position - center)
+        }
+    }
+}
+
 sf::Vector2i DrawArray::addToLayer(int layer, sf::IntRect rectPos, sf::IntRect rectText) {
     int a = 1;
     layers[layer].append(sf::Vertex(sf::Vector2f(a * rectPos.left, a * rectPos.top), sf::Vector2f(a * rectText.left, a * rectText.top)));

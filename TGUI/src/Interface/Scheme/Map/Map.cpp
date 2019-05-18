@@ -33,6 +33,7 @@ void Map::loadMap(tgui::Canvas * canvas) {
 }
 
 void Map::update() {
+    if(UIinformation::wheel != 0) printf("%f\n", UIinformation::wheel);
     for(int i = 0; i < 2; i++) {
         if (MapInfo::pressedAfterPause[i] == 0 && !UIinformation::mPressed[i]) MapInfo::pressedAfterPause[i] = 1;
         if (MapInfo::pressedAfterPause[i] == 1 && UIinformation::mPressed[i]) MapInfo::pressedAfterPause[i] = 2;
