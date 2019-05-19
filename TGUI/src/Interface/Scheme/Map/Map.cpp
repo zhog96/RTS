@@ -19,7 +19,7 @@ std::vector<sf::Vector2f> Map::positionBoom;
 void Map::loadMap(tgui::Canvas * canvas) {
 
     positionBoom.clear();
-    MapInfo::mapState = MapInfo::playStates::wave;
+    MapInfo::mapState = MapInfo::playStates::playing;
     MapInfo::GenerateMap();
 
     Map::canvas = canvas;
@@ -151,6 +151,7 @@ void Map::update() {
             }
             break;
         case MapInfo::playStates::defeat:
+            if(MapInfo::timePauseStart > 0) timeBoom += Time::time - Time::delta - MapInfo::timePauseStart;
             if(Time::time - timeBoom > 5000000) timeBoom = Time::time - 5000000;
             if(UIinformation::mPressed[sf::Mouse::Right]) {
                 timeBoom += 2 * Time::delta;

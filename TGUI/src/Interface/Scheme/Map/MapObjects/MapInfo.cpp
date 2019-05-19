@@ -19,6 +19,7 @@ int MapInfo::mapState = MapInfo::playStates::playing;
 int MapInfo::pressedAfterPause[2];
 sf::Vector2f MapInfo::startPos = sf::Vector2f(0.0f, 0.0f);
 sf::Vector2f MapInfo::boomPos = sf::Vector2f(0.0f, 0.0f);
+int MapInfo::timePauseStart = 0;
 
 int MapInfo::GenerateMap() {
     startPos = sf::Vector2f(0.0f, 0.0f);
