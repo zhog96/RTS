@@ -16,6 +16,7 @@ float Map::height = 0.0f;
 
 void Map::loadMap(tgui::Canvas * canvas) {
 
+    MapInfo::mapState = MapInfo::playStates::waveCrazy;
     MapInfo::GenerateMap();
 
     Map::canvas = canvas;
@@ -112,8 +113,65 @@ void Map::update() {
 
     MapInfo::mapPos = ((UIinformation::mPos - canvas->getPosition()) * (height + H0) / H0) + center;
 
-    for(int i = 0; i < objects.size(); i++) objects[i]->update();
+    if(MapInfo::flagsCnt == 0 && MapInfo::nClosedTiles == 0) MapInfo::mapState = MapInfo::playStates::win;
+    int par = MapInfo::mapState;
+    for(int i = 0; i < objects.size(); i++) objects[i]->update(par);
     MapInfo::UpdateCounters();
+
+    switch (MapInfo::mapState) {
+        case MapInfo::playStates::waveCrazy: {
+            for (int i = 0; i < objects.size(); i++) {
+                Tile *tile = dynamic_cast<Tile *> (objects[i]);
+                if (tile) {
+                    sf::Vector2i ind = tile->info->pos;
+                    sf::Vector2f pos = tile->pos;
+                    tile->phi += Time::delta * 0.000001f;
+                    float phi = tile->phi + ind.x * 0.3f;
+                    DrawArray::update(tile->drawId,
+                                      MapInfo::startPos + sf::Vector2f(ind) * 32.0f +
+                                      sf::Vector2f(0.0f, 3.0f * (MapInfo::tiles[0].size() - 1 - ind.y)) * sin(phi));
+                }
+            }
+            break;
+        }
+        case MapInfo::playStates::wave: {
+            for (int i = 0; i < objects.size(); i++) {
+                Tile *tile = dynamic_cast<Tile *> (objects[i]);
+                if (tile) {
+                    sf::Vector2i ind = tile->info->pos;
+                    sf::Vector2f pos = tile->pos;
+                    tile->phi += Time::delta * 0.000005f;
+                    float phi = tile->phi + ind.x * 0.3f;
+                    DrawArray::update(tile->drawId,
+                                      MapInfo::startPos + sf::Vector2f(ind) * 40.0f +
+                                      sf::Vector2f(16.0f * sin(phi + 1.0f * ind.y), 16.0f * sin(phi)));
+                }
+            }
+            break;
+        }
+        case MapInfo::playStates::defeat: {
+            for (int i = 0; i < objects.size(); i++) {
+                Tile *tile = dynamic_cast<Tile *> (objects[i]);
+                if (tile) {
+                    DrawArray::update(tile->drawId, DrawArray::getPos(tile->drawId) + tile->speed * float(Time::delta));
+                    tile->speed -= tile->speed * 0.000001f * float(Time::delta);
+
+                }
+            }
+            break;
+        }
+        case MapInfo::playStates::boom: {
+            for (int i = 0; i < objects.size(); i++) {
+                Tile *tile = dynamic_cast<Tile *> (objects[i]);
+                if (tile) {
+                    sf::Vector2f delta = DrawArray::getPos(tile->drawId) - MapInfo::boomPos;
+                    tile->speed = delta * (0.01f / (delta.x * delta.x + delta.y * delta.y));
+                    MapInfo::mapState = MapInfo::playStates::defeat;
+                }
+            }
+            break;
+        }
+    }
 }
 
 void Map::clean() {

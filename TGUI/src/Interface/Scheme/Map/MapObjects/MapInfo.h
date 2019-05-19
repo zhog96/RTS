@@ -6,11 +6,16 @@
 struct tileInfo {
     int content;
     int state;
+    sf::Vector2i pos;
 };
 
 class MapInfo {
 public:
+    static sf::Vector2f startPos;
     static sf::Vector2f mapPos;
+    static sf::Vector2f boomPos;
+    static int mapState;
+    typedef enum {playing, win, defeat, waveCrazy, wave, boom} playStates;
     static bool mouseOnMap;
     static int pressedAfterPause[2];
     static sf::Vector2i mapSize;
