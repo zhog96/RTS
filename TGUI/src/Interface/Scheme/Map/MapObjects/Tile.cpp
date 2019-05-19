@@ -2,10 +2,13 @@
 #include "../DrawArray.h"
 #include "../../../UIinformation.h"
 #include "../Map.h"
+#include "../../../Time.h"
 #include <queue>
 #include <iostream>
 
 Tile::Tile(sf::Vector2f pos, tileInfo * info) : MapObject(pos) , info(info), state(DEFAULT) {
+    phi = 0.0f;
+    speed = sf::Vector2f(0.0f, 0.0f);
     if (info->state == MapInfo::states::highlighted) changeState(HIGHLIGHTED);
 }
 
@@ -68,12 +71,14 @@ int Tile::changeState(int newState) {
     return 0;
 }
 
-void Tile::update() {
+void Tile::update(int par) {
     if(mouseLeftClickedOn()) {
         if (info->state == MapInfo::states::highlighted || info->state == MapInfo::states::def || info->state == MapInfo::states::qmark) {
             info->state = MapInfo::states::pressed;
             if (info->content == 9) {
                 changeState(EXPLOSION);
+                MapInfo::boomPos = DrawArray::getPos(drawId);
+                MapInfo::mapState = MapInfo::playStates::boom;
                 Map::openAllTiles();
                 printf("%f %f\n", pos.x / 32, pos.y / 32);
             } else if (info->content == 0) {

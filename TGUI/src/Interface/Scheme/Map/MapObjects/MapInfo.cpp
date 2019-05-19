@@ -15,9 +15,13 @@ int MapInfo::flagsCnt, MapInfo::nClosedTiles;
 std::vector<std::vector<tileInfo>> MapInfo::tiles;
 sf::Vector2f MapInfo::mapPos = sf::Vector2f(0.0f, 0.0f);
 bool MapInfo::mouseOnMap = false;
+int MapInfo::mapState = MapInfo::playStates::playing;
 int MapInfo::pressedAfterPause[2];
+sf::Vector2f MapInfo::startPos = sf::Vector2f(0.0f, 0.0f);
+sf::Vector2f MapInfo::boomPos = sf::Vector2f(0.0f, 0.0f);
 
 int MapInfo::GenerateMap() {
+    startPos = sf::Vector2f(0.0f, 0.0f);
 
     if (MapInfo::nBombs >= MapInfo::mapSize.x * MapInfo::mapSize.y) MapInfo::nBombs = MapInfo::mapSize.x * MapInfo::mapSize.y - 1;
 
@@ -48,6 +52,7 @@ int MapInfo::GenerateMap() {
 
     for (int i = 0; i < MapInfo::mapSize.x; i++) {
         for (int j = 0; j < MapInfo::mapSize.y; j++) {
+            MapInfo::tiles[i][j].pos = sf::Vector2i(i, j);
             if (MapInfo::tiles[i][j].content == MapInfo::contents::bmb) continue;
 
             int cnt = 0;
