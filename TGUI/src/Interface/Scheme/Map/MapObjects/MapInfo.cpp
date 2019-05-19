@@ -1,4 +1,5 @@
 #include "MapInfo.h"
+#include "../../../UIinformation.h"
 #include <random>
 #include <vector>
 #include <algorithm>
@@ -7,7 +8,7 @@
 #include <queue>
 
 sf::Vector2i MapInfo::mapSize = {10, 10};
-int MapInfo::nBombs = 10;
+int MapInfo::nBombs = 50;
 int MapInfo::flagsCnt, MapInfo::nClosedTiles;
 
 
@@ -21,6 +22,11 @@ int MapInfo::GenerateMap() {
     MapInfo::flagsCnt= MapInfo::nBombs;
     MapInfo::nClosedTiles = MapInfo::mapSize.x * MapInfo::mapSize.y - MapInfo::nBombs;
 
+    UIinformation::gui->get("Panel")->cast<tgui::Panel>()->get("BombCounter")->cast<tgui::Label>()->setText(std::to_string(MapInfo::nBombs));
+    UIinformation::gui->get("Panel")->cast<tgui::Panel>()->get("MapSizeCounter")->cast<tgui::Label>()->setText(std::to_string(MapInfo::mapSize.x) + "x" + std::to_string(MapInfo::mapSize.y));
+
+    if (MapInfo::nBombs >= MapInfo::mapSize.x * MapInfo::mapSize.y) MapInfo::nBombs = MapInfo::mapSize.x * MapInfo::mapSize.y - 1;
+
     // Generate <nBombs> random numbers, places for the bombs
     std::vector<int> numbers;
     for (int i = 0; i < MapInfo::mapSize.x * MapInfo::mapSize.y; i++) {
@@ -32,7 +38,7 @@ int MapInfo::GenerateMap() {
     // Putting bombs in their places
     for (int i = 0; i < MapInfo::nBombs; i++) {
         int j = numbers[i];
-        MapInfo::tiles[j / MapInfo::mapSize.x][j % MapInfo::mapSize.y].content = MapInfo::contents::bmb;
+        MapInfo::tiles[j / MapInfo::mapSize.y][j % MapInfo::mapSize.y].content = MapInfo::contents::bmb;
     }
 
     // Putting numbers
@@ -59,18 +65,37 @@ int MapInfo::GenerateMap() {
         }
     }
 
-    srand(time(nullptr));
-    int highlightedNum = (rand() % zeroCnt) + 1;
-    zeroCnt = 0;
-    for (int i = 0; i < MapInfo::mapSize.x; i++) {
-        for (int j = 0; j < MapInfo::mapSize.y; j++) {
-            zeroCnt += MapInfo::tiles[i][j].content == 0;
-            if (zeroCnt == highlightedNum) {
-                MapInfo::tiles[i][j].state = MapInfo::states::highlighted;
-                return 0;
+    // Choosing highlighted tile -- random zero tile, if there is one
+    // If there is none -- random non-bomb tile
+    if (zeroCnt > 0) {
+        srand(time(nullptr));
+        int highlightedNum = (rand() % zeroCnt) + 1;
+        zeroCnt = 0;
+        for (int i = 0; i < MapInfo::mapSize.x; i++) {
+            for (int j = 0; j < MapInfo::mapSize.y; j++) {
+                zeroCnt += MapInfo::tiles[i][j].content == 0;
+                if (zeroCnt == highlightedNum) {
+                    MapInfo::tiles[i][j].state = MapInfo::states::highlighted;
+                    return 0;
+                }
+            }
+        }
+    } else {
+        int nonBombCnt = MapInfo::mapSize.x * MapInfo::mapSize.y - MapInfo::nBombs;
+        srand(time(nullptr));
+        int highlightedNum = (rand() % nonBombCnt) + 1;
+        nonBombCnt = 0;
+        for (int i = 0; i < MapInfo::mapSize.x; i++) {
+            for (int j = 0; j < MapInfo::mapSize.y; j++) {
+                nonBombCnt += MapInfo::tiles[i][j].content < 9;
+                if (nonBombCnt == highlightedNum) {
+                    MapInfo::tiles[i][j].state = MapInfo::states::highlighted;
+                    return 0;
+                }
             }
         }
     }
+
 }
 
 int MapInfo::OpenZeros(sf::Vector2i start) {
@@ -109,10 +134,17 @@ int MapInfo::OpenZeros(sf::Vector2i start) {
             std::cout << "TILES LEFT : " << MapInfo::nClosedTiles << std::endl;
         }
     }
-    for (int i = 0; i < MapInfo::mapSize.x; i++) {
-        for (int j = 0; j < MapInfo::mapSize.y; j++) {
-            std::cout << visited[i][j] << " ";
+    for (int i = 0; i < MapInfo::mapSize.y; i++) {
+        for (int j = 0; j < MapInfo::mapSize.x; j++) {
+            std::cout << visited[j][i] << " ";
         }
         std::cout << std::endl;
     }
+}
+
+int MapInfo::UpdateCounters() {
+    auto tCntr = UIinformation::gui->get("Panel")->cast<tgui::Panel>()->get("TileCounter")->cast<tgui::Label>();
+    tCntr->setText(std::to_string(MapInfo::nClosedTiles));
+    auto fCntr = UIinformation::gui->get("Panel")->cast<tgui::Panel>()->get("FlagCounter")->cast<tgui::Label>();
+    fCntr->setText(std::to_string(MapInfo::flagsCnt));
 }
