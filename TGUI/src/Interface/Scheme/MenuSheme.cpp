@@ -34,16 +34,16 @@ void MenuSheme::loadSheme() {
     // Create the background image
     // The picture is of type tgui::Picture::Ptr which is actually just a typedef for std::shared_widget<Picture>
     // The picture will fit the entire window and will scale with it
-    auto picture = tgui::Picture::create("../themes/images/MainMenuBG.jpg");
+    auto picture = tgui::Picture::create("../themes/images/HandMadeBG.png");
     picture->setSize({"100%", "100%"});
     UIinformation::gui->add(picture);
 
     //Header
     auto header = tgui::Label::create("Header");
-    header->setTextSize(110);
+    header->setTextSize(67);
     header->setAutoSize(true);
     header->setText("Strategy Game");
-    header->setPosition({"10%", "5%"});
+    header->setPosition({"25%", "13%"});
     UIinformation::gui->add(header, "Header");
 
     //Play button

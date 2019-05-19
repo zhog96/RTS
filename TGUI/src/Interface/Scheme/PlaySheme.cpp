@@ -60,7 +60,7 @@ void PlaySheme::loadSheme() {
     paused = false;
     Shemes::shemeChange = ShemesEnum::None;
 
-    tgui::Theme theme{"../themes/Black.txt"};
+    tgui::Theme theme{"../themes/PlayTheme.txt"};
     tgui::Theme::setDefault(&theme);
 
     // Create the background image
