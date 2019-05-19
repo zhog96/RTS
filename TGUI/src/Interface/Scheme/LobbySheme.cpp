@@ -32,10 +32,10 @@ void LobbySheme::playManual() {
         MapInfo::nBombs = std::stoi(placeholder[0]);
         MapInfo::mapSize = {std::stoi(placeholder[2]), std::stoi(placeholder[1])};
     }
-    catch (std::invalid_argument)
+    catch (std::invalid_argument &)
     {
-        MapInfo::nBombs = 10;
-        MapInfo::mapSize = {10, 10};
+        MapInfo::nBombs = 1;
+        MapInfo::mapSize = {1, 2};
     }
     Shemes::shemeChange = ShemesEnum::Play;
 }
@@ -80,7 +80,7 @@ void LobbySheme::loadSheme() {
     smallButton->setPosition({"10.5%", "16%"});
     UIinformation::gui->add(smallButton, "Small");
     Shemes::elements.emplace_back(Button(smallButton));
-    smallButton->setRenderer(theme.getRenderer("Button1"));
+    smallButton->setRenderer(theme.getRenderer("Small"));
     //Small button callback
     smallButton->connect("pressed", playSmall);
 
@@ -91,7 +91,7 @@ void LobbySheme::loadSheme() {
     mediumButton->setPosition({"10.5%", "35.5%"});
     UIinformation::gui->add(mediumButton, "Medium");
     Shemes::elements.emplace_back(Button(mediumButton));
-    mediumButton->setRenderer(theme.getRenderer("Button1"));
+    mediumButton->setRenderer(theme.getRenderer("Medium"));
     //Medium button callback
     mediumButton->connect("pressed", playMedium);
 
@@ -102,18 +102,18 @@ void LobbySheme::loadSheme() {
     bigButton->setPosition({"10.5%", "54.9%"});
     UIinformation::gui->add(bigButton, "Big");
     Shemes::elements.emplace_back(Button(bigButton));
-    bigButton->setRenderer(theme.getRenderer("Button1"));
+    bigButton->setRenderer(theme.getRenderer("Big"));
     //Big button callback
     bigButton->connect("pressed", playBig);
 
     //Manual button
-    auto manualButton = tgui::Button::create("Manual");
+    auto manualButton = tgui::Button::create("Own");
     manualButton->setTextSize(25);
     manualButton->setSize({"10%", "10%"});
     manualButton->setPosition({"10.5%", "74.3%"});
     UIinformation::gui->add(manualButton, "Manual");
     Shemes::elements.emplace_back(Button(manualButton));
-    manualButton->setRenderer(theme.getRenderer("Button1"));
+    manualButton->setRenderer(theme.getRenderer("Manual"));
     //Manual button callback
     manualButton->connect("pressed", playManual);
 
