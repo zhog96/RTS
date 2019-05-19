@@ -7,6 +7,7 @@
 
 #include "Scheme/Shemes.h"
 #include "UIinformation.h"
+#include "Scheme/LobbySheme.h"
 #include "Scheme/MenuSheme.h"
 #include "Scheme/PlaySheme.h"
 #include "Time.h"
@@ -136,6 +137,19 @@ int Interface::run() {
                     Shemes::cleanShemes();
                     update = PlaySheme::update;
                     PlaySheme::loadSheme();
+                }
+                catch (const tgui::Exception& e)
+                {
+                    std::cerr << "Failed to load TGUI widgets: " << e.what() << std::endl;
+                    return 1;
+                }
+                break;
+            case ShemesEnum::Lobby:
+                try
+                {
+                    Shemes::cleanShemes();
+                    update = LobbySheme::update;
+                    LobbySheme::loadSheme();
                 }
                 catch (const tgui::Exception& e)
                 {

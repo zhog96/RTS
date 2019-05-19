@@ -9,7 +9,7 @@
 #include "../Element/Button.h"
 
 void MenuSheme::play() {
-    Shemes::shemeChange = ShemesEnum::Play;
+    Shemes::shemeChange = ShemesEnum::Lobby;
 }
 
 void MenuSheme::exit() {
@@ -28,7 +28,7 @@ void MenuSheme::loadSheme() {
 
     Shemes::shemeChange = ShemesEnum::None;
 
-    tgui::Theme theme{"../themes/Black.txt"};
+    tgui::Theme theme{"../themes/MenuTheme.txt"};
     tgui::Theme::setDefault(&theme);
 
     // Create the background image
