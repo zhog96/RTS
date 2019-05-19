@@ -23,7 +23,7 @@ void Map::loadMap(tgui::Canvas * canvas) {
     DrawArray::setLayerTexture(0, &tiles);
     for (int i = 0; i < MapInfo::mapSize.x; i++) {
         for(int j = 0; j < MapInfo::mapSize.y; j++) {
-            objects.emplace_back(new Tile(sf::Vector2f(32 * i, 32 * j), &MapInfo::tiles[j][i]));
+            objects.emplace_back(new Tile(sf::Vector2f(32 * i, 32 * j), &MapInfo::tiles[i][j]));
         }
     }
     MapInfo::mapPos = canvas->getPosition();

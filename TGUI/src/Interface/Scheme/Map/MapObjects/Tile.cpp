@@ -79,7 +79,7 @@ void Tile::update() {
             } else if (info->content == 0) {
                 MapInfo::nClosedTiles--;
                 std::cout << "TILES LEFT : " << MapInfo::nClosedTiles << std::endl;
-                MapInfo::OpenZeros({(int) (pos.y / 32), (int) (pos.x / 32)});
+                MapInfo::OpenZeros({(int) (pos.x / 32), (int) (pos.y / 32)});
                 Map::checkTileStates();
                 printf("%f %f\n", pos.x / 32, pos.y / 32);
             } else {

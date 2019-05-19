@@ -6,8 +6,8 @@
 #include <chrono>
 #include <queue>
 
-sf::Vector2i MapInfo::mapSize = {10, 10};
-int MapInfo::nBombs = 10;
+sf::Vector2i MapInfo::mapSize = {40, 20};
+int MapInfo::nBombs = 333;
 int MapInfo::flagsCnt, MapInfo::nClosedTiles;
 
 
@@ -32,7 +32,7 @@ int MapInfo::GenerateMap() {
     // Putting bombs in their places
     for (int i = 0; i < MapInfo::nBombs; i++) {
         int j = numbers[i];
-        MapInfo::tiles[j / MapInfo::mapSize.x][j % MapInfo::mapSize.y].content = MapInfo::contents::bmb;
+        MapInfo::tiles[j / MapInfo::mapSize.y][j % MapInfo::mapSize.y].content = MapInfo::contents::bmb;
     }
 
     // Putting numbers
@@ -71,6 +71,8 @@ int MapInfo::GenerateMap() {
             }
         }
     }
+
+
 }
 
 int MapInfo::OpenZeros(sf::Vector2i start) {
@@ -109,9 +111,9 @@ int MapInfo::OpenZeros(sf::Vector2i start) {
             std::cout << "TILES LEFT : " << MapInfo::nClosedTiles << std::endl;
         }
     }
-    for (int i = 0; i < MapInfo::mapSize.x; i++) {
-        for (int j = 0; j < MapInfo::mapSize.y; j++) {
-            std::cout << visited[i][j] << " ";
+    for (int i = 0; i < MapInfo::mapSize.y; i++) {
+        for (int j = 0; j < MapInfo::mapSize.x; j++) {
+            std::cout << visited[j][i] << " ";
         }
         std::cout << std::endl;
     }
