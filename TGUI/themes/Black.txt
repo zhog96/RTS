@@ -104,7 +104,7 @@ EditBox {
 }
 
 Label {
-    TextColor = rgb(255, 0, 0);
+    TextColor = rgb(230, 170, 80);
     Scrollbar = &Scrollbar;
 }
 
