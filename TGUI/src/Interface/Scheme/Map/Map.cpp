@@ -34,6 +34,7 @@ void Map::loadMap(tgui::Canvas * canvas) {
 }
 
 void Map::update() {
+
     for(int i = 0; i < 2; i++) {
         if (MapInfo::pressedAfterPause[i] == 0 && !UIinformation::mPressed[i]) MapInfo::pressedAfterPause[i] = 1;
         if (MapInfo::pressedAfterPause[i] == 1 && UIinformation::mPressed[i]) MapInfo::pressedAfterPause[i] = 2;
@@ -85,25 +86,34 @@ void Map::update() {
     cameraMove *= cameraMoveSpeed * Time::delta;
     float H0 = 1.0f;
     cameraMove -= UIinformation::mDeltaPressed[sf::Mouse::Left];
+    sf::Transform trans;
+    trans.scale(H0 / (height + H0) * sf::Vector2f(1.0f, 1.0f));
+    sf::Vector2f size = canvas->getSize();
+    sf::Vector2f center = camera - size / 2.0f * height / H0;
+    trans.translate(-center);
     camera += cameraMove * (height + H0) / H0;
 
     canvas->clear(sf::Color::Black);
 
-    sf::Vector2f size = canvas->getSize();
-    sf::Vector2f center = camera - size / 2.0f * height / H0;
     for(int i = 0; i < DrawArray::N; i++) {
-        for(int j = 0; j < DrawArray::layers[i].getVertexCount(); j++) {
+        sf::RenderStates states;
+        states.texture = DrawArray::textures[i];
+        states.transform = trans;
+        canvas->draw(DrawArray::layers[i], states);
+
+        /*for(int j = 0; j < DrawArray::layers[i].getVertexCount(); j++) {
             DrawArray::layers[i][j].position = (DrawArray::layers[i][j].position - center) * H0 / (height + H0);
         }
         canvas->draw(DrawArray::layers[i], DrawArray::textures[i]);
         for(int j = 0; j < DrawArray::layers[i].getVertexCount(); j++) {
             DrawArray::layers[i][j].position = (DrawArray::layers[i][j].position * (height + H0) / H0) + center;
-        }
+        }*/
     }
 
     MapInfo::mapPos = ((UIinformation::mPos - canvas->getPosition()) * (height + H0) / H0) + center;
 
     for(int i = 0; i < objects.size(); i++) objects[i]->update();
+    MapInfo::UpdateCounters();
 }
 
 void Map::clean() {
