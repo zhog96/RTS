@@ -9,18 +9,21 @@
 void LobbySheme::playSmall() {
     MapInfo::nBombs = 10;
     MapInfo::mapSize = {10, 10};
+    MapInfo::mapState = UIinformation::gui->get("CheckBox")->cast<tgui::CheckBox>()->isChecked() ? MapInfo::playStates::wave : MapInfo::playStates::playing;
     Shemes::shemeChange = ShemesEnum::Play;
 }
 
 void LobbySheme::playMedium() {
     MapInfo::nBombs = 50;
     MapInfo::mapSize = {20, 20};
+    MapInfo::mapState = UIinformation::gui->get("CheckBox")->cast<tgui::CheckBox>()->isChecked() ? MapInfo::playStates::wave : MapInfo::playStates::playing;
     Shemes::shemeChange = ShemesEnum::Play;
 }
 
 void LobbySheme::playBig() {
     MapInfo::nBombs = 133;
     MapInfo::mapSize = {40, 25};
+    MapInfo::mapState = UIinformation::gui->get("CheckBox")->cast<tgui::CheckBox>()->isChecked() ? MapInfo::playStates::wave : MapInfo::playStates::playing;
     Shemes::shemeChange = ShemesEnum::Play;
 }
 
@@ -165,6 +168,12 @@ void LobbySheme::loadSheme() {
     xBox->setTextSize(81);
     UIinformation::gui->add(xBox, "XBox");
     xBox->setInputValidator(tgui::EditBox::Validator::UInt);
+
+    //Check box
+    auto checkBox = tgui::CheckBox::create("");
+    checkBox->setPosition({"97%", "2%"});
+    checkBox->setSize({"2%", "3%"});
+    UIinformation::gui->add(checkBox, "CheckBox");
 
     printf("Sheme loading end\n");
 }
