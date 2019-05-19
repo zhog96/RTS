@@ -19,7 +19,7 @@ std::vector<sf::Vector2f> Map::positionBoom;
 void Map::loadMap(tgui::Canvas * canvas) {
 
     positionBoom.clear();
-    MapInfo::mapState = MapInfo::playStates::playing;
+
     MapInfo::GenerateMap();
 
     Map::canvas = canvas;
