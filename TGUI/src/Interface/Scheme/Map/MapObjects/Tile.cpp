@@ -114,6 +114,7 @@ void Tile::update() {
             printf("%f %f\n", pos.x / 32, pos.y / 32);
         }
     }
+    MapInfo::UpdateCounters();
 }
 /*
 void Tile::openZeros(int xx, int yy) {

@@ -2,6 +2,7 @@
 #include <TGUI/TGUI.hpp>
 #include <iostream>
 #include <math.h>
+#include <string>
 
 #include "Shemes.h"
 #include "../UIinformation.h"
@@ -125,6 +126,36 @@ void PlaySheme::loadSheme() {
     Shemes::elementsPause.emplace_back(Button(continueButton));
     continueButton->setRenderer(theme.getRenderer("Button1"));
     continueButton->connect("pressed", unpause);
+
+    //Number of bombs and Map Size
+    auto bombCounter = tgui::Label::create("BombCounter");
+    bombCounter->setTextSize(70);
+    bombCounter->setAutoSize(true);
+    bombCounter->setText(std::to_string(MapInfo::nBombs));
+    bombCounter->setPosition({"7%", "6%"});
+    panel->add(bombCounter, "BombCounter");
+
+    auto mapSizeCounter = tgui::Label::create("MapSizeCounter");
+    mapSizeCounter->setTextSize(70);
+    mapSizeCounter->setAutoSize(true);
+    mapSizeCounter->setText(std::to_string(MapInfo::mapSize.x) + "X" + std::to_string(MapInfo::mapSize.y));
+    mapSizeCounter->setPosition({"7%", "45%"});
+    panel->add(mapSizeCounter, "MapSizeCounter");
+
+    //Tiles and Flags counters
+    auto tileCounter = tgui::Label::create("TileCounter");
+    tileCounter->setTextSize(70);
+    tileCounter->setAutoSize(true);
+    tileCounter->setText(std::to_string(MapInfo::nClosedTiles));
+    tileCounter->setPosition({"49%", "6%"});
+    panel->add(tileCounter, "TileCounter");
+
+    auto flagCounter = tgui::Label::create("FlagCounter");
+    flagCounter->setTextSize(70);
+    flagCounter->setAutoSize(true);
+    flagCounter->setText(std::to_string(MapInfo::flagsCnt));
+    flagCounter->setPosition({"49%", "45%"});
+    panel->add(flagCounter, "FlagCounter");
 
     //Map sources loading
     Map::loadMap(canvas.get());

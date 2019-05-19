@@ -1,4 +1,5 @@
 #include "MapInfo.h"
+#include "../../../UIinformation.h"
 #include <random>
 #include <vector>
 #include <algorithm>
@@ -6,8 +7,8 @@
 #include <chrono>
 #include <queue>
 
-sf::Vector2i MapInfo::mapSize = {40, 20};
-int MapInfo::nBombs = 333;
+sf::Vector2i MapInfo::mapSize = {40, 25};
+int MapInfo::nBombs = 167;
 int MapInfo::flagsCnt, MapInfo::nClosedTiles;
 
 
@@ -20,6 +21,9 @@ int MapInfo::GenerateMap() {
     MapInfo::tiles = std::vector<std::vector<tileInfo>>(MapInfo::mapSize.x, std::vector<tileInfo>(MapInfo::mapSize.y, {-1, MapInfo::states::def}));
     MapInfo::flagsCnt= MapInfo::nBombs;
     MapInfo::nClosedTiles = MapInfo::mapSize.x * MapInfo::mapSize.y - MapInfo::nBombs;
+
+    UIinformation::gui->get("Panel")->cast<tgui::Panel>()->get("BombCounter")->cast<tgui::Label>()->setText(std::to_string(MapInfo::nBombs));
+    UIinformation::gui->get("Panel")->cast<tgui::Panel>()->get("MapSizeCounter")->cast<tgui::Label>()->setText(std::to_string(MapInfo::mapSize.x) + "x" + std::to_string(MapInfo::mapSize.y));
 
     // Generate <nBombs> random numbers, places for the bombs
     std::vector<int> numbers;
@@ -117,4 +121,11 @@ int MapInfo::OpenZeros(sf::Vector2i start) {
         }
         std::cout << std::endl;
     }
+}
+
+int MapInfo::UpdateCounters() {
+    auto tCntr = UIinformation::gui->get("Panel")->cast<tgui::Panel>()->get("TileCounter")->cast<tgui::Label>();
+    tCntr->setText(std::to_string(MapInfo::nClosedTiles));
+    auto fCntr = UIinformation::gui->get("Panel")->cast<tgui::Panel>()->get("FlagCounter")->cast<tgui::Label>();
+    fCntr->setText(std::to_string(MapInfo::flagsCnt));
 }

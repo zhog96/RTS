@@ -22,6 +22,7 @@ public:
     static int nClosedTiles;
     static int GenerateMap();
     static int OpenZeros(sf::Vector2i start);
+    static int UpdateCounters();
 };
 
 
