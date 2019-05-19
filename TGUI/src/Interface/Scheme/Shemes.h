@@ -5,7 +5,7 @@
 #include <map>
 #include "../Element/Button.h"
 
-enum ShemesEnum {None, Exit, Menu, Play};
+enum ShemesEnum {None, Exit, Menu, Lobby, Play};
 
 class Shemes {
 public:

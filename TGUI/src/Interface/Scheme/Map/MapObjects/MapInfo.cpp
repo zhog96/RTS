@@ -18,6 +18,9 @@ bool MapInfo::mouseOnMap = false;
 int MapInfo::pressedAfterPause[2];
 
 int MapInfo::GenerateMap() {
+
+    if (MapInfo::nBombs >= MapInfo::mapSize.x * MapInfo::mapSize.y) MapInfo::nBombs = MapInfo::mapSize.x * MapInfo::mapSize.y - 1;
+
     MapInfo::tiles = std::vector<std::vector<tileInfo>>(MapInfo::mapSize.x, std::vector<tileInfo>(MapInfo::mapSize.y, {-1, MapInfo::states::def}));
     MapInfo::flagsCnt= MapInfo::nBombs;
     MapInfo::nClosedTiles = MapInfo::mapSize.x * MapInfo::mapSize.y - MapInfo::nBombs;
@@ -25,7 +28,6 @@ int MapInfo::GenerateMap() {
     UIinformation::gui->get("Panel")->cast<tgui::Panel>()->get("BombCounter")->cast<tgui::Label>()->setText(std::to_string(MapInfo::nBombs));
     UIinformation::gui->get("Panel")->cast<tgui::Panel>()->get("MapSizeCounter")->cast<tgui::Label>()->setText(std::to_string(MapInfo::mapSize.x) + "x" + std::to_string(MapInfo::mapSize.y));
 
-    if (MapInfo::nBombs >= MapInfo::mapSize.x * MapInfo::mapSize.y) MapInfo::nBombs = MapInfo::mapSize.x * MapInfo::mapSize.y - 1;
 
     // Generate <nBombs> random numbers, places for the bombs
     std::vector<int> numbers;
