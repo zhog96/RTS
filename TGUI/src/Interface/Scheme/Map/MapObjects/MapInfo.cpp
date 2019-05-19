@@ -7,8 +7,8 @@
 #include <chrono>
 #include <queue>
 
-sf::Vector2i MapInfo::mapSize = {40, 25};
-int MapInfo::nBombs = 167;
+sf::Vector2i MapInfo::mapSize = {10, 10};
+int MapInfo::nBombs = 50;
 int MapInfo::flagsCnt, MapInfo::nClosedTiles;
 
 
@@ -24,6 +24,8 @@ int MapInfo::GenerateMap() {
 
     UIinformation::gui->get("Panel")->cast<tgui::Panel>()->get("BombCounter")->cast<tgui::Label>()->setText(std::to_string(MapInfo::nBombs));
     UIinformation::gui->get("Panel")->cast<tgui::Panel>()->get("MapSizeCounter")->cast<tgui::Label>()->setText(std::to_string(MapInfo::mapSize.x) + "x" + std::to_string(MapInfo::mapSize.y));
+
+    if (MapInfo::nBombs >= MapInfo::mapSize.x * MapInfo::mapSize.y) MapInfo::nBombs = MapInfo::mapSize.x * MapInfo::mapSize.y - 1;
 
     // Generate <nBombs> random numbers, places for the bombs
     std::vector<int> numbers;
@@ -63,19 +65,36 @@ int MapInfo::GenerateMap() {
         }
     }
 
-    srand(time(nullptr));
-    int highlightedNum = (rand() % zeroCnt) + 1;
-    zeroCnt = 0;
-    for (int i = 0; i < MapInfo::mapSize.x; i++) {
-        for (int j = 0; j < MapInfo::mapSize.y; j++) {
-            zeroCnt += MapInfo::tiles[i][j].content == 0;
-            if (zeroCnt == highlightedNum) {
-                MapInfo::tiles[i][j].state = MapInfo::states::highlighted;
-                return 0;
+    // Choosing highlighted tile -- random zero tile, if there is one
+    // If there is none -- random non-bomb tile
+    if (zeroCnt > 0) {
+        srand(time(nullptr));
+        int highlightedNum = (rand() % zeroCnt) + 1;
+        zeroCnt = 0;
+        for (int i = 0; i < MapInfo::mapSize.x; i++) {
+            for (int j = 0; j < MapInfo::mapSize.y; j++) {
+                zeroCnt += MapInfo::tiles[i][j].content == 0;
+                if (zeroCnt == highlightedNum) {
+                    MapInfo::tiles[i][j].state = MapInfo::states::highlighted;
+                    return 0;
+                }
+            }
+        }
+    } else {
+        int nonBombCnt = MapInfo::mapSize.x * MapInfo::mapSize.y - MapInfo::nBombs;
+        srand(time(nullptr));
+        int highlightedNum = (rand() % nonBombCnt) + 1;
+        nonBombCnt = 0;
+        for (int i = 0; i < MapInfo::mapSize.x; i++) {
+            for (int j = 0; j < MapInfo::mapSize.y; j++) {
+                nonBombCnt += MapInfo::tiles[i][j].content < 9;
+                if (nonBombCnt == highlightedNum) {
+                    MapInfo::tiles[i][j].state = MapInfo::states::highlighted;
+                    return 0;
+                }
             }
         }
     }
-
 
 }
 
