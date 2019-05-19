@@ -115,6 +115,7 @@ void Map::clean() {
     for (int i = 0; i < MapInfo::mapSize.x; i++) {
         MapInfo::tiles[i].clear();
     }
+    height = 0.0f;
     MapInfo::tiles.clear();
 }
 
