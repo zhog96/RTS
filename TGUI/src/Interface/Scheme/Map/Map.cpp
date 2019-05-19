@@ -141,7 +141,6 @@ void Map::update() {
                 Tile *tile = dynamic_cast<Tile *> (objects[i]);
                 if (tile) {
                     sf::Vector2i ind = tile->info->pos;
-                    sf::Vector2f pos = tile->pos;
                     tile->phi += Time::delta * 0.000005f;
                     float phi = tile->phi + ind.x * 0.3f;
                     DrawArray::update(tile->drawId,
