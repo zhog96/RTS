@@ -28,16 +28,29 @@ void LobbySheme::playManual() {
     std::string placeholder[3] = {UIinformation::gui->get("BombBox")->cast<tgui::EditBox>()->getText(),
                                   UIinformation::gui->get("YBox")->cast<tgui::EditBox>()->getText(),
                                   UIinformation::gui->get("XBox")->cast<tgui::EditBox>()->getText()};
-    try {
-        MapInfo::nBombs = std::stoi(placeholder[0]);
-        MapInfo::mapSize = {std::stoi(placeholder[2]), std::stoi(placeholder[1])};
+    if(placeholder[0].size() == 0 || placeholder[1].size() == 0 || placeholder[2].size() == 0
+    || atoi(placeholder[1].c_str()) * atoi(placeholder[2].c_str()) <= atoi(placeholder[0].c_str())
+    || atoi(placeholder[0].c_str()) == 0 || atoi(placeholder[1].c_str()) == 0 || atoi(placeholder[2].c_str()) == 0) {
+        if(placeholder[1].size() == 0 || atoi(placeholder[1].c_str()) == 0) UIinformation::gui->get("YBox")->cast<tgui::EditBox>()->setText("10");
+        if(placeholder[2].size() == 0 || atoi(placeholder[2].c_str()) == 0) UIinformation::gui->get("XBox")->cast<tgui::EditBox>()->setText("10");
+        placeholder[1] = UIinformation::gui->get("YBox")->cast<tgui::EditBox>()->getText();
+        placeholder[2] = UIinformation::gui->get("XBox")->cast<tgui::EditBox>()->getText();
+        if(atoi(placeholder[1].c_str()) * atoi(placeholder[1].c_str()) == 1) {
+            if (atoi(placeholder[1].c_str()) == 1) {
+                UIinformation::gui->get("YBox")->cast<tgui::EditBox>()->setText("2");
+                placeholder[1] = UIinformation::gui->get("YBox")->cast<tgui::EditBox>()->getText();
+            } else {
+                UIinformation::gui->get("XBox")->cast<tgui::EditBox>()->setText("2");
+                placeholder[2] = UIinformation::gui->get("XBox")->cast<tgui::EditBox>()->getText();
+            }
+        }
+        if(placeholder[0].size() == 0 || atoi(placeholder[1].c_str()) * atoi(placeholder[2].c_str()) <= atoi(placeholder[0].c_str()))
+            UIinformation::gui->get("BombBox")->cast<tgui::EditBox>()->setText(sf::String(std::to_string(std::max(1, int(atoi(placeholder[1].c_str()) * atoi(placeholder[2].c_str()) * 0.10)))));
+    } else {
+        MapInfo::nBombs = atoi(placeholder[0].c_str());
+        MapInfo::mapSize = sf::Vector2i(atoi(placeholder[2].c_str()), atoi(placeholder[1].c_str()));
+        Shemes::shemeChange = ShemesEnum::Play;
     }
-    catch (std::invalid_argument &)
-    {
-        MapInfo::nBombs = 1;
-        MapInfo::mapSize = {1, 2};
-    }
-    Shemes::shemeChange = ShemesEnum::Play;
 }
 
 void LobbySheme::exit() {
@@ -135,6 +148,7 @@ void LobbySheme::loadSheme() {
     bombBox->setMaximumCharacters(4);
     bombBox->setTextSize(64);
     UIinformation::gui->add(bombBox, "BombBox");
+    bombBox->setInputValidator(tgui::EditBox::Validator::UInt);
 
     auto yBox = tgui::EditBox::create();
     yBox->setPosition({"56.5%", "41%"});
@@ -142,6 +156,7 @@ void LobbySheme::loadSheme() {
     yBox->setMaximumCharacters(3);
     yBox->setTextSize(81);
     UIinformation::gui->add(yBox, "YBox");
+    yBox->setInputValidator(tgui::EditBox::Validator::UInt);
 
     auto xBox = tgui::EditBox::create();
     xBox->setPosition({"56.5%", "67%"});
@@ -149,6 +164,7 @@ void LobbySheme::loadSheme() {
     xBox->setMaximumCharacters(3);
     xBox->setTextSize(81);
     UIinformation::gui->add(xBox, "XBox");
+    xBox->setInputValidator(tgui::EditBox::Validator::UInt);
 
     printf("Sheme loading end\n");
 }
