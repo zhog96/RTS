@@ -15,6 +15,7 @@ public:
     static sf::Vector2f mapPos;
     static sf::Vector2f boomPos;
     static int mapState;
+    static int timePauseStart;
     typedef enum {playing, win, defeat, waveCrazy, wave, boom} playStates;
     static bool mouseOnMap;
     static int pressedAfterPause[2];

@@ -27,6 +27,9 @@ void PlaySheme::unpause() {
     if(!paused) {
         for(int i = 0; i < 2; i++) MapInfo::pressedAfterPause[i] = 0;
     }
+    if(paused) {
+        MapInfo::timePauseStart = Time::time;
+    }
 }
 
 void PlaySheme::update() {
@@ -44,12 +47,16 @@ void PlaySheme::update() {
         unpause();
     }
 
-    if(!paused) Map::update();
+    if(!paused) {
+        Map::update();
+        MapInfo::timePauseStart = -1;
+    }
 }
 
 void PlaySheme::loadSheme() {
     printf("Sheme loading start\n");
 
+    MapInfo::timePauseStart = -1;
     paused = false;
     Shemes::shemeChange = ShemesEnum::None;
 
