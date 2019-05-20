@@ -11,6 +11,8 @@ public:
     static std::vector<sf::VertexArray> layers;
     static std::vector<sf::Texture *> textures;
 
+    static int upSize(sf::Vector2i id, sf::Vector2f size);
+    static int setSize(sf::Vector2i id, sf::Vector2f size);
     static sf::Vector2i addToLayer(int layer, sf::IntRect rectPos, sf::IntRect rectText);
     static sf::Vector2i addToLayer(int layer, std::vector<sf::Vertex> &pos);
     static int erase(sf::Vector2i id);

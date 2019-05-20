@@ -7,6 +7,7 @@
 #include "../../UIinformation.h"
 #include "../../Time.h"
 #include "DrawArray.h"
+#include "MapObjects/Confetti.h"
 
 sf::Texture Map::tiles;
 tgui::Canvas * Map::canvas = nullptr;
@@ -100,7 +101,7 @@ void Map::update() {
 
     canvas->clear(sf::Color::Black);
 
-    for(int i = 0; i < DrawArray::N; i++) {
+    for(int i = 0; i < 1; i++) {
         sf::RenderStates states;
         states.texture = DrawArray::textures[i];
         states.transform = trans;
@@ -113,6 +114,10 @@ void Map::update() {
         for(int j = 0; j < DrawArray::layers[i].getVertexCount(); j++) {
             DrawArray::layers[i][j].position = (DrawArray::layers[i][j].position * (height + H0) / H0) + center;
         }*/
+    }
+
+    for(int i = 1; i < 2; i++) {
+        canvas->draw(DrawArray::layers[i], DrawArray::textures[i]);
     }
 
     MapInfo::mapPos = ((UIinformation::mPos - canvas->getPosition()) * (height + H0) / H0) + center;
@@ -187,10 +192,15 @@ void Map::update() {
             MapInfo::mapState = MapInfo::playStates::defeat;
             timeBoom = Time::time;
             break;
+        case MapInfo::playStates::win:
+            Confetti::start(1, canvas->getSize()); //This checks was it started
+            Confetti::update();
+            break;
     }
 }
 
 void Map::clean() {
+    Confetti::clear();
     for(int i = 0; i < objects.size(); i++) delete objects[i];
     objects.clear();
     camera = sf::Vector2f(0.0f, 0.0f);

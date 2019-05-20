@@ -54,6 +54,21 @@ int DrawArray::update(sf::Vector2i id, sf::Vector2f pos) {
     layers[id.x][4 * id.y + 3].position = sf::Vector2f(pos) + sf::Vector2f(0.f, size.y);
 }
 
+int DrawArray::upSize(sf::Vector2i id, sf::Vector2f size) {
+    layers[id.x][4 * id.y].position += -size / 2.0f;
+    layers[id.x][4 * id.y + 1].position += sf::Vector2f(size.x / 2, -size.y / 2);
+    layers[id.x][4 * id.y + 2].position += size / 2.0f;
+    layers[id.x][4 * id.y + 3].position += sf::Vector2f(-size.x / 2, size.y / 2) ;
+}
+
+int DrawArray::setSize(sf::Vector2i id, sf::Vector2f size) {
+    sf::Vector2f pos = layers[id.x][4 * id.y].position;
+    layers[id.x][4 * id.y].position = sf::Vector2f(pos);
+    layers[id.x][4 * id.y + 1].position = sf::Vector2f(pos) + sf::Vector2f(size.x, 0.f);
+    layers[id.x][4 * id.y + 2].position = sf::Vector2f(pos) + size;
+    layers[id.x][4 * id.y + 3].position = sf::Vector2f(pos) + sf::Vector2f(0.f, size.y);
+}
+
 int DrawArray::updateTexture(sf::Vector2i id, sf::Vector2i pos) {
     sf::Vector2f size = layers[id.x][4 * id.y + 2].texCoords - layers[id.x][4 * id.y].texCoords;
     layers[id.x][4 * id.y].texCoords = sf::Vector2f(pos);
