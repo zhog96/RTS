@@ -77,6 +77,7 @@ void Tile::update(int par) {
             info->state = MapInfo::states::pressed;
             if (info->content == 9) {
                 changeState(EXPLOSION);
+                Map::lose();
                 MapInfo::boomPos = DrawArray::getPos(drawId);
                 MapInfo::mapState = MapInfo::playStates::boom;
                 Map::openAllTiles();
@@ -119,31 +120,8 @@ void Tile::update(int par) {
             printf("%f %f\n", pos.x / 32, pos.y / 32);
         }
     }
-}
-/*
-void Tile::openZeros(int xx, int yy) {
-    std::vector<std::vector<bool>> visited(MapInfo::mapSize.x, std::vector<bool>(MapInfo::mapSize.y, false));
-    std::queue<sf::Vector2i> Q;
-    Q.push({xx, yy});
-    visited[xx][yy] = true;
-    while (!Q.empty()) {
-        sf::Vector2i cur = Q.front();
-        int x = cur.x, y = cur.y;
-        Q.pop();
-        if (MapInfo::tiles[x][y].content != 0) continue;
-        if (x > 0) {
-            if (y > 0 && !visited[x-1][y-1]) {Q.push({x - 1, y - 1}); visited[x-1][y-1] = true;}
-            if (y < MapInfo::mapSize.y - 1 && !visited[x-1][y+1]) {Q.push({x - 1, y + 1}); visited[x-1][y+1] = true;}
-            if (!visited[x-1][y]) {Q.push({x - 1, y}); visited[x-1][y] = true;}
-        }
-        if (x < MapInfo::mapSize.x - 1) {
-            if (y > 0 && !visited[x+1][y-1]) {Q.push({x + 1, y - 1}); visited[x+1][y-1] = true;}
-            if (y < MapInfo::mapSize.y - 1 && !visited[x+1][y+1]) {Q.push({x + 1, y + 1}); visited[x+1][y+1] = true;}
-            if (!visited[x+1][y]) {Q.push({x + 1, y}); visited[x+1][y] = true;}
-        }
-        if (y > 0) {Q.push({x, y - 1}); visited[x][y-1] = true;}
-        if (y < MapInfo::mapSize.y - 1) {Q.push({x, y + 1}); visited[x][y+1] = true;}
-        Map::objects[x * MapInfo::mapSize.x + y]->changeState(ZERO);
-        MapInfo::tiles[x][y].state = MapInfo::states::pressed;
+    if (MapInfo::flagsCnt == 0 && MapInfo::nClosedTiles == 0) {
+        MapInfo::mapState = MapInfo::playStates::win;
+        Map::win();
     }
-}*/
+}

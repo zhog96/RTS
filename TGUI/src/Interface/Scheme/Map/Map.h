@@ -22,5 +22,7 @@ public:
 
     static void checkTileStates();
     static void openAllTiles();
+    static void win();
+    static void lose();
 };
 

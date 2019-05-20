@@ -88,6 +88,29 @@ void PlaySheme::loadSheme() {
     panelBG->setPosition({"0%, 0%"});
     panel->add(panelBG, "PanelBG");
 
+    //ControlPanelBackground in the end of the game
+    auto panelBGEndGame = tgui::Picture::create("../themes/images/gamePanelEndGame.png");
+    panelBGEndGame->setSize({"100%", "100%"});
+    panelBGEndGame->setPosition({"0%, 0%"});
+    panel->add(panelBGEndGame, "PanelBGEndGame");
+    panelBGEndGame->setVisible(false);
+
+    auto winMessage = tgui::Label::create("WinMessage");
+    winMessage->setTextSize(70);
+    winMessage->setAutoSize(true);
+    winMessage->setText("You WON !!!");
+    winMessage->setPosition({"15%", "25%"});
+    panel->add(winMessage, "WinMessage");
+    winMessage->setVisible(false);
+
+    auto loseMessage = tgui::Label::create("LoseMessage");
+    loseMessage->setTextSize(70);
+    loseMessage->setAutoSize(true);
+    loseMessage->setText("You lost :(");
+    loseMessage->setPosition({"20%", "25%"});
+    panel->add(loseMessage, "LoseMessage");
+    loseMessage->setVisible(false);
+
     //PauseButton
     auto pauseButton = tgui::Button::create("");
     pauseButton->setSize({"10%", "50%"});
