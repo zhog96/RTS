@@ -118,7 +118,7 @@ void Map::update() {
 
     if(MapInfo::flagsCnt == 0 && MapInfo::nClosedTiles == 0) MapInfo::mapState = MapInfo::playStates::win;
     int par = MapInfo::mapState;
-    for(int i = 0; i < objects.size(); i++) objects[i]->update(par);
+    if (MapInfo::mapState != MapInfo::playStates::win && MapInfo::mapState != MapInfo::playStates::defeat)  for(int i = 0; i < objects.size(); i++) objects[i]->update(par);
     MapInfo::UpdateCounters();
 
     switch (MapInfo::mapState) {
@@ -223,4 +223,28 @@ void Map::openAllTiles() {
             MapInfo::tiles[i][j].state = MapInfo::states::pressed;
         }
     }
+}
+
+void Map::win() {
+    UIinformation::gui->get("PanelBG")->setVisible(false);
+    UIinformation::gui->get("PanelBGEndGame")->setVisible(true);
+
+    UIinformation::gui->get("WinMessage")->setVisible(true);
+
+    UIinformation::gui->get("BombCounter")->setVisible(false);
+    UIinformation::gui->get("MapSizeCounter")->setVisible(false);
+    UIinformation::gui->get("TileCounter")->setVisible(false);
+    UIinformation::gui->get("FlagCounter")->setVisible(false);
+}
+
+void Map::lose() {
+    UIinformation::gui->get("PanelBG")->setVisible(false);
+    UIinformation::gui->get("PanelBGEndGame")->setVisible(true);
+
+    UIinformation::gui->get("LoseMessage")->setVisible(true);
+
+    UIinformation::gui->get("BombCounter")->setVisible(false);
+    UIinformation::gui->get("MapSizeCounter")->setVisible(false);
+    UIinformation::gui->get("TileCounter")->setVisible(false);
+    UIinformation::gui->get("FlagCounter")->setVisible(false);
 }
