@@ -20,7 +20,7 @@ void Confetti::start(int layer, sf::Vector2f screenSize) {
         Confetti::screenSize = screenSize;
         started = true;
         Confetti::layer = layer;
-        lastImp = Time::time;
+        lastImp = 0;
         float speed = 0.00001f;
         for (int i = 0; i < 1000; i++) {
             confetti.emplace_back(DrawArray::addToLayer(layer, sf::IntRect(0, int(screenSize.y), 4, 4),
@@ -43,8 +43,8 @@ void Confetti::update() {
         DrawArray::upSize(confetti[i],  sf::Vector2f(1.0f, 1.0f) * (Time::delta * 0.00001f));
         confettiS[i].y += 0.000000001f * Time::delta;
     }
-    if(Time::time > lastImp + freq) {
-        lastImp = Time::time;
+    if(freq <= lastImp) {
+        lastImp = 0;
         float speed = 0.00001f;
         for (int i = 0; i < 1000; i++) {
             DrawArray::update(confetti[i], sf::Vector2f(0, screenSize.y));
@@ -59,6 +59,7 @@ void Confetti::update() {
             confettiS[1000 + i] = ((rand() % 100 + 10) * speed * sf::Vector2f(cos(phi), -sin(phi)));
         }
     }
+    lastImp += Time::delta;
 }
 
 void Confetti::clear() {
