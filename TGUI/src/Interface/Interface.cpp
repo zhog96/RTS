@@ -25,6 +25,11 @@ int Interface::run() {
     Shemes::loadTextures();
     window.setFramerateLimit(60);
 
+    for(int i = 0; i < 2; i++) {
+        UIinformation::mPressStart[i] = -1;
+        UIinformation::mClickTime[i] = -1;
+    }
+
     void (*update)() = nullptr;
 
     // Main loop
@@ -72,6 +77,7 @@ int Interface::run() {
             } else if (event.type == sf::Event::MouseButtonPressed) {
                 //printf("Mouse::Pressed: %d\n", event.key.code);
                 if(0 <= event.key.code < 2) {
+                    UIinformation::mPressStart[event.key.code] = Time::time;
                     UIinformation::mPressed[event.key.code] = true;
                     UIinformation::mClicked[event.key.code] = false;
                 }
@@ -106,10 +112,18 @@ int Interface::run() {
         }
 
         for(int i = 0; i < 2; i++) {
-            int delta = 6;
+            if(UIinformation::mPressed[i]) UIinformation::mClickTime[i] = Time::time - UIinformation::mPressStart[i];
+        }
+
+        for(int i = 0; i < 2; i++) {
+            /*int delta = 6;
             sf::Vector2f vec = UIinformation::mDeltaClick[i];
             float len = vec.x * vec.x + vec.y * vec.y;
-            if(len <= delta && delta <= len) UIinformation::mDeltaClick[i] = sf::Vector2f(0.0f, 0.0f);
+            if(len <= delta && delta <= len) UIinformation::mDeltaClick[i] = sf::Vector2f(0.0f, 0.0f);*/
+            if(UIinformation::mClickTime[i] < 100000) {
+                UIinformation::mDeltaClick[i] = sf::Vector2f(0.0f, 0.0f);
+                UIinformation::mDeltaPressed[i] = sf::Vector2f(0.0f, 0.0f);
+            }
         }
 
         Time::update();
