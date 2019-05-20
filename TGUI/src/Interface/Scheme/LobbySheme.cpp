@@ -52,6 +52,7 @@ void LobbySheme::playManual() {
     } else {
         MapInfo::nBombs = atoi(placeholder[0].c_str());
         MapInfo::mapSize = sf::Vector2i(atoi(placeholder[2].c_str()), atoi(placeholder[1].c_str()));
+        MapInfo::mapState = UIinformation::gui->get("CheckBox")->cast<tgui::CheckBox>()->isChecked() ? MapInfo::playStates::wave : MapInfo::playStates::playing;
         Shemes::shemeChange = ShemesEnum::Play;
     }
 }
