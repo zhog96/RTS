@@ -1,13 +1,13 @@
 #include "Time.h"
 
 sf::Clock Time::clock;
-int Time::delta = 0;
-int Time::time = clock.getElapsedTime().asMicroseconds();
-int Time::update() {
+long long Time::delta = 0;
+long long Time::time = clock.getElapsedTime().asMicroseconds();
+long long Time::update() {
     delta = clock.getElapsedTime().asMicroseconds() - time;
     time = clock.getElapsedTime().asMicroseconds();
 }
-int Time::staticUpdate() {
+long long Time::staticUpdate() {
     delta = clock.getElapsedTime().asMicroseconds() - time;
 }
 

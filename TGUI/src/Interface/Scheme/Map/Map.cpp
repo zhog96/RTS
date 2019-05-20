@@ -13,7 +13,7 @@ tgui::Canvas * Map::canvas = nullptr;
 sf::Vector2f Map::camera(0.0f, 0.0f);
 std::vector<MapObject *> Map::objects;
 float Map::height = 0.0f;
-int Map::timeBoom = 0;
+long long Map::timeBoom = 0;
 std::vector<sf::Vector2f> Map::positionBoom;
 
 void Map::loadMap(tgui::Canvas * canvas) {

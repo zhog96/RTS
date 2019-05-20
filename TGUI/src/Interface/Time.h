@@ -5,9 +5,9 @@ class Time {
 private:
     static sf::Clock clock;
 public:
-    static int delta;
-    static int time;
+    static long long delta;
+    static long long time;
 
-    static int update();
-    static int staticUpdate();
+    static long long update();
+    static long long staticUpdate();
 };

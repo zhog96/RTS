@@ -13,7 +13,7 @@ public:
     static tgui::Canvas * canvas;
     static sf::Vector2f camera;
     static float height;
-    static int timeBoom;
+    static long long timeBoom;
     static std::vector<sf::Vector2f> positionBoom;
 
     static void loadMap(tgui::Canvas * canvas);
