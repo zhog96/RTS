@@ -47,6 +47,7 @@ void Map::update() {
     if(UIinformation::wheel != 0 && MapInfo::mouseOnMap) {
         //printf("%f\n", UIinformation::wheel);
         height += -UIinformation::wheel * 0.01;
+        if(height < -0.9f) height = -0.9f;
     }
 
     /*if(UIinformation::wheel != 0 && MapInfo::mouseOnMap) {
