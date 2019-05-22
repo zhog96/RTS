@@ -120,7 +120,7 @@ int MapInfo::OpenZeros(sf::Vector2i start) {
             if (MapInfo::tiles[x][y].state != MapInfo::states::pressed) {
                 MapInfo::tiles[x][y].state = MapInfo::states::pressed;
                 MapInfo::nClosedTiles--;
-                std::cout << "TILES LEFT : " << MapInfo::nClosedTiles << std::endl;
+//                std::cout << "TILES LEFT : " << MapInfo::nClosedTiles << std::endl;
             }
             continue;
         }
@@ -139,15 +139,15 @@ int MapInfo::OpenZeros(sf::Vector2i start) {
         if (MapInfo::tiles[x][y].state != MapInfo::states::pressed) {
             MapInfo::tiles[x][y].state = MapInfo::states::pressed;
             MapInfo::nClosedTiles--;
-            std::cout << "TILES LEFT : " << MapInfo::nClosedTiles << std::endl;
+//            std::cout << "TILES LEFT : " << MapInfo::nClosedTiles << std::endl;
         }
     }
-    for (int i = 0; i < MapInfo::mapSize.y; i++) {
-        for (int j = 0; j < MapInfo::mapSize.x; j++) {
-            std::cout << visited[j][i] << " ";
-        }
-        std::cout << std::endl;
-    }
+//    for (int i = 0; i < MapInfo::mapSize.y; i++) {
+//       for (int j = 0; j < MapInfo::mapSize.x; j++) {
+//            std::cout << visited[j][i] << " ";
+//        }
+//        std::cout << std::endl;
+//    }
 }
 
 int MapInfo::UpdateCounters() {
