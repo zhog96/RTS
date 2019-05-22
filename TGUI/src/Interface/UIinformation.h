@@ -11,6 +11,7 @@ public:
     static bool mPressed[2];
     static bool mClicked[2];
     static float wheel;
+    static int coreAmount;
     static long long mPressStart[2];
     static long long mClickTime[2];
     static sf::Vector2f mDeltaClick[2];

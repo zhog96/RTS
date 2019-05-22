@@ -5,6 +5,9 @@
 #include <iostream>
 #include <TGUI/TGUI.hpp>
 
+#include <stdio.h>
+#include <sys/sysinfo.h>
+
 #include "Scheme/Shemes.h"
 #include "UIinformation.h"
 #include "Scheme/LobbySheme.h"
@@ -13,7 +16,7 @@
 #include "Time.h"
 
 int Interface::initInterface() {
-
+    UIinformation::coreAmount = get_nprocs();
 }
 
 int Interface::run() {

@@ -7,6 +7,7 @@ bool UIinformation::mClicked[2];
 long long UIinformation::mPressStart[2];
 long long UIinformation::mClickTime[2];
 float UIinformation::wheel = 0.0f;
+int UIinformation::coreAmount = 1;
 sf::Vector2f UIinformation::mDeltaClick[2];
 sf::Vector2f UIinformation::mLastClick[2];
 sf::Vector2f UIinformation::mDeltaPressed[2];

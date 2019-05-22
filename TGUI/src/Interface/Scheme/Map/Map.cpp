@@ -16,10 +16,15 @@ std::vector<MapObject *> Map::objects;
 float Map::height = 0.0f;
 long long Map::timeBoom = 0;
 std::vector<sf::Vector2f> Map::positionBoom;
+bool Map::openTiles = false;
+sf::Vector2f Map::openZeros = sf::Vector2f(-1.0f, -1.0f);
 
 void Map::loadMap(tgui::Canvas * canvas) {
 
     positionBoom.clear();
+    Map::openTiles = false;
+    Map::openZeros = sf::Vector2f(-1.0f, -1.0f);
+    positionBoom = std::vector<sf::Vector2f>(MapInfo::mapSize.x * MapInfo::mapSize.y);
 
     MapInfo::GenerateMap();
 
@@ -36,6 +41,73 @@ void Map::loadMap(tgui::Canvas * canvas) {
     for(int i = 0; i < 2; i++) {
         MapInfo::pressedAfterPause[i] = 0;
     }
+}
+
+void Map::switchCase(sf::Vector2i task) {
+    switch (MapInfo::mapState) {
+        case MapInfo::playStates::waveCrazy:
+            for (int i = task.x; i < task.y; i++) {
+                Tile *tile = dynamic_cast<Tile *> (objects[i]);
+                if (tile) {
+                    sf::Vector2i ind = tile->info->pos;
+                    sf::Vector2f pos = tile->pos;
+                    tile->phi += Time::delta * 0.000001f;
+                    float phi = tile->phi + ind.x * 0.3f;
+                    DrawArray::update(tile->drawId,
+                                      MapInfo::startPos + sf::Vector2f(ind) * 32.0f +
+                                      sf::Vector2f(0.0f, 3.0f * (MapInfo::tiles[0].size() - 1 - ind.y)) * sin(phi));
+                }
+            }
+            break;
+        case MapInfo::playStates::wave:
+            for (int i = task.x; i < task.y; i++) {
+                Tile *tile = dynamic_cast<Tile *> (objects[i]);
+                if (tile) {
+                    sf::Vector2i ind = tile->info->pos;
+                    tile->phi += Time::delta * 0.000005f;
+                    float phi = tile->phi + ind.x * 0.3f;
+                    DrawArray::update(tile->drawId,
+                                      MapInfo::startPos + sf::Vector2f(ind) * 40.0f +
+                                      sf::Vector2f(16.0f * sin(phi + 1.0f * ind.y), 16.0f * sin(phi)));
+                }
+            }
+            break;
+        case MapInfo::playStates::defeat:
+            for (int i = task.x; i < task.y; i++) {
+                Tile *tile = dynamic_cast<Tile *> (objects[i]);
+                if (tile) {
+                    float a = 0.000001f;
+                    DrawArray::update(tile->drawId, tile->speed / a * (1.0f + float(-exp(a * (timeBoom - Time::time)))) + positionBoom[i]);
+                }
+            }
+            break;
+        case MapInfo::playStates::boom:
+            for (int i = task.x; i < task.y; i++) {
+                Tile *tile = dynamic_cast<Tile *> (objects[i]);
+                if (tile) {
+                    positionBoom[i] = DrawArray::getPos(tile->drawId);
+                }
+            }
+            for (int i = task.x; i < task.y; i++) {
+                Tile *tile = dynamic_cast<Tile *> (objects[i]);
+                if (tile) {
+                    sf::Vector2f delta = DrawArray::getPos(tile->drawId) - MapInfo::boomPos;
+                    if (delta.x * delta.x + delta.y * delta.y < 3.0f) {
+                        float phi = (rand() % 100) * 6.28f / 100.f;
+                        tile->speed = sf::Vector2f(sin(phi), cos(phi)) * 0.0002f;
+                    } else {
+                        tile->speed = delta * (0.1f / (delta.x * delta.x + delta.y * delta.y));
+                    }
+                }
+            }
+            break;
+        case MapInfo::playStates::win:
+            break;
+    }
+}
+
+void Map::updateObjects(sf::Vector2i task) {
+    for(int i = task.x; i < task.y; i++) objects[i]->update(MapInfo::mapState);
 }
 
 void Map::update() {
@@ -123,79 +195,158 @@ void Map::update() {
     MapInfo::mapPos = ((UIinformation::mPos - canvas->getPosition()) * (height + H0) / H0) + center;
 
     if(MapInfo::flagsCnt == 0 && MapInfo::nClosedTiles == 0) MapInfo::mapState = MapInfo::playStates::win;
-    int par = MapInfo::mapState;
-    if (MapInfo::mapState != MapInfo::playStates::win && MapInfo::mapState != MapInfo::playStates::defeat)  for(int i = 0; i < objects.size(); i++) objects[i]->update(par);
+
+    if (MapInfo::mapState != MapInfo::playStates::win && MapInfo::mapState != MapInfo::playStates::defeat)  {
+        //run
+        int n = UIinformation::coreAmount;
+        sf::Thread * thr[n];
+        int m = objects.size() / n;
+        for(int i = 0; i < n; i++) {
+            if(i == n - 1) {
+                thr[i] = new sf::Thread(updateObjects, sf::Vector2i(m * i, objects.size()));
+            } else {
+                thr[i] = new sf::Thread(updateObjects, sf::Vector2i(m * i, m * (i + 1)));
+            }
+            thr[i]->launch();
+        }
+        for(int i = 0; i < n; i++) {
+            thr[i]->wait();
+            delete thr[i];
+        }
+    }
+
     MapInfo::UpdateCounters();
 
     switch (MapInfo::mapState) {
-        case MapInfo::playStates::waveCrazy:
-            for (int i = 0; i < objects.size(); i++) {
-                Tile *tile = dynamic_cast<Tile *> (objects[i]);
-                if (tile) {
-                    sf::Vector2i ind = tile->info->pos;
-                    sf::Vector2f pos = tile->pos;
-                    tile->phi += Time::delta * 0.000001f;
-                    float phi = tile->phi + ind.x * 0.3f;
-                    DrawArray::update(tile->drawId,
-                                      MapInfo::startPos + sf::Vector2f(ind) * 32.0f +
-                                      sf::Vector2f(0.0f, 3.0f * (MapInfo::tiles[0].size() - 1 - ind.y)) * sin(phi));
+        case MapInfo::playStates::waveCrazy: {
+            //run
+            int n = UIinformation::coreAmount;
+            sf::Thread *thr[n];
+            int m = objects.size() / n;
+            for (int i = 0; i < n; i++) {
+                if(i == n - 1) {
+                    thr[i] = new sf::Thread(switchCase, sf::Vector2i(m * i, objects.size()));
+                } else {
+                    thr[i] = new sf::Thread(switchCase, sf::Vector2i(m * i, m * (i + 1)));
                 }
+                thr[i]->launch();
+            }
+            for (int i = 0; i < n; i++) {
+                thr[i]->wait();
+                delete thr[i];
             }
             break;
-        case MapInfo::playStates::wave:
-            for (int i = 0; i < objects.size(); i++) {
-                Tile *tile = dynamic_cast<Tile *> (objects[i]);
-                if (tile) {
-                    sf::Vector2i ind = tile->info->pos;
-                    tile->phi += Time::delta * 0.000005f;
-                    float phi = tile->phi + ind.x * 0.3f;
-                    DrawArray::update(tile->drawId,
-                                      MapInfo::startPos + sf::Vector2f(ind) * 40.0f +
-                                      sf::Vector2f(16.0f * sin(phi + 1.0f * ind.y), 16.0f * sin(phi)));
+        }
+        case MapInfo::playStates::wave: {
+            //run
+            int n = UIinformation::coreAmount;
+            sf::Thread *thr[n];
+            int m = objects.size() / n;
+            for (int i = 0; i < n; i++) {
+                if(i == n - 1) {
+                    thr[i] = new sf::Thread(switchCase, sf::Vector2i(m * i, objects.size()));
+                } else {
+                    thr[i] = new sf::Thread(switchCase, sf::Vector2i(m * i, m * (i + 1)));
                 }
+                thr[i]->launch();
+            }
+            for (int i = 0; i < n; i++) {
+                thr[i]->wait();
+                delete thr[i];
             }
             break;
-        case MapInfo::playStates::defeat:
-            if(MapInfo::timePauseStart > 0) timeBoom += Time::time - Time::delta - MapInfo::timePauseStart;
-            if(Time::time - timeBoom > 5000000) timeBoom = Time::time - 5000000;
-            if(UIinformation::mPressed[sf::Mouse::Right]) {
+        }
+        case MapInfo::playStates::defeat: {
+            if (MapInfo::timePauseStart > 0) timeBoom += Time::time - Time::delta - MapInfo::timePauseStart;
+            if (Time::time - timeBoom > 5000000) timeBoom = Time::time - 5000000;
+            if (UIinformation::mPressed[sf::Mouse::Right]) {
                 timeBoom += 2 * Time::delta;
-                if(timeBoom > Time::time) timeBoom = Time::time;
+                if (timeBoom > Time::time) timeBoom = Time::time;
             }
-            for (int i = 0; i < objects.size(); i++) {
-                Tile *tile = dynamic_cast<Tile *> (objects[i]);
-                if (tile) {
-                    float a = 0.000001f;
-                    DrawArray::update(tile->drawId, tile->speed / a * (1.0f + float(-exp(a * (timeBoom - Time::time)))) + positionBoom[i]);
+            //run
+            int n = UIinformation::coreAmount;
+            sf::Thread *thr[n];
+            int m = objects.size() / n;
+            for (int i = 0; i < n; i++) {
+                if(i == n - 1) {
+                    thr[i] = new sf::Thread(switchCase, sf::Vector2i(m * i, objects.size()));
+                } else {
+                    thr[i] = new sf::Thread(switchCase, sf::Vector2i(m * i, m * (i + 1)));
                 }
+                thr[i]->launch();
+            }
+            for (int i = 0; i < n; i++) {
+                thr[i]->wait();
+                delete thr[i];
             }
             break;
-        case MapInfo::playStates::boom:
-            for(int i = 0; i < objects.size(); i++) {
-                Tile *tile = dynamic_cast<Tile *> (objects[i]);
-                if (tile) {
-                    positionBoom.emplace_back(DrawArray::getPos(tile->drawId));
+        }
+        case MapInfo::playStates::boom: {
+            //run
+            int n = UIinformation::coreAmount;
+            sf::Thread *thr[n];
+            int m = objects.size() / n;
+            for (int i = 0; i < n; i++) {
+                if(i == n - 1) {
+                    thr[i] = new sf::Thread(switchCase, sf::Vector2i(m * i, objects.size()));
+                } else {
+                    thr[i] = new sf::Thread(switchCase, sf::Vector2i(m * i, m * (i + 1)));
                 }
+                thr[i]->launch();
             }
-            for (int i = 0; i < objects.size(); i++) {
-                Tile *tile = dynamic_cast<Tile *> (objects[i]);
-                if (tile) {
-                    sf::Vector2f delta = DrawArray::getPos(tile->drawId) - MapInfo::boomPos;
-                    if (delta.x * delta.x + delta.y * delta.y < 3.0f) {
-                        float phi = (rand() % 100) * 6.28f / 100.f;
-                        tile->speed = sf::Vector2f(sin(phi), cos(phi)) * 0.0002f;
-                    } else {
-                        tile->speed = delta * (0.1f / (delta.x * delta.x + delta.y * delta.y));
-                    }
-                }
+            for (int i = 0; i < n; i++) {
+                thr[i]->wait();
+                delete thr[i];
             }
+
             MapInfo::mapState = MapInfo::playStates::defeat;
             timeBoom = Time::time;
             break;
+        }
         case MapInfo::playStates::win:
             Confetti::start(1, canvas->getSize()); //This checks was it started
             Confetti::update();
             break;
+    }
+
+    if(0 <= openZeros.x) {
+        MapInfo::OpenZeros({(int) (openZeros.x / 32), (int) (openZeros.y / 32)});
+        //run
+        int n = UIinformation::coreAmount;
+        sf::Thread *thr[n];
+        int m = objects.size() / n;
+        for (int i = 0; i < n; i++) {
+            if(i == n - 1) {
+                thr[i] = new sf::Thread(checkTileStates, sf::Vector2i(m * i, objects.size()));
+            } else {
+                thr[i] = new sf::Thread(checkTileStates, sf::Vector2i(m * i, m * (i + 1)));
+            }
+            thr[i]->launch();
+        }
+        for (int i = 0; i < n; i++) {
+            thr[i]->wait();
+            delete thr[i];
+        }
+    }
+    openZeros = sf::Vector2f(-1.0f, -1.0f);
+
+    if(openTiles) {
+        //run
+        int n = UIinformation::coreAmount;
+        sf::Thread *thr[n];
+        int m = objects.size() / n;
+        for (int i = 0; i < n; i++) {
+            if(i == n - 1) {
+                thr[i] = new sf::Thread(openAllTiles, sf::Vector2i(m * i, objects.size()));
+            } else {
+                thr[i] = new sf::Thread(openAllTiles, sf::Vector2i(m * i, m * (i + 1)));
+            }
+            thr[i]->launch();
+        }
+        for (int i = 0; i < n; i++) {
+            thr[i]->wait();
+            delete thr[i];
+        }
     }
 }
 
@@ -213,15 +364,15 @@ void Map::clean() {
     MapInfo::tiles.clear();
 }
 
-void Map::checkTileStates() {
-    for (int i = 0; i < objects.size(); i++) {
+void Map::checkTileStates(sf::Vector2i task) {
+    for (int i = task.x; i < task.y; i++) {
         if (((Tile *) objects[i])->info->content == 9) continue;
         if (((Tile *) objects[i])->info->state == MapInfo::states::pressed && ((Tile *) objects[i])->state != (Tile::ZERO + ((Tile *) objects[i])->info->content)) ((Tile *) objects[i])->changeState(Tile::ZERO + ((Tile *) objects[i])->info->content);
     }
 }
 
-void Map::openAllTiles() {
-    for (int i = 0; i < objects.size(); i++) {
+void Map::openAllTiles(sf::Vector2i task) {
+    for (int i = task.x; i < task.y; i++) {
         if (((Tile *) objects[i])->info->content == 9) {
             if (((Tile *) objects[i])->state == Tile::EXPLOSION || ((Tile *) objects[i])->info->state == MapInfo::states::flag) continue;
             ((Tile *) objects[i])->changeState(Tile::BOMB);
@@ -229,10 +380,10 @@ void Map::openAllTiles() {
             ((Tile *) objects[i])->changeState(((Tile *)objects[i])->info->state == MapInfo::states::flag ? Tile::BOMB_CROSSED  : Tile::ZERO + ((Tile *) objects[i])->info->content);
         }
     }
-    for (int i = 0; i < MapInfo::mapSize.x; i++) {
-        for (int j = 0; j < MapInfo::mapSize.y; j++) {
-            MapInfo::tiles[i][j].state = MapInfo::states::pressed;
-        }
+
+    for (int i = task.x ; i < task.y; i++) {
+        if(i / MapInfo::mapSize.y < MapInfo::mapSize.y)
+            MapInfo::tiles[i / MapInfo::mapSize.y][i % MapInfo::mapSize.y].state = MapInfo::states::pressed;
     }
 }
 

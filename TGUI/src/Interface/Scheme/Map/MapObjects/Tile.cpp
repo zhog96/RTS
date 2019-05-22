@@ -80,13 +80,12 @@ void Tile::update(int par) {
                 Map::lose();
                 MapInfo::boomPos = DrawArray::getPos(drawId);
                 MapInfo::mapState = MapInfo::playStates::boom;
-                Map::openAllTiles();
+                Map::openTiles = true;
                 printf("%f %f\n", pos.x / 32, pos.y / 32);
             } else if (info->content == 0) {
                 MapInfo::nClosedTiles--;
                 std::cout << "TILES LEFT : " << MapInfo::nClosedTiles << std::endl;
-                MapInfo::OpenZeros({(int) (pos.x / 32), (int) (pos.y / 32)});
-                Map::checkTileStates();
+                Map::openZeros = sf::Vector2f(pos.x, pos.y);
                 printf("%f %f\n", pos.x / 32, pos.y / 32);
             } else {
                 MapInfo::nClosedTiles--;
