@@ -17,7 +17,7 @@ int Interface::initInterface() {
 }
 
 int Interface::run() {
-    sf::RenderWindow window(sf::VideoMode(1080, 720), "TGUI window");
+    sf::RenderWindow window(sf::VideoMode(1080, 720), "TGUI window", sf::Style::Close);
     UIinformation::window = &window;
     UIinformation::window->setVerticalSyncEnabled(true);
     tgui::Gui gui(window);
