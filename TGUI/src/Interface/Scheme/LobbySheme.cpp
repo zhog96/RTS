@@ -47,6 +47,10 @@ void LobbySheme::playManual() {
                 placeholder[2] = UIinformation::gui->get("XBox")->cast<tgui::EditBox>()->getText();
             }
         }
+        if(placeholder[0].size() != 0 && atoi(placeholder[0].c_str()) == 0) {
+            UIinformation::gui->get("BombBox")->cast<tgui::EditBox>()->setText("1");
+            placeholder[0] = UIinformation::gui->get("BombBox")->cast<tgui::EditBox>()->getText();
+        }
         if(placeholder[0].size() == 0 || atoi(placeholder[1].c_str()) * atoi(placeholder[2].c_str()) <= atoi(placeholder[0].c_str()))
             UIinformation::gui->get("BombBox")->cast<tgui::EditBox>()->setText(sf::String(std::to_string(std::max(1, int(atoi(placeholder[1].c_str()) * atoi(placeholder[2].c_str()) * 0.10)))));
     } else {
