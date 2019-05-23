@@ -310,25 +310,27 @@ void Map::update() {
     }
 
     if(0 <= openZeros.x) {
-        MapInfo::OpenZeros({(int) (openZeros.x / 32), (int) (openZeros.y / 32)});
-        //run
-        int n = UIinformation::coreAmount;
-        sf::Thread *thr[n];
-        int m = objects.size() / n;
-        for (int i = 0; i < n; i++) {
-            if(i == n - 1) {
-                thr[i] = new sf::Thread(checkTileStates, sf::Vector2i(m * i, objects.size()));
-            } else {
-                thr[i] = new sf::Thread(checkTileStates, sf::Vector2i(m * i, m * (i + 1)));
-            }
-            thr[i]->launch();
-        }
-        for (int i = 0; i < n; i++) {
-            thr[i]->wait();
-            delete thr[i];
-        }
+        MapInfo::Q.push({(int) (openZeros.x / 32), (int) (openZeros.y / 32)});
+        MapInfo::visited[(int) (openZeros.x / 32)][(int) (openZeros.y / 32)] = true;
     }
     openZeros = sf::Vector2f(-1.0f, -1.0f);
+    MapInfo::OpenZeros();
+    //run
+    int n = UIinformation::coreAmount;
+    sf::Thread *thr[n];
+    int m = objects.size() / n;
+    for (int i = 0; i < n; i++) {
+        if(i == n - 1) {
+            thr[i] = new sf::Thread(checkTileStates, sf::Vector2i(m * i, objects.size()));
+        } else {
+            thr[i] = new sf::Thread(checkTileStates, sf::Vector2i(m * i, m * (i + 1)));
+        }
+        thr[i]->launch();
+    }
+    for (int i = 0; i < n; i++) {
+        thr[i]->wait();
+        delete thr[i];
+    }
 
     if(openTiles) {
         //run
@@ -351,6 +353,7 @@ void Map::update() {
 }
 
 void Map::clean() {
+    MapInfo::visited.clear();
     Confetti::clear();
     for(int i = 0; i < objects.size(); i++) delete objects[i];
     objects.clear();

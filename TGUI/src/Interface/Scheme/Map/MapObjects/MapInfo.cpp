@@ -1,5 +1,6 @@
 #include "MapInfo.h"
 #include "../../../UIinformation.h"
+#include "../../../Time.h"
 #include <random>
 #include <vector>
 #include <algorithm>
@@ -20,8 +21,16 @@ int MapInfo::pressedAfterPause[2];
 sf::Vector2f MapInfo::startPos = sf::Vector2f(0.0f, 0.0f);
 sf::Vector2f MapInfo::boomPos = sf::Vector2f(0.0f, 0.0f);
 int MapInfo::timePauseStart = 0;
+std::vector<std::vector<bool>> MapInfo::visited;
+std::queue<sf::Vector2i> MapInfo::Q;
+long long MapInfo::openZerosTimer = 0;
+
 
 int MapInfo::GenerateMap() {
+    visited = std::vector<std::vector<bool>>(MapInfo::mapSize.x, std::vector<bool>(MapInfo::mapSize.y, false));
+    openZerosTimer = 0;
+    while(!Q.empty()) Q.pop();
+
     startPos = sf::Vector2f(0.0f, 0.0f);
 
     if (MapInfo::nBombs >= MapInfo::mapSize.x * MapInfo::mapSize.y) MapInfo::nBombs = MapInfo::mapSize.x * MapInfo::mapSize.y - 1;
@@ -106,16 +115,18 @@ int MapInfo::GenerateMap() {
 
 }
 
-int MapInfo::OpenZeros(sf::Vector2i start) {
-    std::queue<sf::Vector2i> Q;
-    std::vector<std::vector<bool>> visited(MapInfo::mapSize.x, std::vector<bool>(MapInfo::mapSize.y, false));
-    Q.push(start);
-    visited[start.x][start.y] = true;
+int MapInfo::OpenZeros() {
+    openZerosTimer += Time::delta;
+    if(openZerosTimer < 10000) return 0;
+    openZerosTimer = 0;
+    int k = Q.size();
     while (!Q.empty()) {
         sf::Vector2i cur = Q.front();
         int x = cur.x, y = cur.y;
         Q.pop();
-        if (MapInfo::tiles[x][y].state == MapInfo::states::flag) continue;
+        if (MapInfo::tiles[x][y].state == MapInfo::states::flag) {
+            MapInfo::flagsCnt++;
+        }
         if (MapInfo::tiles[x][y].content != 0) {
             if (MapInfo::tiles[x][y].state != MapInfo::states::pressed) {
                 MapInfo::tiles[x][y].state = MapInfo::states::pressed;
@@ -141,6 +152,8 @@ int MapInfo::OpenZeros(sf::Vector2i start) {
             MapInfo::nClosedTiles--;
 //            std::cout << "TILES LEFT : " << MapInfo::nClosedTiles << std::endl;
         }
+        k--;
+        if(k == 0) break;
     }
 //    for (int i = 0; i < MapInfo::mapSize.y; i++) {
 //       for (int j = 0; j < MapInfo::mapSize.x; j++) {
